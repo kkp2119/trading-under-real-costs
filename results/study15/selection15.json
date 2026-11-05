@@ -1,0 +1,26 @@
+{
+ "setting": "lgb_l127_m1000|v60|P1|0.5",
+ "model": "lgb_l127_m1000",
+ "target": "v60",
+ "policy": "P1",
+ "theta": 0.5,
+ "h": 60,
+ "mean_sharpe_R": 1.4182201828701129,
+ "fold_A": {
+  "sharpe_R": 1.8384186070445352,
+  "sharpe_Rp": 1.851359888832259
+ },
+ "fold_B": {
+  "sharpe_R": 0.9980217586956904,
+  "sharpe_Rp": 0.998021758695691
+ },
+ "best_mean_sharpe_R": 1.4182201828701129,
+ "best_setting": "lgb_l127_m1000|v60|P1|0.5",
+ "candidates_within_0.1": [
+  "lgb_l127_m1000|v60|P1|0.5",
+  "lgb_l127_m1000|v60|P2|0.5"
+ ],
+ "n_settings": 153,
+ "n_settings_nan": 99,
+ "rule": "max mean of fold A and B daily net Sharpe (R); within 0.1 of the max: ridge > LightGBM, fewer leaves, larger theta, then mean Sharpe, then name (DEVIATIONS15 16)"
+}

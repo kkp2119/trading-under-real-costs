@@ -1,0 +1,110 @@
+{
+ "source": "R2 per-parent results ($DATA_DIR/research15_data/val15/r2_<Y>.npz) for 2015-2020; test15 per-parent results and results15/test15/test15_daily.csv for 2021-2026",
+ "units": "saved in dollars per day (sum over parent orders of (IS_S0 - IS) x 1,000 / 100); IS in cents per share, simple mean over the day's parent orders (equal size)",
+ "E*": "E12|E2off|E3off|E4off",
+ "scenario": "R",
+ "by_year": {
+  "2015": {
+   "n_orders": 48540,
+   "saved_Estar_usd": 413941.8474768847,
+   "saved_S2i_usd": 380050.59530600905,
+   "IS_S0_mean": 2.806499792901292,
+   "IS_Estar_mean": 1.953714775437582
+  },
+  "2016": {
+   "n_orders": 50400,
+   "saved_Estar_usd": 519675.6937212078,
+   "saved_S2i_usd": 506709.9844241934,
+   "IS_S0_mean": 3.051130958665458,
+   "IS_Estar_mean": 2.0200283917582995
+  },
+  "2017": {
+   "n_orders": 50200,
+   "saved_Estar_usd": 586857.9714251996,
+   "saved_S2i_usd": 536890.5980522686,
+   "IS_S0_mean": 3.8709462324651587,
+   "IS_Estar_mean": 2.7019064487496216
+  },
+  "2018": {
+   "n_orders": 47740,
+   "saved_Estar_usd": 905000.6515802257,
+   "saved_S2i_usd": 871613.0468584038,
+   "IS_S0_mean": 5.546292446726628,
+   "IS_Estar_mean": 3.650606121673788
+  },
+  "2019": {
+   "n_orders": 50400,
+   "saved_Estar_usd": 507856.28961014096,
+   "saved_S2i_usd": 473102.2077843966,
+   "IS_S0_mean": 3.6184920776895586,
+   "IS_Estar_mean": 2.6108407094154695
+  },
+  "2020": {
+   "n_orders": 48680,
+   "saved_Estar_usd": 558730.8371407466,
+   "saved_S2i_usd": 520915.26254561,
+   "IS_S0_mean": 3.8768899101809877,
+   "IS_Estar_mean": 2.7291273030718126
+  },
+  "2021": {
+   "n_orders": 50400,
+   "saved_Estar_usd": 857636.4900000001,
+   "saved_S2i_usd": 842584.6580000003,
+   "IS_S0_mean": 4.740982142857143,
+   "IS_Estar_mean": 3.0393224404761896
+  },
+  "2022": {
+   "n_orders": 49780,
+   "saved_Estar_usd": 436363.3300000002,
+   "saved_S2i_usd": 420620.53500000027,
+   "IS_S0_mean": 3.3713439132181597,
+   "IS_Estar_mean": 2.494760285255122
+  },
+  "2023": {
+   "n_orders": 46020,
+   "saved_Estar_usd": 296581.804,
+   "saved_S2i_usd": 313403.12600000005,
+   "IS_S0_mean": 2.574033029117775,
+   "IS_Estar_mean": 1.9295701781833983
+  },
+  "2024": {
+   "n_orders": 49900,
+   "saved_Estar_usd": 785264.6830000002,
+   "saved_S2i_usd": 766975.4490000001,
+   "IS_S0_mean": 6.855150300601203,
+   "IS_Estar_mean": 5.281473581162325
+  },
+  "2025": {
+   "n_orders": 50000,
+   "saved_Estar_usd": 896769.2789999999,
+   "saved_S2i_usd": 866995.4229999997,
+   "IS_S0_mean": 4.85779,
+   "IS_Estar_mean": 3.064251442
+  },
+  "2026": {
+   "n_orders": 40600,
+   "saved_Estar_usd": 1023530.6089999999,
+   "saved_S2i_usd": 999525.006,
+   "IS_S0_mean": 6.464322660098522,
+   "IS_Estar_mean": 3.943311307881773
+  }
+ },
+ "by_period": {
+  "select": {
+   "days": 1511,
+   "n_orders": 295960,
+   "saved_Estar_usd": 3492063.2909544054,
+   "saved_S2i_usd": 3289281.6949708816,
+   "sharpe_saved_Estar": 18.594848859988364,
+   "sharpe_saved_S2i": 16.830352792190887
+  },
+  "test": {
+   "days": 1458,
+   "n_orders": 286700,
+   "saved_Estar_usd": 4296146.195,
+   "saved_S2i_usd": 4210104.197000001,
+   "sharpe_saved_Estar": 17.9146130837394,
+   "sharpe_saved_S2i": 17.36438632247097
+  }
+ }
+}

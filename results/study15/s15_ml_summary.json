@@ -1,0 +1,45 @@
+{
+ "source": "research15/results15/val15_daily_A.csv (2019), val15_daily_B.csv (2020); val15_fold_A/B.csv",
+ "ML_best": "lgb_l127_m10000|v30|P2|0.0",
+ "ML_best_rule": "highest P&L per share among settings with >= 1,000 limit fills in both folds (post-hoc reference analysis, not the pre-registered selection)",
+ "scenario": "R",
+ "window": "09:30-16:00",
+ "years": {
+  "2019": {
+   "B0": {
+    "sharpe": -47.55041894071931,
+    "pnl_per_share_cents": -1.7376111153623073,
+    "net_usd": -783408.053,
+    "limit_fills": 399155,
+    "limit_shares": 39501609,
+    "market_shares": 5583741
+   },
+   "ML_best": {
+    "sharpe": -5.231565893271533,
+    "pnl_per_share_cents": -1.3210327120064145,
+    "net_usd": -29326.662,
+    "limit_fills": 16246,
+    "limit_shares": 1599166,
+    "market_shares": 620814
+   }
+  },
+  "2020": {
+   "B0": {
+    "sharpe": -27.77158936554193,
+    "pnl_per_share_cents": -1.8392575930274089,
+    "net_usd": -1479688.656,
+    "limit_fills": 754049,
+    "limit_shares": 74290380,
+    "market_shares": 6159942
+   },
+   "ML_best": {
+    "sharpe": -2.271244273663754,
+    "pnl_per_share_cents": -0.7418942648000922,
+    "net_usd": -14128.485999999995,
+    "limit_fills": 13924,
+    "limit_shares": 1363828,
+    "market_shares": 540552
+   }
+  }
+ }
+}

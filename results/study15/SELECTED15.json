@@ -1,0 +1,110 @@
+{
+ "setting": "lgb_l127_m1000|v60|P1|0.5",
+ "model": "lgb_l127_m1000",
+ "target": "v60",
+ "policy": "P1",
+ "theta": 0.5,
+ "h": 60,
+ "mean_sharpe_R": 1.4182201828701129,
+ "fold_A": {
+  "sharpe_R": 1.8384186070445352,
+  "sharpe_Rp": 1.851359888832259
+ },
+ "fold_B": {
+  "sharpe_R": 0.9980217586956904,
+  "sharpe_Rp": 0.998021758695691
+ },
+ "best_mean_sharpe_R": 1.4182201828701129,
+ "best_setting": "lgb_l127_m1000|v60|P1|0.5",
+ "candidates_within_0.1": [
+  "lgb_l127_m1000|v60|P1|0.5",
+  "lgb_l127_m1000|v60|P2|0.5"
+ ],
+ "n_settings": 153,
+ "n_settings_nan": 99,
+ "rule": "max mean of fold A and B daily net Sharpe (R); within 0.1 of the max: ridge > LightGBM, fewer leaves, larger theta, then mean Sharpe, then name (DEVIATIONS15 16)",
+ "final_model_file": "$DATA_DIR/research15_data/models15/final/lgb_l127_m1000_v60.txt",
+ "final_model_sha256": "90ff28506b99d6c695c5bfbe7bccd74dc60794acf3611b64119b373f1553d5f8",
+ "final_train": {
+  "train_years": [
+   2015,
+   2016,
+   2017,
+   2018,
+   2019,
+   2020
+  ],
+  "val_year": null,
+  "es_year": 2020,
+  "rows": {
+   "2015": {
+    "decisions": 1881297,
+    "out_by_day_gate": 9334,
+    "out_by_row_gate": 366757,
+    "kept_decisions": 1505206,
+    "rows_both_sides": 3010412
+   },
+   "2016": {
+    "decisions": 1956580,
+    "out_by_day_gate": 4668,
+    "out_by_row_gate": 289322,
+    "kept_decisions": 1662590,
+    "rows_both_sides": 3325180
+   },
+   "2017": {
+    "decisions": 1945220,
+    "out_by_day_gate": 7001,
+    "out_by_row_gate": 415463,
+    "kept_decisions": 1522756,
+    "rows_both_sides": 3045512
+   },
+   "2018": {
+    "decisions": 1847372,
+    "out_by_day_gate": 9335,
+    "out_by_row_gate": 556243,
+    "kept_decisions": 1281794,
+    "rows_both_sides": 2563588
+   },
+   "2019": {
+    "decisions": 1949420,
+    "out_by_day_gate": 22974,
+    "out_by_row_gate": 292355,
+    "kept_decisions": 1634091,
+    "rows_both_sides": 3268182
+   },
+   "2020": {
+    "decisions": 1887538,
+    "out_by_day_gate": 778,
+    "out_by_row_gate": 393874,
+    "kept_decisions": 1492886,
+    "rows_both_sides": 2985772
+   }
+  },
+  "n_rows": 18198646,
+  "files": {
+   "lgb_l127_m1000_v60": "90ff28506b99d6c695c5bfbe7bccd74dc60794acf3611b64119b373f1553d5f8"
+  },
+  "lgb_sample": {
+   "seed": 15,
+   "rows": 6000000,
+   "of": 18198646,
+   "years": {
+    "2015": 993264,
+    "2016": 1095248,
+    "2017": 1005780,
+    "2018": 845064,
+    "2019": 1075357,
+    "2020": 985287
+   }
+  },
+  "best_iteration": {
+   "lgb_l127_m1000_v60": 22
+  },
+  "seconds": 28
+ },
+ "frozen_utc": "2026-10-29T23:36:34Z",
+ "fold_model_sha256": {
+  "A": "ae6607ede5df6c66c000206eb22a2ce8fd5a5a7feec21859d7c7d7db4913ddc9",
+  "B": "9846b442fbf880e93084002abb24e5510e116a49da9e3b363088385e706ed4e8"
+ }
+}

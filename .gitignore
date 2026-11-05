@@ -1,0 +1,22 @@
+# Licensed market data and per-order outputs never go in this repository
+data/
+*.npz
+*.parquet
+*.pkl
+*.feather
+*.h5
+*.gz
+*.csv.gz
+
+# Unlock files and local environment
+UNLOCK*
+HOLDOUT_UNLOCKED*
+.env
+.env.*
+
+# Python and OS clutter
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.pytest_cache/
+.DS_Store

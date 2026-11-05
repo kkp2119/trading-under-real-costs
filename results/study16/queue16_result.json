@@ -1,0 +1,364 @@
+{
+ "rule": "QUEUE16.md",
+ "rule_sha256": "d7b561823316063fef1cec98e7f4ed6fbd3024f27b4614083351cd97a072fa89",
+ "trials_added": 22,
+ "trials_cumulative": 714,
+ "verdict": "none (diagnostic)",
+ "K": 10,
+ "x_grid": [
+  0.0,
+  0.1,
+  0.2,
+  0.3,
+  0.4,
+  0.5,
+  0.6,
+  0.7,
+  0.8,
+  0.9,
+  1.0
+ ],
+ "observation_days": 505,
+ "symbol_days": 4955,
+ "gated_symbol_days": 4941,
+ "sweep": [
+  {
+   "x": 0.0,
+   "scenario": "R",
+   "net_usd": -1479671.6999999997,
+   "pnl_per_share_c": -0.8437389234695855,
+   "sharpe": -19.54701167739094,
+   "limit_fills": 1570449,
+   "limit_shares": 157044900,
+   "market_shares": 18325900,
+   "loss_day_frac": 0.996039603960396
+  },
+  {
+   "x": 0.0,
+   "scenario": "R+",
+   "net_usd": -1165581.9,
+   "pnl_per_share_c": -0.6646385259119534,
+   "sharpe": -16.41329915139744,
+   "limit_fills": 1570449,
+   "limit_shares": 157044900,
+   "market_shares": 18325900,
+   "loss_day_frac": 0.9762376237623762
+  },
+  {
+   "x": 0.1,
+   "scenario": "R",
+   "net_usd": -1469660.4840000002,
+   "pnl_per_share_c": -0.9225190371883782,
+   "sharpe": -19.179289313756914,
+   "limit_fills": 1663472,
+   "limit_shares": 146057224,
+   "market_shares": 13252278,
+   "loss_day_frac": 0.996039603960396
+  },
+  {
+   "x": 0.1,
+   "scenario": "R+",
+   "net_usd": -1177546.0359999998,
+   "pnl_per_share_c": -0.739156184167847,
+   "sharpe": -16.39027759377999,
+   "limit_fills": 1663472,
+   "limit_shares": 146057224,
+   "market_shares": 13252278,
+   "loss_day_frac": 0.9762376237623762
+  },
+  {
+   "x": 0.2,
+   "scenario": "R",
+   "net_usd": -1584636.0499999998,
+   "pnl_per_share_c": -1.0458682247896283,
+   "sharpe": -20.341713424966578,
+   "limit_fills": 1640204,
+   "limit_shares": 138854210,
+   "market_shares": 12659720,
+   "loss_day_frac": 0.998019801980198
+  },
+  {
+   "x": 0.2,
+   "scenario": "R+",
+   "net_usd": -1306927.6300000001,
+   "pnl_per_share_c": -0.8625791899134292,
+   "sharpe": -17.88831552344875,
+   "limit_fills": 1640204,
+   "limit_shares": 138854210,
+   "market_shares": 12659720,
+   "loss_day_frac": 0.9920792079207921
+  },
+  {
+   "x": 0.3,
+   "scenario": "R",
+   "net_usd": -1677288.042,
+   "pnl_per_share_c": -1.168075843838268,
+   "sharpe": -21.323172139241404,
+   "limit_fills": 1619531,
+   "limit_shares": 131891510,
+   "market_shares": 11702594,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.3,
+   "scenario": "R+",
+   "net_usd": -1413505.0219999999,
+   "pnl_per_share_c": -0.9843753905104626,
+   "sharpe": -19.16166711788017,
+   "limit_fills": 1619531,
+   "limit_shares": 131891510,
+   "market_shares": 11702594,
+   "loss_day_frac": 0.998019801980198
+  },
+  {
+   "x": 0.4,
+   "scenario": "R",
+   "net_usd": -1763684.066,
+   "pnl_per_share_c": -1.2826925301281649,
+   "sharpe": -22.207236653201612,
+   "limit_fills": 1547582,
+   "limit_shares": 126265652,
+   "market_shares": 11232932,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.4,
+   "scenario": "R+",
+   "net_usd": -1511152.762,
+   "pnl_per_share_c": -1.0990315085717537,
+   "sharpe": -20.28141814271824,
+   "limit_fills": 1547582,
+   "limit_shares": 126265652,
+   "market_shares": 11232932,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.5,
+   "scenario": "R",
+   "net_usd": -1869880.042,
+   "pnl_per_share_c": -1.405004639517751,
+   "sharpe": -23.189320612573155,
+   "limit_fills": 1368968,
+   "limit_shares": 121534154,
+   "market_shares": 11552954,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.5,
+   "scenario": "R+",
+   "net_usd": -1626811.7339999997,
+   "pnl_per_share_c": -1.2223661318119556,
+   "sharpe": -21.492622063892473,
+   "limit_fills": 1368968,
+   "limit_shares": 121534154,
+   "market_shares": 11552954,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.6,
+   "scenario": "R",
+   "net_usd": -1895360.386,
+   "pnl_per_share_c": -1.4742547810675781,
+   "sharpe": -23.39736968234503,
+   "limit_fills": 1377962,
+   "limit_shares": 117980802,
+   "market_shares": 10583162,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.6,
+   "scenario": "R+",
+   "net_usd": -1659398.7820000001,
+   "pnl_per_share_c": -1.2907184333550887,
+   "sharpe": -21.809235125029602,
+   "limit_fills": 1377962,
+   "limit_shares": 117980802,
+   "market_shares": 10583162,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.7,
+   "scenario": "R",
+   "net_usd": -1937029.7939999998,
+   "pnl_per_share_c": -1.5473526928115986,
+   "sharpe": -23.767771060308704,
+   "limit_fills": 1362136,
+   "limit_shares": 114954122,
+   "market_shares": 10229348,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.7,
+   "scenario": "R+",
+   "net_usd": -1707121.55,
+   "pnl_per_share_c": -1.3636956620550622,
+   "sharpe": -22.29226637366331,
+   "limit_fills": 1362136,
+   "limit_shares": 114954122,
+   "market_shares": 10229348,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.8,
+   "scenario": "R",
+   "net_usd": -1981268.9640000002,
+   "pnl_per_share_c": -1.620601532411418,
+   "sharpe": -24.108722553097124,
+   "limit_fills": 1356024,
+   "limit_shares": 112189080,
+   "market_shares": 10066078,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.8,
+   "scenario": "R+",
+   "net_usd": -1756890.804,
+   "pnl_per_share_c": -1.4370688588861011,
+   "sharpe": -22.73671303964589,
+   "limit_fills": 1356024,
+   "limit_shares": 112189080,
+   "market_shares": 10066078,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.9,
+   "scenario": "R",
+   "net_usd": -2022222.025,
+   "pnl_per_share_c": -1.6972036553719392,
+   "sharpe": -24.50586789495615,
+   "limit_fills": 1355564,
+   "limit_shares": 109316023,
+   "market_shares": 9834205,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 0.9,
+   "scenario": "R+",
+   "net_usd": -1803589.9790000003,
+   "pnl_per_share_c": -1.513710891933837,
+   "sharpe": -23.239043639511188,
+   "limit_fills": 1355564,
+   "limit_shares": 109316023,
+   "market_shares": 9834205,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 1.0,
+   "scenario": "R",
+   "net_usd": -2140090.747,
+   "pnl_per_share_c": -1.7948722063243918,
+   "sharpe": -25.69148372829797,
+   "limit_fills": 1092187,
+   "limit_shares": 107784401,
+   "market_shares": 11449199,
+   "loss_day_frac": 1.0
+  },
+  {
+   "x": 1.0,
+   "scenario": "R+",
+   "net_usd": -1924521.9449999998,
+   "pnl_per_share_c": -1.6140768583687817,
+   "sharpe": -24.554485218771063,
+   "limit_fills": 1092187,
+   "limit_shares": 107784401,
+   "market_shares": 11449199,
+   "loss_day_frac": 1.0
+  }
+ ],
+ "crossings": {
+  "R": {
+   "x_star_breakeven": {
+    "status": "below_at_0",
+    "x": null,
+    "all": []
+   },
+   "x_2star_sharpe": {
+    "status": "below_at_0",
+    "x": null,
+    "all": []
+   }
+  },
+  "R+": {
+   "x_star_breakeven": {
+    "status": "below_at_0",
+    "x": null,
+    "all": []
+   },
+   "x_2star_sharpe": {
+    "status": "below_at_0",
+    "x": null,
+    "all": []
+   }
+  }
+ },
+ "T_reference": {
+  "R": {
+   "net_usd": 925336.3999999999,
+   "pnl_per_share_c": 0.23875656406360948,
+   "sharpe": 8.949063167618641,
+   "limit_fills": 3641286,
+   "limit_shares": 364128600,
+   "market_shares": 23436200,
+   "loss_day_frac": 0.22178217821782178
+  },
+  "R+": {
+   "net_usd": 1653593.6,
+   "pnl_per_share_c": 0.4266624832802154,
+   "sharpe": 15.282214013039964,
+   "limit_fills": 3641286,
+   "limit_shares": 364128600,
+   "market_shares": 23436200,
+   "loss_day_frac": 0.06732673267326733
+  }
+ },
+ "checks": {
+  "queue16_sha256": "d7b561823316063fef1cec98e7f4ed6fbd3024f27b4614083351cd97a072fa89",
+  "dates_equal_dev_daily": true,
+  "x1_daily_vs_B0_Q_R": {
+   "max_abs_diff_usd": 0.0,
+   "days_over_0.01": 0,
+   "pass": true
+  },
+  "x05_daily_vs_B0_Q50_R": {
+   "max_abs_diff_usd": 0.0,
+   "days_over_0.01": 0,
+   "pass": true
+  },
+  "r12T_daily_vs_B0_T_R": {
+   "max_abs_diff_usd": 0.0,
+   "days_over_0.01": 0,
+   "pass": true
+  },
+  "x1_shares_vs_s12": {
+   "limit": 107784401,
+   "market": 11449199,
+   "s12_limit": 107784401,
+   "s12_market": 11449199,
+   "pass": true
+  },
+  "symbol_days_fills_differ": {
+   "x1_eq_Q": 0,
+   "x05_eq_Q50": 0
+  },
+  "hand_trace": {
+   "pass": true,
+   "note": "per-second quote/trade values removed (licensed TAQ data); the check passed in the original run"
+  },
+  "no_date_after_2020": true
+ },
+ "costs_1e4_usd_per_share": {
+  "R": [
+   30,
+   0
+  ],
+  "R+": [
+   30,
+   -20
+  ]
+ },
+ "runtime_s": 33.0,
+ "python": "python",
+ "numpy": "1.26.4",
+ "pandas": "2.2.2",
+ "written": "2026-10-30T12:55:56"
+}

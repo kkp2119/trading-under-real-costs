@@ -1,0 +1,51 @@
+Research 12 code freeze test report (2026-10-27)
+
+Environment (/opt/anaconda3, nothing installed): python 3.12.7 | numba 0.60.0 | numpy 1.26.4 | pandas 2.2.2 |
+scipy 1.13.1 | statsmodels 0.14.2 | pytest 7.4.4
+Command: R12_TEST_DIR=<scratch outside the repository> PYTHONDONTWRITEBYTECODE=1 nice -n 19 \
+         /opt/anaconda3/bin/python -m pytest -p no:cacheprovider -q research12/tests
+Result: 104 passed in 398.64 s (0:06:38), one process.
+
+Tests per file
+  test_m00_refsim.py               13  kernel = independent reference (refsim.py, written from SPEC + E1 only, before the
+                                       kernel and without seeing it): 300 random days x 20 combos = 6,000 runs + 3 full grids
+  test_m01_lookahead.py             9  M1
+  test_m02_fills.py                 9  M2
+  test_m03_inventory.py            11  M3
+  test_m04_market.py                3  M4
+  test_m05_accounting.py            3  M5 (1,000 random runs for the identity)
+  test_m06_markout.py               2  M6
+  test_m07_event.py                 4  M7
+  test_m08_known_markets.py         5  M8 (i-T 0.09 SE, i-Q 0.24 SE from the analytic values)
+  test_m09_stats.py                 6  M9 (coverage 1,000 series x 2,000 resamples; (b) table 2,000 x 1,000)
+  test_m10_verdict.py               3  M10
+  test_m11_m12_loader.py            9  M11, M12
+  test_m13_session.py               5  M13
+  test_m14_repro.py                 4  M14 (numba = plain Python, 1 worker = 2 workers, npz numpy 2.3 -> 1.26)
+  test_m15_universe.py              3  M15
+  test_m16_m17_m18_selection.py     7  M16, M17, M18
+  test_record_mode.py               4  record mode leaves results bit-identical; fill log = refsim fills; q path
+  test_clean_tree.py                1  clean-tree rule (throwaway git repository)
+  test_runners.py                   3  run_dev end to end, the 7 holdout refusals, one holdout + reserve run (synthetic)
+
+Mutation check (tests/run_mutations.py): one deliberate defect per row, the M test must fail
+item  defect                                               test                       result
+M1    OBI reads next bar's bid size (lookahead 1 bar)      test_m01_lookahead.py      caught (test failed)
+M1    buy price from the next bar (lookahead 1 bar)        test_m01_lookahead.py      caught (test failed)
+M2    Q case 2 inequality <= instead of <                  test_m02_fills.py          caught (test failed)
+M2    cross needs ask strictly below the bid               test_m02_fills.py          caught (test failed)
+M2    odd lots move the queue                              test_m02_fills.py          caught (test failed)
+M3    inventory limit off by one share                     test_m03_inventory.py      caught (test failed)
+M3    stale liquidation one decision late at the boundary  test_m03_inventory.py      caught (test failed)
+M4    flatten one bar early                                test_m04_market.py         caught (test failed)
+M4    market sell takes the better price                   test_m04_market.py         caught (test failed)
+M5    inventory P&L marked at the fill price               test_m05_accounting.py     caught (test failed)
+M5    R+ rebate charged as a fee                           test_m05_accounting.py     caught (test failed)
+M6    markout past the close kept                          test_m06_markout.py        caught (test failed)
+M6    markout one bar early                                test_m06_markout.py        caught (test failed)
+M7    event keeps a buy after the best moved               test_m07_event.py          caught (test failed)
+M7    new buy queue one share too long                     test_m07_event.py          caught (test failed)
+caught 15/15
+
+No real bar file was opened: every test uses synthetic bars or synthetic MANIFEST/npz files in a scratch folder
+outside the repository. The development grid has not been run.

@@ -1,0 +1,21 @@
+{
+ "rule": "E12|E2off|E3off|E4off",
+ "mean_of_years_R": 2.611037291684429,
+ "best_rule": "E12|E2off|E3on|E4off",
+ "best_mean_of_years_R": 2.611037291684429,
+ "candidates_within_0.05": [
+  "E12|E2off|E3off|E4off",
+  "E11|E2off|E3off|E4off",
+  "E12|E2off|E3on|E4off",
+  "E11|E2off|E3on|E4off"
+ ],
+ "n_combinations": 36,
+ "baselines_mean_of_years_R": {
+  "S0": 3.7950419031048472,
+  "S1": 3.7467001134177664,
+  "S2": 3.004462571193656,
+  "S2i": 2.6796470076600856
+ },
+ "rule_text": "min mean over 2015-2020 of the yearly mean IS (R); within 0.05 c: fewer rules on, then larger E4 X (off largest), then mean, then name (DEVIATIONS15 23)",
+ "written": "2026-10-29 22:53 ET"
+}

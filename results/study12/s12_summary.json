@@ -1,0 +1,43 @@
+{
+ "source": "research12/results/dev_daily.csv (daily net R, dollars); shares from research12 results_external dev_fills.csv",
+ "scenario": "R (market 0.3 c/share, limit 0)",
+ "window": "09:45-15:55 (research 12 B0)",
+ "columns": {
+  "B0_Q": {
+   "setting": "B0",
+   "model": "Q",
+   "sharpe_annualized": -25.69148372829797,
+   "sharpe_2019": -47.099652109052506,
+   "sharpe_2020": -27.509736371030645,
+   "net_usd": -2140090.747,
+   "pnl_per_share_cents": -1.7948722063243916,
+   "limit_shares": 107784401,
+   "market_shares": 11449199,
+   "days": 505
+  },
+  "B0_T": {
+   "setting": "B0",
+   "model": "T",
+   "sharpe_annualized": 8.949063167618641,
+   "sharpe_2019": 5.531841936917307,
+   "sharpe_2020": 13.190189122472342,
+   "net_usd": 925336.4,
+   "pnl_per_share_cents": 0.23875656406360948,
+   "limit_shares": 364128600,
+   "market_shares": 23436200,
+   "days": 505
+  },
+  "best_tuned": {
+   "setting": "C_all",
+   "model": "Q",
+   "sharpe_annualized": -11.131420507441309,
+   "sharpe_2019": -13.316953690193094,
+   "sharpe_2020": -11.952071487166886,
+   "net_usd": -738931.463,
+   "pnl_per_share_cents": -1.5687945903285097,
+   "limit_shares": 43508121,
+   "market_shares": 3593741,
+   "days": 505
+  }
+ }
+}

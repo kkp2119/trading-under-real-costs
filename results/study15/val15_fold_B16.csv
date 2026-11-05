@@ -1,0 +1,2 @@
+setting,sharpe_R,sharpe_Rp,net_R_usd,net_Rp_usd,mean_day_R,sh_lim,sh_mkt,n_fill_ev,n_mkt_fills,pnl_per_share_R_cents,pnl_per_share_Rp_cents,markout5_cents,markout30_cents,markout60_cents,open_R_usd,open_R+_usd,mid_R_usd,mid_R+_usd,close_R_usd,close_R+_usd
+lgb_l127_m1000|v60|P1|0.5,,,0.0,0.0,0.0,0,0,0,0,,,,,,0.0,0.0,0.0,0.0,0.0,0.0

@@ -1,0 +1,55 @@
+Research 14 shell: freeze test report (code-freeze-14)
+written 2026-10-28 21:34 ET · SPEC14.md 77497023f66da1b0137bbb23c19810a4fbe9af977cd5df8058b87e1079e8e4c2 (spec14-v1, c6eeaf7)
+frozen research 13 modules: code-freeze-13 manifest 58267d6c727b76ac4fed982b1b08a674f7d1a67d201b3e727a73750b30f4b162; check equal (13 modules)
+
+1. Synthetic tests (pytest, R13_TEST_DIR outside the repository; no real data file opened, no holdout path)
+   19 passed in 45.14s
+   PASSED test_holdout14.py::test_constants_judged_level_bounds_and_hashes
+   PASSED test_holdout14.py::test_bounds_equal_the_research13_development_files
+   PASSED test_holdout14.py::test_frozen_modules_equal_the_code_freeze_13_manifest
+   PASSED test_holdout14.py::test_gitignore_keeps_the_unlock_file_out_of_the_tree
+   PASSED test_holdout14.py::test_98_33_percentiles_come_from_the_same_resample_and_are_wider
+   PASSED test_holdout14.py::test_verdict_judges_on_the_98_33_ci_not_the_95_ci
+   PASSED test_holdout14.py::test_each_setting_uses_its_own_downgrade_and_tail_boundary
+   PASSED test_holdout14.py::test_each_start_check_refuses[1-dev_daily.csv]
+   PASSED test_holdout14.py::test_each_start_check_refuses[2-dev_summary.json]
+   PASSED test_holdout14.py::test_each_start_check_refuses[3-dev_settings.csv]
+   PASSED test_holdout14.py::test_start_check_4_frozen_modules
+   PASSED test_holdout14.py::test_each_refusal_condition_blocks_and_leaves_no_file
+   PASSED test_holdout14.py::test_needs_go
+   PASSED test_holdout14.py::test_dev_mismatch_stops_before_any_holdout_file
+   PASSED test_holdout14.py::test_rehearsal_a_out_of_range_iv_does_not_stop
+   PASSED test_holdout14.py::test_results_written_once_atomically_with_required_items
+   PASSED test_holdout14.py::test_rehearsal_c_second_run_refused_on_the_screen_only
+   PASSED test_holdout14.py::test_rehearsal_b_invariant_stop_leaks_nothing
+   PASSED test_holdout14.py::test_nothing_is_written_before_the_statistics_finish
+
+2. Mutation check (SPEC14 9 list; each mutant on a scratch copy of research13, study14 tests -x)
+   1 refusal 1 removed (results exist)                  caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   2 refusal 2 removed (tags)                           caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   3 refusal 3 removed (clean tree)                     caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   4 refusal 4 removed (unlock file)                    caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   5 refusal 5 removed (frozen modules)                 caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   6 refusal 6 removed (data manifest)                  caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   7 refusal 7 removed (end date)                       caught | test_each_refusal_condition_blocks_and_leaves_no_file
+   8 start check 1 removed (dev_daily.csv)              caught | test_each_start_check_refuses[1-dev_daily.csv]
+   9 start check 2 removed (dev_summary.json)           caught | test_each_start_check_refuses[2-dev_summary.json]
+   10 start check 3 removed (dev_settings.csv)          caught | test_each_start_check_refuses[3-dev_settings.csv]
+   11 start check 4 removed (frozen modules)            caught | test_start_check_4_frozen_modules
+   12 development identity check skipped                caught | test_dev_mismatch_stops_before_any_holdout_file
+   13 judged setting changed (O9 -> O10)                caught | test_constants_judged_level_bounds_and_hashes
+   14 judged setting dropped (O9)                       caught | test_constants_judged_level_bounds_and_hashes
+   15 verdict on the 95 % CI                            caught | test_verdict_judges_on_the_98_33_ci_not_the_95_ci
+   16 d_dev swapped between O2 and O9                   caught | test_constants_judged_level_bounds_and_hashes
+   17 development MaxDD swapped between O2 and O9       caught | test_constants_judged_level_bounds_and_hashes
+   18 bound rounded (O2 d_dev 0.2541)                   caught | test_constants_judged_level_bounds_and_hashes
+   19 a result file written in the middle               caught | test_nothing_is_written_before_the_statistics_finish
+   20 refusal reasons written to results14              caught | test_each_start_check_refuses[1-dev_daily.csv]
+   20 / 20 caught
+
+3. Freeze checklist (SPEC14 10)
+   1 SPEC14 reviewed, approved, committed, tag spec14-v1 (c6eeaf7) .... done
+   2 run_holdout14.py, .gitignore entry, synthetic tests, mutation ........ done (sections 1, 2)
+   3 CODE_FREEZE_MANIFEST14.tsv ............................................ done
+   4 Kyle 'commit', tag code-freeze-14 ...................................... this commit
+   5 Kyle types UNLOCK HOLDOUT 14, single run, tag holdout-run-14 ........... pending

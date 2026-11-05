@@ -1,0 +1,288 @@
+Research 13 engine: freeze test report (code-freeze-13)
+written 2026-10-28 19:47 ET · SPEC.md 3d7dd482126b949c053c9504ccc2e87e81d092953d3c09a96f935dd6d9e073f4 · SPEC_AMENDMENTS.md (A13-1..A13-4) 72f256c5d876ffc13498eb52ab02c3864eee4b63c7f32990ba1372a75ba1731e
+memo 4b v2 e82942ef4def60d55a0fff96f40769c698a56889f861424acbbfc4fba4b6d8d0 · A13-4 approved 2026-10-28 19:21 ET (approved text: draft 3 178007820d7332d7b41e0d6006c881adf431d8ea18191fed91c697fabd1767ca)
+environment: /opt/miniconda3/bin/python (pandas 2.2.3, numpy 2.3.5, scipy 1.18.1; numba absent -> A13-4 N4)
+
+1. Synthetic tests (pytest, R13_TEST_DIR outside the repository; no real data file opened)
+   83 passed in 258.74s (0:04:18)
+   PASSED test_engine.py::test_m1_identity
+   PASSED test_engine.py::test_m5_cost_monotone_every_day
+   PASSED test_engine.py::test_spec_constants
+   PASSED test_engine.py::test_hedge_pnl_attributed_next_day
+   PASSED test_engine.py::test_hedge_is_plus_sum_q_delta_on_entry_day
+   PASSED test_engine.py::test_fees_per_contract_per_side
+   PASSED test_engine.py::test_forward_is_parity_on_tau025_chain
+   PASSED test_engine.py::test_m3_fair_iv_mean_zero
+   PASSED test_engine.py::test_m4_rich_iv_positive_and_near_theory
+   PASSED test_engine.py::test_m6_no_lookahead_in_gates_and_sizing
+   PASSED test_engine.py::test_m7_tranche_count_and_notional
+   PASSED test_engine.py::test_m8_last_chance_rules
+   PASSED test_engine.py::test_m8_exit_timing
+   PASSED test_engine.py::test_n1_boundary_exit_on_the_actual_h_th_business_day
+   PASSED test_engine.py::test_n1_deferral_counted_in_processed_days_across_the_boundary
+   PASSED test_engine.py::test_m8_exit_exactly_on_schedule_without_deferrals
+   PASSED test_engine.py::test_m8_holiday_week_deferral_to_wednesday
+   PASSED test_engine.py::test_m9_fallback_uses_last_valid_iv_and_u_and_jump
+   PASSED test_engine.py::test_m9_theta_sign
+   PASSED test_engine.py::test_e13_04_missing_row_is_invalid_and_e13_06_delta
+   PASSED test_engine.py::test_e13_05_u_weights_by_q_and_skips_new_legs
+   PASSED test_engine.py::test_m10_sizing
+   PASSED test_engine.py::test_m11_bit_identical_rerun
+   PASSED test_engine.py::test_m12_clean_tree_and_lock_order
+   PASSED test_engine.py::test_m14_verdict_boundaries
+   PASSED test_engine.py::test_m15_bootstrap_coverage
+   PASSED test_engine.py::test_ci_uses_block_21_and_seed_13
+   PASSED test_engine.py::test_m17_each_refusal_blocks
+   PASSED test_engine.py::test_m18_continuous_equals_dev_only_and_no_holdout_access
+   PASSED test_engine.py::test_market_refuses_later_year
+   PASSED test_engine.py::test_m19_defects
+   PASSED test_engine.py::test_select_tie_rule_uses_the_best_only
+   PASSED test_engine.py::test_stats_start_is_plus_43
+   PASSED test_engine.py::test_e13_12_drawdown_and_calmar_by_hand
+   PASSED test_engine.py::test_rule5_held_leg_keeps_its_expiry_chain_when_1_and_2_share_a_month
+   PASSED test_engine.py::test_8d_first_row_in_stored_order_nan_rates_dropped_and_counted
+   PASSED test_engine.py::test_8e_moved_exdate_uses_the_row_chain_and_the_entry_settlement
+   PASSED test_engine.py::test_leg_tracked_by_optionid_not_by_contract_terms
+   PASSED test_engine.py::test_rehearsal_a_out_of_range_iv_does_not_stop
+   PASSED test_engine.py::test_rehearsal_d_holdout_duplicates_and_nan_rates_do_not_stop
+   PASSED test_engine.py::test_n2_no_entry_on_the_data_end_day
+   PASSED test_engine.py::test_rehearsal_b_invariant_stop_leaks_nothing
+   PASSED test_engine.py::test_rehearsal_c_second_run_refused
+   PASSED test_engine.py::test_e13_02_dev_iv_out_of_range_stops
+   PASSED test_engine.py::test_run_dev_refuses_second_run
+   PASSED test_engine.py::test_n3_both_behaviours_and_refusal
+   PASSED test_engine.py::test_n2_forced_run_refuses_while_undecided
+   PASSED test_chain.py::test_m16_kinds_and_settlement
+   PASSED test_chain.py::test_m16_calendar_end_rule
+   PASSED test_chain.py::test_m16_standard_mask_rules
+   PASSED test_chain.py::test_m16_roots_merge_and_dedupe_order
+   PASSED test_chain.py::test_valid_quote_and_iv
+   PASSED test_chain.py::test_m19_range_status_and_structural_gap_is_not_a_defect
+   PASSED test_chain.py::test_m20a_identical_to_v1_rule_when_forward_price_is_null
+   PASSED test_chain.py::test_m20b_independent_of_forward_price
+   PASSED test_chain.py::test_m20c_rates_previous_curve_flat_and_none
+   PASSED test_chain.py::test_m20d_a3_prime_exclusions_and_ties
+   PASSED test_chain.py::test_m2_known_values_and_parity
+   PASSED test_dataio.py::test_split_guard_names_and_sql
+   PASSED test_dataio.py::test_select_lists_only_memo_columns
+   PASSED test_dataio.py::test_to_arrays_types_nulls_empty_and_all_null_frames
+   PASSED test_dataio.py::test_to_arrays_rejects_values_outside_kind[cp_flag-X]
+   PASSED test_dataio.py::test_to_arrays_rejects_values_outside_kind[date-None]
+   PASSED test_dataio.py::test_to_arrays_rejects_values_outside_kind[optionid-1.5]
+   PASSED test_dataio.py::test_to_arrays_rejects_values_outside_kind[strike_price-abc]
+   PASSED test_dataio.py::test_check_dates_bounds
+   PASSED test_dataio.py::test_content_hash_is_stable_across_rewrites
+   PASSED test_dataio.py::test_s2_writes_typed_files_manifest_and_code_version
+   PASSED test_dataio.py::test_resume_skips_and_never_overwrites
+   PASSED test_dataio.py::test_leftover_part_is_rewritten
+   PASSED test_dataio.py::test_query_error_rolls_back_and_stops_at_first_failure
+   PASSED test_dataio.py::test_table_check_error_is_a_stop
+   PASSED test_dataio.py::test_out_of_range_row_stops_without_writing
+   PASSED test_dataio.py::test_warning_is_a_failure
+   PASSED test_dataio.py::test_disk_floor_and_missing_tables_stop_before_writing
+   PASSED test_dataio.py::test_cli_refuses_without_go
+   PASSED test_dataio.py::test_holdout_store_locked_until_unlock_file
+   PASSED test_dataio.py::test_calendar_dev_union_bits
+   PASSED test_dataio.py::test_holdout_end_date_and_truncated_calendar_idempotent
+   PASSED test_dataio.py::test_finalize_reads_only_dates_and_has_close
+   PASSED test_dataio.py::test_s4b_after_s4a
+   PASSED test_dataio.py::test_meta_statements_select_no_values
+   PASSED test_dataio.py::test_run_meta_on_fake
+
+2. Mutation check (memo 4b v2 9.3 items 1-22, A13-4 items 23-30; each mutant on a scratch copy, tests -x)
+   1 signal read on d instead of d-1                    caught | test_m6_no_lookahead_in_gates_and_sizing
+   2 size with S of d-1                                 caught | test_m6_no_lookahead_in_gates_and_sizing
+   3 H business days off by one                         caught
+   4 DTE <= 5 becomes <= 4                              caught | test_n1_boundary_exit_on_the_actual_h_th_business_day
+   5 deferral ignores the last trading day              caught | test_m8_last_chance_rules
+   6 kappa scenarios swapped                            caught | test_m5_cost_monotone_every_day
+   7 hedge P&L with today's position                    caught | test_hedge_pnl_attributed_next_day
+   8 hedge sign flipped                                 caught | test_hedge_is_plus_sum_q_delta_on_entry_day
+   9 fees only on the open side                         caught | test_fees_per_contract_per_side
+   10 fallback with today's IV                          caught | test_m9_fallback_uses_last_valid_iv_and_u_and_jump
+   11 forward not from parity                           caught | test_forward_is_parity_on_tau025_chain
+   12 u_t by leg count                                  caught | test_m9_fallback_uses_last_valid_iv_and_u_and_jump
+   13 structural gap counted as defect                  caught | test_m19_defects
+   14 tie rule chained                                  caught | test_select_tie_rule_uses_the_best_only
+   15 bootstrap block 10                                caught | test_spec_constants
+   16 simultaneous (a)(b) -> (a)                        caught | test_m14_verdict_boundaries
+   17 no forced close at data end                       caught | test_m18_continuous_equals_dev_only_and_no_holdout_access
+   18 forced close on the development last day          caught | test_rehearsal_a_out_of_range_iv_does_not_stop
+   19 legs tracked by contract terms                    caught | test_8e_moved_exdate_uses_the_row_chain_and_the_entry_settlement
+   20 statistics start +21                              caught | test_spec_constants
+   21 read ahead across the split                       caught | test_n1_boundary_exit_on_the_actual_h_th_business_day
+   22 stop on an out-of-range holdout value             caught | test_rehearsal_a_out_of_range_iv_does_not_stop
+   23 N2: entries on the data-end day                   caught | test_n2_no_entry_on_the_data_end_day
+   24 N3: missing close makes RV21 missing              caught | test_n2_no_entry_on_the_data_end_day
+   25 N1: H counted in weekdays                         caught | test_n1_boundary_exit_on_the_actual_h_th_business_day
+   26 N1: deferral counted in weekdays                  caught | test_n1_deferral_counted_in_processed_days_across_the_boundary
+   27 N1: next calendar day instead of next business day caught | test_m8_last_chance_rules
+   28 rule 5: held legs and forwards from the standard monthly only caught | test_rule5_held_leg_keeps_its_expiry_chain_when_1_and_2_share_a_month
+   29 8d: duplicate rows stop the run                   caught | test_8d_first_row_in_stored_order_nan_rates_dropped_and_counted
+   30 8e: chain of the entry exdate                     caught | test_8e_moved_exdate_uses_the_row_chain_and_the_entry_settlement
+   30 / 30 caught
+
+3. M13 independent reference (tests/ref/refsim13.py by a separate agent from the documents in tests/ref/BRIEF.md)
+   reference aligned post hoc to A13-4 rule 5 (REF_NOTES.md section 4) and 8d/8e (section 5);
+   engine/reference comparison table: tests/ref/REF_NOTES_vs_engine.md
+   synthetic (tests/ref/compare_ref.py): worlds clean, injected, missing_close (N3), rule5 (8b), dup_nan (8d),
+     exdate_change (8e); 5 x 3-month windows each, 11 settings x 3 scenarios
+     (columns: setting pass_days fail_days max_rel_err dates_equal):
+     clean:
+       O0 327 0 0.0 True
+       O1 327 0 0.0 True
+       O10 327 0 0.0 True
+       O2 327 0 0.0 True
+       O3 327 0 0.0 True
+       O4 327 0 0.0 True
+       O5 327 0 0.0 True
+       O6 327 0 0.0 True
+       O7 327 0 0.0 True
+       O8 327 0 0.0 True
+       O9 327 0 0.0 True
+     injected:
+       O0 323 0 0.0 True
+       O1 323 0 0.0 True
+       O10 323 0 0.0 True
+       O2 323 0 0.0 True
+       O3 323 0 0.0 True
+       O4 323 0 0.0 True
+       O5 323 0 0.0 True
+       O6 323 0 0.0 True
+       O7 323 0 0.0 True
+       O8 323 0 0.0 True
+       O9 323 0 0.0 True
+     missing_close:
+       O0 323 0 0.0 True
+       O1 323 0 0.0 True
+       O10 323 0 0.0 True
+       O2 323 0 0.0 True
+       O3 323 0 0.0 True
+       O4 323 0 0.0 True
+       O5 323 0 0.0 True
+       O6 323 0 0.0 True
+       O7 323 0 0.0 True
+       O8 323 0 0.0 True
+       O9 323 0 0.0 True
+     rule5:
+       O0 323 0 0.0 True
+       O1 323 0 0.0 True
+       O10 323 0 0.0 True
+       O2 323 0 0.0 True
+       O3 323 0 0.0 True
+       O4 323 0 0.0 True
+       O5 323 0 0.0 True
+       O6 323 0 0.0 True
+       O7 323 0 0.0 True
+       O8 323 0 0.0 True
+       O9 323 0 0.0 True
+       rule5 world activity: {'nonstd_fwd_parity': 2936, 'nonstd_fwd_spot': 904, 'exdate_moved_leg_days': 0, 'opprcd_dup_rows': 0, 'secprd_dup_rows': 0, 'vsurfd_dup_rows': 0, 'zerocd_nan_rows': 0, 'zerocd_dup_rows': 0}
+     dup_nan:
+       O0 323 0 0.0 True
+       O1 323 0 0.0 True
+       O10 323 0 0.0 True
+       O2 323 0 0.0 True
+       O3 323 0 0.0 True
+       O4 323 0 0.0 True
+       O5 323 0 0.0 True
+       O6 323 0 0.0 True
+       O7 323 0 0.0 True
+       O8 323 0 0.0 True
+       O9 323 0 0.0 True
+       dup_nan world activity: {'nonstd_fwd_parity': 0, 'nonstd_fwd_spot': 360, 'exdate_moved_leg_days': 0, 'opprcd_dup_rows': 60480, 'secprd_dup_rows': 52, 'vsurfd_dup_rows': 104, 'zerocd_nan_rows': 400, 'zerocd_dup_rows': 200}
+     exdate_change:
+       O0 323 0 0.0 True
+       O1 323 0 0.0 True
+       O10 323 0 0.0 True
+       O2 323 0 0.0 True
+       O3 323 0 0.0 True
+       O4 323 0 0.0 True
+       O5 323 0 0.0 True
+       O6 323 0 0.0 True
+       O7 323 0 0.0 True
+       O8 323 0 0.0 True
+       O9 323 0 0.0 True
+       exdate_change world activity: {'nonstd_fwd_parity': 1094, 'nonstd_fwd_spot': 1421, 'exdate_moved_leg_days': 38284, 'opprcd_dup_rows': 0, 'secprd_dup_rows': 0, 'vsurfd_dup_rows': 0, 'zerocd_nan_rows': 0, 'zerocd_dup_rows': 0}
+     non-vacuity: the engine before rule 5 differs from the aligned reference on 2470 setting-days (rule5)
+     non-vacuity: dup_nan: engine before 8d/8e stops: InvalidIndexError
+     non-vacuity: exdate_change: engine before 8d/8e vs aligned reference: failing setting-days 631, settings with a failure 11
+   real development data (tests/ref/m13_real.py, Kyle permission 2026-10-28): counts and maximum relative error only
+     windows (seed 13): [(19981201, 19990226), (20001002, 20001229), (20031103, 20040130), (20050502, 20050729), (20060103, 20060331)]
+     window	setting	pass_days	fail_days	max_rel_err
+     19981201-19990226	O0	60	0	0.000e+00
+     19981201-19990226	O1	60	0	0.000e+00
+     19981201-19990226	O2	60	0	0.000e+00
+     19981201-19990226	O3	60	0	0.000e+00
+     19981201-19990226	O4	60	0	0.000e+00
+     19981201-19990226	O5	60	0	0.000e+00
+     19981201-19990226	O6	60	0	0.000e+00
+     19981201-19990226	O7	60	0	0.000e+00
+     19981201-19990226	O8	60	0	0.000e+00
+     19981201-19990226	O9	60	0	0.000e+00
+     19981201-19990226	O10	60	0	0.000e+00
+     20001002-20001229	O0	63	0	0.000e+00
+     20001002-20001229	O1	63	0	0.000e+00
+     20001002-20001229	O2	63	0	0.000e+00
+     20001002-20001229	O3	63	0	0.000e+00
+     20001002-20001229	O4	63	0	0.000e+00
+     20001002-20001229	O5	63	0	0.000e+00
+     20001002-20001229	O6	63	0	0.000e+00
+     20001002-20001229	O7	63	0	0.000e+00
+     20001002-20001229	O8	63	0	0.000e+00
+     20001002-20001229	O9	63	0	0.000e+00
+     20001002-20001229	O10	63	0	0.000e+00
+     20031103-20040130	O0	61	0	0.000e+00
+     20031103-20040130	O1	61	0	0.000e+00
+     20031103-20040130	O2	61	0	0.000e+00
+     20031103-20040130	O3	61	0	0.000e+00
+     20031103-20040130	O4	61	0	0.000e+00
+     20031103-20040130	O5	61	0	0.000e+00
+     20031103-20040130	O6	61	0	0.000e+00
+     20031103-20040130	O7	61	0	0.000e+00
+     20031103-20040130	O8	61	0	0.000e+00
+     20031103-20040130	O9	61	0	0.000e+00
+     20031103-20040130	O10	61	0	0.000e+00
+     20050502-20050729	O0	63	0	0.000e+00
+     20050502-20050729	O1	63	0	0.000e+00
+     20050502-20050729	O2	63	0	0.000e+00
+     20050502-20050729	O3	63	0	0.000e+00
+     20050502-20050729	O4	63	0	0.000e+00
+     20050502-20050729	O5	63	0	0.000e+00
+     20050502-20050729	O6	63	0	0.000e+00
+     20050502-20050729	O7	63	0	0.000e+00
+     20050502-20050729	O8	63	0	0.000e+00
+     20050502-20050729	O9	63	0	0.000e+00
+     20050502-20050729	O10	63	0	0.000e+00
+     20060103-20060331	O0	62	0	0.000e+00
+     20060103-20060331	O1	62	0	0.000e+00
+     20060103-20060331	O2	62	0	0.000e+00
+     20060103-20060331	O3	62	0	0.000e+00
+     20060103-20060331	O4	62	0	0.000e+00
+     20060103-20060331	O5	62	0	0.000e+00
+     20060103-20060331	O6	62	0	0.000e+00
+     20060103-20060331	O7	62	0	0.000e+00
+     20060103-20060331	O8	62	0	0.000e+00
+     20060103-20060331	O9	62	0	0.000e+00
+     20060103-20060331	O10	62	0	0.000e+00
+     read paths 25, holdout paths 0
+
+4. Real-data use before freeze (development files only; counts, hashes and relative errors only)
+   loader and chain construction on 119 development sample days; the M13 windows above
+   engine before and after rule 5 on the 5 windows: windows 5, setting-days compared 3399, differing ledger rows 0, settings with differing leg logs 0, read paths 25, holdout paths 0
+   engine before and after 8d/8e on the 5 windows (sha256 of each ledger without the 8e column and of the leg log):
+     before 8d/8e: windows 5, rows 55, exdate_moved leg-days 0, fixes {}, read paths 25, holdout paths 0
+     after 8d/8e: windows 5, rows 55, exdate_moved leg-days 0, fixes {'opprcd_dup_rows': 0, 'secprd_dup_rows': 0, 'vsurfd_dup_rows': 0, 'zerocd_nan_rows': 0, 'zerocd_dup_rows': 0}, read paths 25, holdout paths 0
+     hash files: IDENTICAL
+   counts on all development files (53): duplicate keys and invalid values (REF_NOTES comparison, 8d):
+   {'secprd_dup_date': 0, 'vsurfd_dup_key': 0, 'vsurfd_iv30_le0': 0, 'opprcd_dup_oid_date': 0, 'zerocd_nan': 0, 'zerocd_dup_date_days': 0} files read 53, holdout paths 0
+   No development run (run_dev.py not executed), no holdout path read.
+
+5. Memo 4b v2 section 12 checklist
+   1 A13-3 + memo 4b v2 approved and committed (0baeed3) .............. done
+   2 implementation + synthetic M1-M20 (M13 real separately) .......... done (section 1)
+   3 mutation >= 12, all caught ........................................ done (section 2)
+   4 M13 reference comparison ........................................... done (section 3)
+   5 holdout rehearsal (refusals 7, M18, A13-3 rehearsal a-c, 8d d) ... done
+   6 CODE_FREEZE_MANIFEST.tsv ............................................ done
+   7 Kyle 'commit', tag code-freeze-13 ................................... this commit
+   8 A13-4 approval and commit (N1-N6, 8a-8e) ........................... approved 2026-10-28 19:21 ET, this commit

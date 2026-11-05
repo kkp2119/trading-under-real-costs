@@ -1,0 +1,112 @@
+{
+ "written": "2026-10-30 06:22 ET",
+ "gate_file_sha256": "e67ca02c43650340be9e4ed3ca4b5f78ea9aac9f7289a2e9fbe3d6a79dbef6ba",
+ "trials_cumulative": 692,
+ "raw_manifest": {
+  "crsp_dsf.npz": "cb45171a6e419c93853f0cb3eb38a0d2454f217415f9fc76fe8781246ce14f85",
+  "crsp_dsenames.csv": "b8f5b88cc5a4d9e013f675860be19fdf94b6d179715bab4b06ba9c2832138080"
+ },
+ "G_cents_round_trip": -0.04918452913494211,
+ "G_loop_check": -0.049184529134947544,
+ "ci95_cents": [
+  -1.1382670426648582,
+  0.9303109385736834
+ ],
+ "bootstrap": {
+  "block": 21,
+  "B": 10000,
+  "seed": 16,
+  "days": 1510
+ },
+ "costs_round_trip_cents": {
+  "Estar": 5.2,
+  "S0": 7.6
+ },
+ "verdict": "멈춤",
+ "verdict_reason": "G < 5.2: E*로도 못 살린다",
+ "G_bp": -0.13530592714785933,
+ "secondary": {
+  "by_spread": {
+   "3-5c": {
+    "G_cents": 0.2908461874738408,
+    "positions": 169151
+   },
+   "6-8c": {
+    "G_cents": -2.1185301470483475,
+    "positions": 30386
+   },
+   "9-12c": {
+    "G_cents": -0.8898814581896706,
+    "positions": 20259
+   }
+  },
+  "by_year": {
+   "2015": {
+    "G_cents": 0.26717549189190715,
+    "positions": 30983
+   },
+   "2016": {
+    "G_cents": 1.3118255748218712,
+    "positions": 25383
+   },
+   "2017": {
+    "G_cents": 0.9751168133580472,
+    "positions": 42518
+   },
+   "2018": {
+    "G_cents": 0.8784724817161178,
+    "positions": 42107
+   },
+   "2019": {
+    "G_cents": 0.5268334745685144,
+    "positions": 35763
+   },
+   "2020": {
+    "G_cents": -3.4001197061764734,
+    "positions": 43042
+   }
+  },
+  "hold_2day_G_cents": 0.27841913036626387,
+  "hold_2day_positions": 219544,
+  "hold_2day_excluded": 432
+ },
+ "signal_days": 1510,
+ "traded_days": 1510,
+ "days_below_40": 0,
+ "universe_mean": 366.23774834437086,
+ "universe_min": 113,
+ "universe_max": 811,
+ "long_per_day_mean": 72.83973509933774,
+ "short_per_day_mean": 72.83973509933774,
+ "positions": 219976,
+ "positions_used": 219796,
+ "excluded_no_mid_t1": 180,
+ "first_signal": 20150102,
+ "last_signal": 20201230,
+ "checks": {
+  "G_vectorized_equals_loop_6dp": true,
+  "hand_check_3_dates": [
+   {
+    "date": 20180326,
+    "n_universe": 465,
+    "k": 93,
+    "match": true
+   },
+   {
+    "date": 20180525,
+    "n_universe": 484,
+    "k": 96,
+    "match": true
+   },
+   {
+    "date": 20191210,
+    "n_universe": 390,
+    "k": 78,
+    "match": true
+   }
+  ],
+  "no_date_after_2020": true
+ },
+ "dividends": "ignored (adjusted quote midpoints only)",
+ "seconds": 12
+}

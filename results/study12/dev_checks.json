@@ -1,0 +1,14 @@
+{
+ "skipped_symbol_days": {
+  "0": 133380,
+  "1": 378,
+  "2": 27
+ },
+ "gate_failed": 14,
+ "observation_days": 505,
+ "absent_listed": 95,
+ "mkt_over_display": 192409,
+ "mkt_on_stale_quote": 1661,
+ "flat_after_close": true,
+ "record_rerun_identical": true
+}

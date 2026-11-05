@@ -1,0 +1,37 @@
+path	bytes	sha256	note
+research13/study14/run_holdout14.py	13551	ad99d5c9f059feb5d9e1531d96397d59663a8077995c76a80deb32c45df32e9b	
+research13/.gitignore	106	ba22b995c84a7f2c17b46d22bea6eb6391c02e703e1351a0947991504277a69e	adds study14/results14/HOLDOUT_UNLOCKED
+research13/study14/tests/conftest.py	721	2f28093c93d2e5a716c50c240a97c193ce7451352f1a625448db6b4e4333aae2	
+research13/study14/tests/test_holdout14.py	15639	4bbad2cebe805fb2d63e537b50a7109831614ab3c6bdc6bd3eeb02ba33e60d87	
+research13/study14/FREEZE_TEST_REPORT14.txt	4809	71d0eabf77733398f8fb26b80c978e90a56a57237f391af34a2179f838d1b143	
+research13/study14/SPEC14.md	24390	77497023f66da1b0137bbb23c19810a4fbe9af977cd5df8058b87e1079e8e4c2	
+research13/tests/synth13.py	9879	65cc87f59d3f99d650942cea51dab6ca4dbc6fb9e0761c4aa8553c873f7cef53	synthetic world used by the study14 tests (code-freeze-13)
+research13/CODE_FREEZE_MANIFEST.tsv	4776	58267d6c727b76ac4fed982b1b08a674f7d1a67d201b3e727a73750b30f4b162	code-freeze-13 manifest
+research13/config13.py	2939	3dfdbccae5ef2a20468f21c76889a495c6a5ef9b523e9f1e762b18052a8c98d2	frozen research 13 module (import only)
+research13/market.py	12839	c99be7dd6eb2e557b0e9aeaee3180f0524b281fa43e7e08ca2fd32a423be3b45	frozen research 13 module (import only)
+research13/signals.py	1385	43c47a232dd8a4bc0aecb8eba0ab031f0a1720e71b147ee223ccfa3c699a47fc	frozen research 13 module (import only)
+research13/ladder.py	13133	aa9be1d3e79b64cc7e8011c4e3477233e21c31d3e9239ae32216872fa777eecd	frozen research 13 module (import only)
+research13/costs.py	1022	9501de2f3dc2bdd184908db7d8e417b10374c4bd23753b09566f62a8ccd83b02	frozen research 13 module (import only)
+research13/accounting.py	2387	747f75fac6cf3a544c75194d769936694003f22c5253dc6cbc44ac6e73207214	frozen research 13 module (import only)
+research13/stats13.py	6496	a55b98c4525e3cdf4b2a67616231bf8c8a78536b624ebc09880a8cfcbf1ea853	frozen research 13 module (import only)
+research13/select13.py	1632	09f413a0e824231af9aa1fced7e4eea508bd23046ec708ab5e6ff04e6b6b3ada	frozen research 13 module (import only)
+research13/results13.py	3236	c64c14e45f305bd1dffc822ddf3b8851feaf9af10e1998c154766230979196a5	frozen research 13 module (import only)
+research13/run_dev.py	6241	bf2aea18365650e4a00f38682a8f835a22974c8a1e50fc8081ec018d8b6de570	frozen research 13 module (import only)
+research13/run_holdout.py	9683	90bf531e79d53196151798a7d1db6791744020180a303c98e220264fc6aeb9c9	frozen research 13 module (import only)
+research13/chain.py	9817	a4d83092f520195f3d8eaa9c683af7eca24098ff658498f9a4cbb6b80201a349	frozen research 13 module (import only)
+research13/omdata.py	13901	1acd0f7b6d2b75c59a1d74bbbe4abb59d532295a64cd37ee6e73f6f9d59d81e0	frozen research 13 module (import only)
+research13/results/dev_daily.csv	2639664	b6822a0a00428959c046f21726f29957260f49b7c885de3a7305ae9728b5c7f8	research 13 development result (start check)
+research13/results/dev_summary.json	17853	568663f8d8b777fe799062fd2f82e53675ee88380a3e111587ce903b5f434136	research 13 development result (start check)
+research13/results/dev_settings.csv	3515	51fccd2a713c313136f6e8127ac9e481aabdf8bf1f2938fd608ae4a2e0a272d6	research 13 development result (start check)
+judged			O2,O8,O9
+level			0.9833333333333333
+d_dev			O2=0.254073199527745,O8=0.2639905548996458,O9=0.2675324675324675
+max_drawdown_dev			O2=0.12206986737589562,O8=0.07828371970127149,O9=0.044234858519156345
+downgrade_threshold			O2=0.304073199527745,O8=0.3139905548996458,O9=0.3175324675324675
+tail_boundary			O2=0.18310480106384341,O8=0.11742557955190723,O9=0.06635228777873452
+bootstrap			block 21, B 10000, seed 13, same resample for every setting
+tags_required			spec14-v1,code-freeze-14
+results_dir			research13/study14/results14
+unlock_file			research13/study14/results14/HOLDOUT_UNLOCKED (omdata.UNLOCK)
+holdout			20130102..20250829
+status			FINAL, code-freeze-14; results14/ empty, holdout not opened

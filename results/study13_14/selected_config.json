@@ -1,0 +1,29 @@
+{
+ "candidate": null,
+ "candidates": [],
+ "stats_start": 19960306,
+ "dev_days": 4278,
+ "switch_table": {
+  "delta": "optionmetrics_then_bs_then_previous",
+  "T": "T1",
+  "nonstd": [
+   "m",
+   "w"
+  ]
+ },
+ "code_sha256": {
+  "config13.py": "3dfdbccae5ef2a20468f21c76889a495c6a5ef9b523e9f1e762b18052a8c98d2",
+  "market.py": "c99be7dd6eb2e557b0e9aeaee3180f0524b281fa43e7e08ca2fd32a423be3b45",
+  "signals.py": "43c47a232dd8a4bc0aecb8eba0ab031f0a1720e71b147ee223ccfa3c699a47fc",
+  "ladder.py": "aa9be1d3e79b64cc7e8011c4e3477233e21c31d3e9239ae32216872fa777eecd",
+  "costs.py": "9501de2f3dc2bdd184908db7d8e417b10374c4bd23753b09566f62a8ccd83b02",
+  "accounting.py": "747f75fac6cf3a544c75194d769936694003f22c5253dc6cbc44ac6e73207214",
+  "stats13.py": "a55b98c4525e3cdf4b2a67616231bf8c8a78536b624ebc09880a8cfcbf1ea853",
+  "select13.py": "09f413a0e824231af9aa1fced7e4eea508bd23046ec708ab5e6ff04e6b6b3ada",
+  "results13.py": "c64c14e45f305bd1dffc822ddf3b8851feaf9af10e1998c154766230979196a5",
+  "run_dev.py": "bf2aea18365650e4a00f38682a8f835a22974c8a1e50fc8081ec018d8b6de570",
+  "run_holdout.py": "90bf531e79d53196151798a7d1db6791744020180a303c98e220264fc6aeb9c9",
+  "chain.py": "a4d83092f520195f3d8eaa9c683af7eca24098ff658498f9a4cbb6b80201a349",
+  "omdata.py": "1acd0f7b6d2b75c59a1d74bbbe4abb59d532295a64cd37ee6e73f6f9d59d81e0"
+ }
+}
