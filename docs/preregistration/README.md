@@ -8,6 +8,7 @@ These are the original rule files, written before any result they govern was com
 | 13–14 | `SPEC.md`, `SPEC_AMENDMENTS.md`, `CODE_FREEZE_MANIFEST.tsv`, `FREEZE_TEST_REPORT.txt`, `dev_prediction_scoring.md`; Study 14: `SPEC14.md`, `CODE_FREEZE_MANIFEST14.tsv`, `FREEZE_TEST_REPORT14.txt`, `holdout_prediction_scoring14.md` |
 | 15 | `SPLIT15.md` (data split), `FEATURES15.md`, `EXEC15_DECLARATION.md`, `TEST15_DECLARATION.md` (sealed test rule), `TEST15_PREDICTIONS.md` and `test15_prediction_scoring.md`, `DEVIATIONS15.md` (deviations log) |
 | 16 | `GATE16.md`, `QUEUE16.md`, `ROBUST16.md`, `QTY16.md` with their `.sha256` files, and `DEVIATIONS16.md` |
+| 17 | `SPEC17.md` (plan), `SPEC17_QUESTIONS.md` and `SPEC17_ANSWERS.md` (open points and Kyle's answers), `FREEZE17.md` (A* and SHA-256 of the frozen files), `PREDICTIONS17.md`, `DEVIATIONS17.md` |
 
 **Changes from the originals.** The files in this public copy differ from the originals in three ways:
 - The "(Korean)" first line was added.

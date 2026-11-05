@@ -4,7 +4,7 @@
 Kyle Park · Columbia University, *Algorithmic Trading with Market Simulator* course project · Fall 2026
 
 > Two algorithms that tried to **earn** the bid–ask spread could not beat trading costs on unseen data.
-> One that tried to **pay less** of it saved 1.5¢ a share on six years of sealed data.
+> One that tried to **pay less** of it saved 1.5¢ a share on six years of sealed data, and 1.25¢ on 120 stocks we had never used.
 
 Data: WRDS TAQ (1-second quotes and trades), CRSP, OptionMetrics. Raw data are licensed and **not included** in this repository.
 
@@ -18,6 +18,7 @@ Data: WRDS TAQ (1-second quotes and trades), CRSP, OptionMetrics. Raw data are l
 | **Market Maker + ML** | Same, plus a LightGBM model that decides when to quote (each test year trained only on earlier years, from 2015) | Validation 2019–2020 | Loss cut to −1.05¢/share, Sharpe −3.7 (best setting, picked after the fact). Still fails |
 | **Option Seller** | S&P 500 options: sell a 1-month strangle every day, delta-hedge daily | Build 1996–2012 → **sealed 2013–Aug 2025**, opened once | Sharpe 0.55 → **0.10**. **Inconclusive**, near zero (pass bar 0.5; buy-and-hold S&P 500 was 0.77). A drawdown condition was dropped after seeing the build results; see docs. |
 | **Patient Trader** (execution) | 1,000-share orders with a 5-min deadline, 10 liquid US stocks a year | Picked on 2015–2020 → **sealed 2021–Oct 2026**, opened once (286,700 orders) | **−1.50¢/share vs. market orders** (95% CI −1.67 to −1.33), 2.75 bp; −1.40¢ vs. TWAP; Sharpe of daily savings 17.9; stress test on 2015–2020 build data with strict fill and depth rules: still −1.43¢ |
+| **Patient Trader, new stocks** | Same frozen rules on 20 never-used stocks a year, drawn at random | Sealed 2021–2026 on the new stocks, opened once (556,900 orders) | **−1.25¢/share vs. market orders** under the strictest fill rules (97.5% bound −1.14¢); negative in all 6 years. A spread switch picked on old data saved another 0.10¢: confirmed, but small |
 
 **Lesson:** the spread is the wall, from both sides. Market makers lose because the traders who hit their quotes know the price is about to move, even when the market maker stands first in line. A slow trader's edge is on the cost side: waiting 1¢ inside the spread instead of crossing it.
 
@@ -27,15 +28,16 @@ Data: WRDS TAQ (1-second quotes and trades), CRSP, OptionMetrics. Raw data are l
 
 ![Patient Trader: cumulative savings vs. market orders, 2015–2026](figures/patient_trader_savings.png)
 
-More figures are in the study summaries: [Study 12](docs/study12_market_maker.md) · [Studies 13–14](docs/study13_14_option_seller.md) · [Study 15](docs/study15_ml_and_execution.md) · [Study 16](docs/study16_followups.md)
+More figures are in the study summaries: [Study 12](docs/study12_market_maker.md) · [Studies 13–14](docs/study13_14_option_seller.md) · [Study 15](docs/study15_ml_and_execution.md) · [Study 16](docs/study16_followups.md) · [Study 17](docs/study17_new_stocks.md)
 
 ## How we kept the results honest
 
 1. **Rules first.** Every setting, cost assumption and pass/fail test was written down and committed (with a timestamp and hash) before any result was computed.
 2. **Build vs. sealed data.** Settings were chosen on a build period only. The sealed period was opened exactly once, with a typed unlock phrase, and never re-run.
-3. **Every try counted.** All configurations across all studies were logged (722 trials), and every departure from the plan is recorded in a deviations log.
+3. **Every try counted.** All configurations across all studies were logged (730 trials), and every departure from the plan is recorded in a deviations log.
 4. **Realistic costs.** Real bid–ask spreads, $0.003/share on market orders, fills that wait in line behind displayed orders, option bid/ask plus $1/contract, and before-cost results shown next to after-cost results.
 5. **Stress tests on the one positive result.** Stricter fill rules (only trades through our price; at most the displayed size) and a depth penalty for large market orders (run on the 2015–2020 build data).
+6. **Replication on new stocks.** A final pre-registered test on 120 stocks never used in any study, with predictions written down before the run (4 of 4 came true).
 
 ## Repository layout
 
@@ -49,26 +51,30 @@ trading-under-real-costs/
 │   ├── study12_market_maker.md
 │   ├── study13_14_option_seller.md
 │   ├── study15_ml_and_execution.md
-│   └── study16_followups.md
+│   ├── study16_followups.md
+│   └── study17_new_stocks.md
 ├── figures/    # made by src/common/make_figures.py from results/
 │   ├── ml_vs_no_ml.png
 │   ├── mm_cumulative_pnl.png
 │   ├── mm_queue_position.png
 │   ├── option_seller_cumulative.png
 │   ├── patient_trader_savings.png
-│   └── patient_trader_stress.png
+│   ├── patient_trader_stress.png
+│   └── replication_by_year.png
 ├── results/    # aggregated outputs only (daily P&L, summaries)
 │   ├── study12/
 │   ├── study13_14/
 │   ├── study15/
 │   ├── study16/
+│   ├── study17/    # sealed and development summaries, new-stock ticker lists
 │   └── universe_tickers.csv
 └── src/    # study code, copied as run (paths generalised)
     ├── common/
     ├── study12_market_maker/
     ├── study13_14_option_seller/
     ├── study15_ml_execution/
-    └── study16_followups/
+    ├── study16_followups/
+    └── study17_new_stocks/
 ```
 
 ## Reproducing

@@ -1,5 +1,6 @@
-"""Draw the six figures in figures/ from the aggregated files in results/ only (no licensed data needed).
+"""Draw the seven figures in figures/ from the aggregated files in results/ only (no licensed data needed).
   python src/common/make_figures.py"""
+import json
 import os
 
 import matplotlib
@@ -137,8 +138,26 @@ def patient_trader_stress():
     save(fig, "patient_trader_stress.png")
 
 
+def replication_by_year():
+    s = json.load(open(os.path.join(RES, "study17", "test17_summary.json"), encoding="utf-8"))
+    y = s["variants"]["L3D1"]["yearly"]
+    years, w = sorted(y["H1"]), 0.38
+    fig, ax = plt.subplots(figsize=(8, 4.5))
+    ax.bar([i - w / 2 for i in range(len(years))], [y["H1"][k]["mean_c"] for k in years], w, color=NAVY,
+           label="H1: E* − market order")
+    ax.bar([i + w / 2 for i in range(len(years))], [y["H2"][k]["mean_c"] for k in years], w, color=ORANGE,
+           label="H2: C3 − E*")
+    ax.axhline(0, color=GREY, lw=0.8)
+    ax.set_xticks(range(len(years)))
+    ax.set_xticklabels(years)
+    ax.set_ylabel("¢ per share (negative = cheaper)")
+    ax.set_title("Study 17: savings on 120 never-used stocks, by year (strictest fill rules)")
+    ax.legend(frameon=False, loc="upper center", bbox_to_anchor=(0.5, -0.08), ncol=2)
+    save(fig, "replication_by_year.png")
+
+
 if __name__ == "__main__":
     for f in (mm_cumulative_pnl, mm_queue_position, ml_vs_no_ml, option_seller_cumulative, patient_trader_savings,
-              patient_trader_stress):
+              patient_trader_stress, replication_by_year):
         f()
         print("wrote", f.__name__)
