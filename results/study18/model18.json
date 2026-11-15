@@ -1,0 +1,43 @@
+{
+ "features": [
+  "imbalance",
+  "spread_ticks",
+  "vol_pre",
+  "mid_change_5s"
+ ],
+ "mean": [
+  0.00014628949894103646,
+  5.5490523938189735,
+  7.696168469550037,
+  0.001393861369797885
+ ],
+ "sd": [
+  0.33282098310355357,
+  3.0327658745934882,
+  7.443282825487783,
+  1.9382733870915987
+ ],
+ "coef": [
+  0.30885508904771225,
+  0.004249586817681716,
+  0.002214655057666735,
+  0.05327824828758999
+ ],
+ "intercept": -0.0005675089333077584,
+ "vol_pre_fill": 5.480766169410919,
+ "train_years": [
+  2015,
+  2016,
+  2017,
+  2018
+ ],
+ "n_train_points": 10567048,
+ "n_train_parents": 196880,
+ "base_rate_train": 0.4998615507377273,
+ "sklearn": "1.7.2",
+ "estimator": "LogisticRegression(penalty='l2', C=1.0, solver='lbfgs', max_iter=1000)",
+ "n_iter": 3,
+ "p_formula": "1 / (1 + exp(-(intercept + sum coef_j (x_j - mean_j) / sd_j)))",
+ "written": "2026-11-07T20:33:47",
+ "check_vs_predict_proba_max_abs": 0.0
+}

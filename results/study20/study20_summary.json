@@ -1,0 +1,2913 @@
+{
+ "built": "2026-11-11T01:50:22",
+ "sources": {
+  "research20/results/test20_summary.json": "2b80241e13dbdf01ec0e71b3a684f0878317d3af8a1972d4d87bda5a076f0701",
+  "research20/results/test20_daily.csv": "946c67c419860dc463310637e8bc9a22a33510f7cebc133516998d3a61fa5cb0",
+  "research20/results/rehearsal20_summary.json": "a08d14ae8ba861f11ed44399f6f7aaff1a8768e5f5d223cf16f1e5a537dfd237",
+  "research20/results/rehearsal20_daily.csv": "dbe1b38feb73084d118d9698fb7d9451798007b91b1900306ce54d0d0a76b5ff",
+  "research20/results/dev20_summary.json": "5831ff12981d7f755770ea042934cdbc9c8a27bd82c2892a29276ebe60796e04",
+  "research20/results/delay20_summary.json": "df3835e35d7f5326f32a8bafddb479bd06f0d3e6df3ad84dd23dc8c2266d5fb5"
+ },
+ "unit": "US dollars; 50,000 dollars per leg and trade; daily values are sums over the pairs of the day (a day without a trade is 0)",
+ "astar": "W30_z3_k1_P",
+ "astar_signal": "W30_z3_k1",
+ "h1_signal": "W30_z2_k0",
+ "h2_exists": false,
+ "trials_cumulative": 794,
+ "verdict_sealed": {
+  "H1": {
+   "p": 0.0,
+   "level": 0.05,
+   "rejected": true,
+   "result": "확인",
+   "mean_daily_usd": 4173.795612244898,
+   "lower_2_5": 3611.225005102041,
+   "sentence": "두 종류 주식의 가격이 벌어지면 처음 보는 기간에도 다시 붙었다"
+  },
+  "H2": {
+   "result": "없음",
+   "sentence": "개발 구간에서 이미 비용을 넘지 못했다. 그래서 수익 가설은 봉인 데이터로 시험하지 않았다"
+  }
+ },
+ "periods": {
+  "dev": {
+   "note": "development period: the same code path as the sealed run (rehearsal); not a verdict",
+   "first_day": "2015-01-02",
+   "last_day": "2020-12-31",
+   "days": 1511,
+   "pair_days": 5831,
+   "pairs": [
+    "GOOGL/GOOG",
+    "FOXA/FOX",
+    "CMCSA/CMCSK",
+    "NWSA/NWS",
+    "DISCA/DISCK",
+    "LMCA/LMCK",
+    "UAA/UA"
+   ],
+   "h1": {
+    "signal": "W30_z2_k0",
+    "mean_daily_usd": 3400.7012574454,
+    "ci95": [
+     3096.3896897749837,
+     3734.5094705493048
+    ],
+    "p_one_sided": 0.0,
+    "lower_2_5": 3096.3896897749837,
+    "per_trade_usd": {
+     "mean": 24.77321184070967,
+     "lo": 23.45552904619638,
+     "hi": 26.297890366146643
+    },
+    "trades": 207420,
+    "win_rate": 0.9661025937710924,
+    "mean_hold_s": 193.12732619805226
+   },
+   "delayed_mid": {
+    "signal": "W30_z2_k0",
+    "rows": {
+     "0": {
+      "trades": 207420,
+      "per_trade_usd": 24.77321184070967,
+      "mean_daily_usd": 3400.7012574454,
+      "ci_lo": 3096.3896897749837,
+      "ci_hi": 3734.5094705493048,
+      "ratio_to_delay0": 1.0,
+      "win_rate": 0.9661025937710924
+     },
+     "1": {
+      "trades": 207420,
+      "per_trade_usd": 19.50870914087359,
+      "mean_daily_usd": 2678.025446724024,
+      "ci_lo": 2476.2004045334215,
+      "ci_hi": 2901.298222203838,
+      "ratio_to_delay0": 0.7874921211796625,
+      "win_rate": 0.8881592903288015
+     },
+     "5": {
+      "trades": 207420,
+      "per_trade_usd": 12.966521791534085,
+      "mean_daily_usd": 1779.957610853739,
+      "ci_lo": 1663.7268092322963,
+      "ci_hi": 1904.130555095963,
+      "ratio_to_delay0": 0.5234089901183615,
+      "win_rate": 0.7528348278854499
+     },
+     "30": {
+      "trades": 207420,
+      "per_trade_usd": 5.163076366792016,
+      "mean_daily_usd": 708.7526803441428,
+      "ci_lo": 650.5545896757114,
+      "ci_hi": 769.1530650231634,
+      "ratio_to_delay0": 0.20841368491055176,
+      "win_rate": 0.5420836949185228
+     }
+    },
+    "sentence_5s": "5초 늦게 거래해도 되돌림의 52%가 남았다"
+   },
+   "runs": {
+    "W30_z2_k0": {
+     "mid": {
+      "mean_daily_usd": 3400.7012574454,
+      "ci_lo": 3096.3896897749837,
+      "ci_hi": 3734.5094705493048,
+      "sharpe": 31.65566367983785,
+      "trades": 207420,
+      "trades_per_day": 137.2733289212442,
+      "win_rate": 0.9661025937710924,
+      "mean_hold_s": 193.12732619805226,
+      "pnl_per_trade": 24.77321184070971,
+      "mid_per_trade": 24.77321184070971,
+      "cost_per_trade": 0.0,
+      "fee_per_trade": 0.0,
+      "exit_z": 0.9916642560987369,
+      "exit_time": 0.008104329380001928,
+      "exit_close": 0.00023141452126120915,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": 2418.163492063492,
+       "2016": 2847.859325396825,
+       "2017": 3155.046015936255,
+       "2018": 3955.2388446215136,
+       "2019": 2553.837103174603,
+       "2020": 5467.088537549407
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": 1025.0697220383852,
+        "trades": 83330,
+        "total_usd": 1548880.35
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": 583.2118140243902,
+        "trades": 38246,
+        "total_usd": 765173.8999999999
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": 306.7098739495799,
+        "trades": 6059,
+        "total_usd": 72996.95000000001
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": 933.119246031746,
+        "trades": 6867,
+        "total_usd": 235146.05
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": 789.5913026211279,
+        "trades": 37590,
+        "total_usd": 994095.45
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": 1072.567495029821,
+        "trades": 13020,
+        "total_usd": 539501.45
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": 1299.822023809524,
+        "trades": 22308,
+        "total_usd": 982665.4500000001
+       }
+      }
+     },
+     "M_L3D1": {
+      "mean_daily_usd": -11291.19203176704,
+      "ci_lo": -12475.339228987421,
+      "ci_hi": -10243.110082395764,
+      "sharpe": -30.892320585433453,
+      "trades": 207420,
+      "trades_per_day": 137.2733289212442,
+      "win_rate": 0.0009931539870793558,
+      "mean_hold_s": 193.12732619805226,
+      "pnl_per_trade": -82.25335628194004,
+      "mid_per_trade": 24.77321184070968,
+      "cost_per_trade": 91.61397599074347,
+      "fee_per_trade": 15.41259213190635,
+      "exit_z": 0.9916642560987369,
+      "exit_time": 0.008104329380001928,
+      "exit_close": 0.00023141452126120915,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": -7603.888095238089,
+       "2016": -9128.856984126995,
+       "2017": -10688.081593625502,
+       "2018": -11884.992111553776,
+       "2019": -8945.659523809521,
+       "2020": -19463.208300395247
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -2905.876598279283,
+        "trades": 83330,
+        "total_usd": -4390779.539999996
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -1879.9304115853654,
+        "trades": 38246,
+        "total_usd": -2466468.6999999993
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -731.8675630252081,
+        "trades": 6059,
+        "total_usd": -174184.47999999954
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -3942.4800793650766,
+        "trades": 6867,
+        "total_usd": -993504.9799999993
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -2893.3806195393186,
+        "trades": 37590,
+        "total_usd": -3642766.200000002
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -3894.933161033797,
+        "trades": 13020,
+        "total_usd": -1959151.38
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -4542.507777777778,
+        "trades": 22308,
+        "total_usd": -3434135.88
+       }
+      }
+     },
+     "M_L0D0": {
+      "mean_daily_usd": -6890.4855459960245,
+      "ci_lo": -7630.4776363335495,
+      "ci_hi": -6241.209738252809,
+      "sharpe": -29.798882142174886,
+      "trades": 207420,
+      "trades_per_day": 137.2733289212442,
+      "win_rate": 0.005105582875325427,
+      "mean_hold_s": 193.12732619805226,
+      "pnl_per_trade": -50.19537007038868,
+      "mid_per_trade": 24.77321184070968,
+      "cost_per_trade": 59.555989779192096,
+      "fee_per_trade": 15.41259213190635,
+      "exit_z": 0.9916642560987369,
+      "exit_time": 0.008104329380001928,
+      "exit_close": 0.00023141452126120915,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": -4895.6107142857045,
+       "2016": -5371.611746031759,
+       "2017": -6852.377609561753,
+       "2018": -7075.371394422303,
+       "2019": -5448.548412698406,
+       "2020": -11680.966007905121
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -2905.876598279283,
+        "trades": 83330,
+        "total_usd": -4390779.539999996
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -985.5804878048776,
+        "trades": 38246,
+        "total_usd": -1293081.5999999994
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -402.16084033613174,
+        "trades": 6059,
+        "total_usd": -95714.27999999936
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -2060.8078571428537,
+        "trades": 6867,
+        "total_usd": -519323.5799999991
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -1192.8378077839538,
+        "trades": 37590,
+        "total_usd": -1501782.799999998
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -2368.959602385687,
+        "trades": 13020,
+        "total_usd": -1191586.6800000006
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -1877.3216666666674,
+        "trades": 22308,
+        "total_usd": -1419255.1800000006
+       }
+      }
+     },
+     "P_L3D1": {
+      "mean_daily_usd": -8968.015784248842,
+      "ci_lo": -9793.940530559234,
+      "ci_hi": -8240.027579252148,
+      "sharpe": -35.61013792582985,
+      "trades": 182262,
+      "trades_per_day": 120.62342819324951,
+      "win_rate": 0.042532178951180166,
+      "mean_hold_s": 223.95809329426868,
+      "pnl_per_trade": -74.34721362653758,
+      "mid_per_trade": 25.027229208502096,
+      "cost_per_trade": 89.03414705204582,
+      "fee_per_trade": 10.340295782993705,
+      "exit_z": 0.9905191427724923,
+      "exit_time": 0.009222986689490953,
+      "exit_close": 0.00025787053801670123,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.3450835032114509,
+      "p_deadline_order_frac": 0.7414089229224341,
+      "by_year": {
+       "2015": -5886.719249999999,
+       "2016": -7894.248111111113,
+       "2017": -9300.505940239049,
+       "2018": -9060.774952191232,
+       "2019": -7106.330781746032,
+       "2020": -14539.095707509876
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -2366.5402183984115,
+        "trades": 72139,
+        "total_usd": -3575842.2699999996
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -1301.8368475609757,
+        "trades": 32819,
+        "total_usd": -1708009.9440000001
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -454.75433193277354,
+        "trades": 5404,
+        "total_usd": -108231.5310000001
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -3294.787115079362,
+        "trades": 5894,
+        "total_usd": -830286.3529999993
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -2104.0629253375696,
+        "trades": 33502,
+        "total_usd": -2649015.223
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -3915.20166998012,
+        "trades": 12384,
+        "total_usd": -1969346.4400000004
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -3584.576837301588,
+        "trades": 20120,
+        "total_usd": -2709940.0890000006
+       }
+      }
+     },
+     "P_L0D0": {
+      "mean_daily_usd": -6191.8088934480475,
+      "ci_lo": -6777.424188500994,
+      "ci_hi": -5670.666929698876,
+      "sharpe": -34.13205946569085,
+      "trades": 183211,
+      "trades_per_day": 121.25148908007942,
+      "win_rate": 0.0848911910311062,
+      "mean_hold_s": 222.67718641347955,
+      "pnl_per_trade": -51.06583795732793,
+      "mid_per_trade": 25.04498801927833,
+      "cost_per_trade": 67.1768802091578,
+      "fee_per_trade": 8.933945767448447,
+      "exit_z": 0.9905627937187178,
+      "exit_time": 0.009180671466232923,
+      "exit_close": 0.0002565348150493147,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.3717393381098601,
+      "p_deadline_order_frac": 0.6368693278744456,
+      "by_year": {
+       "2015": -4227.33238095238,
+       "2016": -5063.053186507942,
+       "2017": -6521.366079681279,
+       "2018": -6144.234247011949,
+       "2019": -5025.0002380952355,
+       "2020": -10155.258233201579
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -2355.776657842488,
+        "trades": 72143,
+        "total_usd": -3559578.5299999993
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -853.6039786585366,
+        "trades": 33161,
+        "total_usd": -1119928.42
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -336.687453781513,
+        "trades": 5448,
+        "total_usd": -80131.61400000009
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -2021.963134920631,
+        "trades": 5920,
+        "total_usd": -509534.70999999903
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -1103.7153351866564,
+        "trades": 33892,
+        "total_usd": -1389577.6070000003
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -2479.2664950298226,
+        "trades": 12400,
+        "total_usd": -1247071.0470000007
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -1917.9911507936515,
+        "trades": 20247,
+        "total_usd": -1450001.3100000005
+       }
+      }
+     }
+    },
+    "W30_z3_k1": {
+     "mid": {
+      "mean_daily_usd": 458.2358371939113,
+      "ci_lo": 407.2890395433488,
+      "ci_hi": 515.6328524156189,
+      "sharpe": 20.885269676193005,
+      "trades": 19971,
+      "trades_per_day": 13.217074784910656,
+      "win_rate": 0.8907916478894397,
+      "mean_hold_s": 480.22332381953834,
+      "pnl_per_trade": 34.66998898402678,
+      "mid_per_trade": 34.66998898402678,
+      "cost_per_trade": 0.0,
+      "fee_per_trade": 0.0,
+      "exit_z": 0.979670522257273,
+      "exit_time": 0.019528316058284513,
+      "exit_close": 0.0008011616844424415,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": 266.34841269841263,
+       "2016": 468.23849206349206,
+       "2017": 356.7619521912351,
+       "2018": 630.8312749003984,
+       "2019": 323.38075396825394,
+       "2020": 703.1644268774703
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": 12.067504963600264,
+        "trades": 906,
+        "total_usd": 18234.0
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": 114.90735518292684,
+        "trades": 6169,
+        "total_usd": 150758.45
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": 72.74495798319327,
+        "trades": 1221,
+        "total_usd": 17313.3
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": 61.87698412698413,
+        "trades": 336,
+        "total_usd": 15593.0
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": 167.5708895949166,
+        "trades": 6387,
+        "total_usd": 210971.75
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": 135.5108349900596,
+        "trades": 1331,
+        "total_usd": 68161.94999999998
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": 279.5792328042328,
+        "trades": 3621,
+        "total_usd": 211361.9
+       }
+      }
+     },
+     "M_L3D1": {
+      "mean_daily_usd": -1097.9088153540702,
+      "ci_lo": -1235.0377038385175,
+      "ci_hi": -975.6122346128386,
+      "sharpe": -25.795272644412133,
+      "trades": 19971,
+      "trades_per_day": 13.217074784910656,
+      "win_rate": 0.007611036002203195,
+      "mean_hold_s": 480.22332381953834,
+      "pnl_per_trade": -83.06745881528221,
+      "mid_per_trade": 34.669988984026816,
+      "cost_per_trade": 94.2660733062943,
+      "fee_per_trade": 23.471374493014853,
+      "exit_z": 0.979670522257273,
+      "exit_time": 0.019528316058284513,
+      "exit_close": 0.0008011616844424415,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": -556.0610317460317,
+       "2016": -1075.9561111111113,
+       "2017": -798.6051792828689,
+       "2018": -1412.013545816733,
+       "2019": -886.5955555555552,
+       "2020": -1855.2747826086963
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -14.536320317670434,
+        "trades": 906,
+        "total_usd": -21964.380000000026
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -280.70405487804885,
+        "trades": 6169,
+        "total_usd": -368283.7200000001
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -132.66705882352974,
+        "trades": 1221,
+        "total_usd": -31574.76000000008
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -176.3048412698409,
+        "trades": 336,
+        "total_usd": -44428.819999999905
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -458.52575059571063,
+        "trades": 6387,
+        "total_usd": -577283.9199999997
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -266.58059642147134,
+        "trades": 1331,
+        "total_usd": -134090.0400000001
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -636.6594973544976,
+        "trades": 3621,
+        "total_usd": -481314.5800000002
+       }
+      }
+     },
+     "M_L0D0": {
+      "mean_daily_usd": -436.12661813368544,
+      "ci_lo": -477.2672495036397,
+      "ci_hi": -399.5107048312364,
+      "sharpe": -26.46022812910222,
+      "trades": 19971,
+      "trades_per_day": 13.217074784910656,
+      "win_rate": 0.04556607080266386,
+      "mean_hold_s": 480.22332381953834,
+      "pnl_per_trade": -32.997211957338,
+      "mid_per_trade": 34.669988984026816,
+      "cost_per_trade": 44.19582644834993,
+      "fee_per_trade": 23.471374493014853,
+      "exit_z": 0.979670522257273,
+      "exit_time": 0.019528316058284513,
+      "exit_close": 0.0008011616844424415,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2015": -319.2451587301585,
+       "2016": -453.44658730158665,
+       "2017": -359.0980079681268,
+       "2018": -480.5494023904359,
+       "2019": -339.9332539682536,
+       "2020": -663.455810276679
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -14.536320317670434,
+        "trades": 906,
+        "total_usd": -21964.380000000026
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -136.11411585365832,
+        "trades": 6169,
+        "total_usd": -178581.7199999997
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -68.79352941176508,
+        "trades": 1221,
+        "total_usd": -16372.86000000009
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -86.943333333333,
+        "trades": 336,
+        "total_usd": -21909.719999999917
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -166.90589356632196,
+        "trades": 6387,
+        "total_usd": -210134.51999999935
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -99.90445328031792,
+        "trades": 1331,
+        "total_usd": -50251.939999999915
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -211.3388624338621,
+        "trades": 3621,
+        "total_usd": -159772.17999999973
+       }
+      }
+     },
+     "P_L3D1": {
+      "mean_daily_usd": -976.8250595632029,
+      "ci_lo": -1090.311898643282,
+      "ci_hi": -876.7230625248183,
+      "sharpe": -25.365876260664994,
+      "trades": 19824,
+      "trades_per_day": 13.119788219722038,
+      "win_rate": 0.07395076674737691,
+      "mean_hold_s": 485.7077280064568,
+      "pnl_per_trade": -74.45433136602092,
+      "mid_per_trade": 34.55808868038746,
+      "cost_per_trade": 94.47900070621448,
+      "fee_per_trade": 14.533419340193642,
+      "exit_z": 0.9795197740112994,
+      "exit_time": 0.01967312348668281,
+      "exit_close": 0.0008071025020177562,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.379567016552281,
+      "p_deadline_order_frac": 0.6843838312474768,
+      "by_year": {
+       "2015": -501.2359523809524,
+       "2016": -1055.0202579365073,
+       "2017": -787.695274900399,
+       "2018": -1191.4718446215143,
+       "2019": -769.400924603174,
+       "2020": -1553.9372332015805
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -18.597445400396957,
+        "trades": 903,
+        "total_usd": -28100.7399999998
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -234.24535594512196,
+        "trades": 6123,
+        "total_usd": -307329.907
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -95.98915966386585,
+        "trades": 1207,
+        "total_usd": -22845.42000000007
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -178.0900396825396,
+        "trades": 336,
+        "total_usd": -44878.68999999998
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -381.9453637807783,
+        "trades": 6341,
+        "total_usd": -480869.2129999999
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -313.9602544731612,
+        "trades": 1325,
+        "total_usd": -157922.0080000001
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -574.1226018518518,
+        "trades": 3589,
+        "total_usd": -434036.6869999999
+       }
+      }
+     },
+     "P_L0D0": {
+      "mean_daily_usd": -519.4658305757778,
+      "ci_lo": -566.4717694076774,
+      "ci_hi": -477.6872808735934,
+      "sharpe": -25.44661086595107,
+      "trades": 19843,
+      "trades_per_day": 13.132362673726009,
+      "win_rate": 0.17814846545381244,
+      "mean_hold_s": 485.0050395605503,
+      "pnl_per_trade": -39.55615935090454,
+      "mid_per_trade": 34.561613667288256,
+      "cost_per_trade": 62.019100942397905,
+      "fee_per_trade": 12.098672075794962,
+      "exit_z": 0.9795393841657007,
+      "exit_time": 0.01965428614624805,
+      "exit_close": 0.0008063296880512019,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.4083690446180993,
+      "p_deadline_order_frac": 0.5081169649609276,
+      "by_year": {
+       "2015": -345.29965873015885,
+       "2016": -562.136468253969,
+       "2017": -444.6978964143425,
+       "2018": -562.8674541832668,
+       "2019": -411.71706746031697,
+       "2020": -788.8828537549415
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 1511,
+        "per_pair_day_usd": -18.452296492389014,
+        "trades": 903,
+        "total_usd": -27881.419999999798
+       },
+       "FOXA/FOX": {
+        "pair_days": 1312,
+        "per_pair_day_usd": -147.8928086890247,
+        "trades": 6130,
+        "total_usd": -194035.3650000004
+       },
+       "CMCSA/CMCSK": {
+        "pair_days": 238,
+        "per_pair_day_usd": -69.88972689075622,
+        "trades": 1208,
+        "total_usd": -16633.75499999998
+       },
+       "NWSA/NWS": {
+        "pair_days": 252,
+        "per_pair_day_usd": -104.01051190476198,
+        "trades": 336,
+        "total_usd": -26210.64900000002
+       },
+       "DISCA/DISCK": {
+        "pair_days": 1259,
+        "per_pair_day_usd": -188.19094678316114,
+        "trades": 6346,
+        "total_usd": -236932.40199999989
+       },
+       "LMCA/LMCK": {
+        "pair_days": 503,
+        "per_pair_day_usd": -147.24892047713723,
+        "trades": 1325,
+        "total_usd": -74066.20700000002
+       },
+       "UAA/UA": {
+        "pair_days": 756,
+        "per_pair_day_usd": -276.65750264550286,
+        "trades": 3595,
+        "total_usd": -209153.07200000016
+       }
+      }
+     }
+    }
+   },
+   "cost_per_trade_M_vs_P": {
+    "W30_z2_k0": {
+     "L3D1": {
+      "M": {
+       "mean": 107.02656812264969,
+       "lo": 101.01128364916077,
+       "hi": 113.93315812107896
+      },
+      "P": {
+       "mean": 99.37444283503966,
+       "lo": 94.16970174276801,
+       "hi": 105.44358114045791
+      },
+      "P_minus_M": {
+       "mean": -7.652125287610033,
+       "lo": -9.0929630222303,
+       "hi": -6.19001705273623
+      }
+     },
+     "L0D0": {
+      "M": {
+       "mean": 74.96858191109823,
+       "lo": 70.77866335088606,
+       "hi": 79.91625025903534
+      },
+      "P": {
+       "mean": 76.11082597660621,
+       "lo": 72.14995450881804,
+       "hi": 80.75420520516894
+      },
+      "P_minus_M": {
+       "mean": 1.142244065507981,
+       "lo": 0.22319713953803175,
+       "hi": 1.9842515516002293
+      }
+     }
+    },
+    "W30_z3_k1": {
+     "L3D1": {
+      "M": {
+       "mean": 117.737447799309,
+       "lo": 108.8967593081984,
+       "hi": 127.35956070348796
+      },
+      "P": {
+       "mean": 109.01242004640837,
+       "lo": 101.22238415184665,
+       "hi": 117.74875723832427
+      },
+      "P_minus_M": {
+       "mean": -8.72502775290063,
+       "lo": -10.937863799155956,
+       "hi": -6.445774658078222
+      }
+     },
+     "L0D0": {
+      "M": {
+       "mean": 67.6672009413649,
+       "lo": 63.75724209427832,
+       "hi": 72.11317133690571
+      },
+      "P": {
+       "mean": 74.1177730181928,
+       "lo": 69.7362539024038,
+       "hi": 79.08422543996859
+      },
+      "P_minus_M": {
+       "mean": 6.4505720768279105,
+       "lo": 5.361924826642258,
+       "hi": 7.63389170239787
+      }
+     }
+    }
+   },
+   "delay_check_astar_1s": {
+    "L3D1": {
+     "mean_daily_usd": -968.7597418927861,
+     "ci_lo": -1079.9678929351414,
+     "ci_hi": -870.5322559728655,
+     "trades": 19785
+    },
+    "L0D0": {
+     "mean_daily_usd": -517.1171575115821,
+     "ci_lo": -561.333032792853,
+     "ci_hi": -476.3939939774988,
+     "trades": 19823
+    }
+   },
+   "pair_days_left_out_no_state_after_first_state": 0,
+   "trades_valued_at_last_valid_mids": {
+    "W30_z2_k0": {
+     "mid": 0,
+     "M_L3D1": 0,
+     "M_L0D0": 0,
+     "P_L3D1": 0,
+     "P_L0D0": 0
+    },
+    "W30_z3_k1": {
+     "mid": 0,
+     "M_L3D1": 0,
+     "M_L0D0": 0,
+     "P_L3D1": 0,
+     "P_L0D0": 0
+    }
+   }
+  },
+  "sealed": {
+   "note": "the single sealed run of 2026-11-11",
+   "first_day": "2021-01-04",
+   "last_day": "2026-11-09",
+   "days": 1470,
+   "pair_days": 5797,
+   "pairs": [
+    "GOOGL/GOOG",
+    "DISCA/DISCK",
+    "UAA/UA",
+    "FOXA/FOX",
+    "LSXMK/LSXMA",
+    "LBRDK/LBRDA",
+    "HEI/HEI.A"
+   ],
+   "h1": {
+    "signal": "W30_z2_k0",
+    "mean_daily_usd": 4173.795612244898,
+    "ci95": [
+     3611.225005102041,
+     5024.848451530613
+    ],
+    "p_one_sided": 0.0,
+    "lower_2_5": 3611.225005102041,
+    "per_trade_usd": {
+     "mean": 32.98769066577774,
+     "lo": 29.505913615821452,
+     "hi": 38.63226593072526
+    },
+    "trades": 185993,
+    "win_rate": 0.9636007806745415,
+    "mean_hold_s": 197.0478727694053
+   },
+   "delayed_mid": {
+    "signal": "W30_z2_k0",
+    "rows": {
+     "0": {
+      "trades": 185993,
+      "per_trade_usd": 32.98769066577774,
+      "mean_daily_usd": 4173.795612244898,
+      "ci_lo": 3611.225005102041,
+      "ci_hi": 5024.848451530613,
+      "ratio_to_delay0": 1.0,
+      "win_rate": 0.9636007806745415
+     },
+     "1": {
+      "trades": 185993,
+      "per_trade_usd": 26.763614490867933,
+      "mean_daily_usd": 3386.2890816326526,
+      "ci_lo": 3038.4043571428574,
+      "ci_hi": 3831.067019557823,
+      "ratio_to_delay0": 0.811321251979399,
+      "win_rate": 0.9040555289715204
+     },
+     "5": {
+      "trades": 185993,
+      "per_trade_usd": 19.12186587667278,
+      "mean_daily_usd": 2419.4103401360544,
+      "ci_lo": 2241.9788511904762,
+      "ci_hi": 2599.562089285714,
+      "ratio_to_delay0": 0.5796667026622231,
+      "win_rate": 0.7902017817874867
+     },
+     "30": {
+      "trades": 185993,
+      "per_trade_usd": 8.34270590828687,
+      "mean_daily_usd": 1055.5679591836733,
+      "ci_lo": 975.94887414966,
+      "ci_hi": 1136.6226045918365,
+      "ratio_to_delay0": 0.2529036055543531,
+      "win_rate": 0.5670428456984941
+     }
+    },
+    "sentence_5s": "5초 늦게 거래해도 되돌림의 58%가 남았다"
+   },
+   "runs": {
+    "W30_z2_k0": {
+     "mid": {
+      "mean_daily_usd": 4173.795612244898,
+      "ci_lo": 3611.225005102041,
+      "ci_hi": 5024.848451530613,
+      "sharpe": 5.3797889961155985,
+      "trades": 185993,
+      "trades_per_day": 126.52585034013606,
+      "win_rate": 0.9636007806745415,
+      "mean_hold_s": 197.0478727694053,
+      "pnl_per_trade": 32.98769066577763,
+      "mid_per_trade": 32.98769066577763,
+      "cost_per_trade": 0.0,
+      "fee_per_trade": 0.0,
+      "exit_z": 0.9905695375632416,
+      "exit_time": 0.009215400579591705,
+      "exit_close": 0.00021506185716666757,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": 3614.8771825396825,
+       "2022": 5419.017729083665,
+       "2023": 6516.3588,
+       "2024": 2158.8039682539684,
+       "2025": 3330.8383999999996,
+       "2026": 3993.205348837209
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": 323.8319731404959,
+        "trades": 21511,
+        "total_usd": 313469.35000000003
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": 779.5069444444445,
+        "trades": 6870,
+        "total_usd": 196435.75
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": 1607.6046425636812,
+        "trades": 32213,
+        "total_usd": 1956454.85
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": 788.6649421375085,
+        "trades": 56977,
+        "total_usd": 1158548.8
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": 1402.518175074184,
+        "trades": 28204,
+        "total_usd": 945297.25
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": 1783.2022954091817,
+        "trades": 26018,
+        "total_usd": 893384.3500000001
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": 938.3927374301676,
+        "trades": 14200,
+        "total_usd": 671889.2
+       }
+      }
+     },
+     "M_L3D1": {
+      "mean_daily_usd": -14778.27284353742,
+      "ci_lo": -16028.987168027215,
+      "ci_hi": -13562.865534353747,
+      "sharpe": -21.837931199138424,
+      "trades": 185993,
+      "trades_per_day": 126.52585034013606,
+      "win_rate": 0.006145392568537526,
+      "mean_hold_s": 197.0478727694053,
+      "pnl_per_trade": -116.80042302667272,
+      "mid_per_trade": 32.98769066577762,
+      "cost_per_trade": 127.53097831638857,
+      "fee_per_trade": 22.257135376062624,
+      "exit_z": 0.9905695375632416,
+      "exit_time": 0.009215400579591705,
+      "exit_close": 0.00021506185716666757,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": -11470.48595238096,
+       "2022": -19476.31131474103,
+       "2023": -21280.099200000004,
+       "2024": -9992.232222222223,
+       "2025": -14660.626480000008,
+       "2026": -11356.839720930237
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -920.3252685950436,
+        "trades": 21511,
+        "total_usd": -890874.8600000022
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -2276.4774603174596,
+        "trades": 6870,
+        "total_usd": -573672.3199999998
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -5637.514018077241,
+        "trades": 32213,
+        "total_usd": -6860854.560000003
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -2975.064411164057,
+        "trades": 56977,
+        "total_usd": -4370369.62
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -4778.555637982196,
+        "trades": 28204,
+        "total_usd": -3220746.4999999995
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -5959.361237524951,
+        "trades": 26018,
+        "total_usd": -2985639.9800000004
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -3941.205642458101,
+        "trades": 14200,
+        "total_usd": -2821903.24
+       }
+      }
+     },
+     "M_L0D0": {
+      "mean_daily_usd": -10035.583591836736,
+      "ci_lo": -10855.38565544218,
+      "ci_hi": -9199.550677891157,
+      "sharpe": -15.244522769223934,
+      "trades": 185993,
+      "trades_per_day": 126.52585034013606,
+      "win_rate": 0.009575629190345873,
+      "mean_hold_s": 197.0478727694053,
+      "pnl_per_trade": -79.31646825418159,
+      "mid_per_trade": 32.98769066577762,
+      "cost_per_trade": 90.04702354389688,
+      "fee_per_trade": 22.257135376062624,
+      "exit_z": 0.9905695375632416,
+      "exit_time": 0.009215400579591705,
+      "exit_close": 0.00021506185716666757,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": -6703.403809523817,
+       "2022": -12244.759521912352,
+       "2023": -13121.7112,
+       "2024": -6288.195714285712,
+       "2025": -10731.525680000002,
+       "2026": -11356.655534883726
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -900.3469628099193,
+        "trades": 21511,
+        "total_usd": -871535.8600000018
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -908.5965079365094,
+        "trades": 6870,
+        "total_usd": -228966.32000000036
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -3472.1042399342655,
+        "trades": 32213,
+        "total_usd": -4225550.860000001
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -1565.8091354663025,
+        "trades": 56977,
+        "total_usd": -2300173.6199999982
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -2544.9893175074194,
+        "trades": 28204,
+        "total_usd": -1715322.8000000007
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -5212.517325349303,
+        "trades": 26018,
+        "total_usd": -2611471.1800000006
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -3909.6190502793297,
+        "trades": 14200,
+        "total_usd": -2799287.24
+       }
+      }
+     },
+     "P_L3D1": {
+      "mean_daily_usd": -14147.370480272108,
+      "ci_lo": -15437.915421411564,
+      "ci_hi": -12922.991658911567,
+      "sharpe": -28.752359033821392,
+      "trades": 168495,
+      "trades_per_day": 114.62244897959184,
+      "win_rate": 0.02534199827888068,
+      "mean_hold_s": 221.47286269622245,
+      "pnl_per_trade": -123.42582632125551,
+      "mid_per_trade": 31.892541024956227,
+      "cost_per_trade": 137.28165565743848,
+      "fee_per_trade": 18.036711688774105,
+      "exit_z": 0.9895961304489748,
+      "exit_time": 0.010166473782604825,
+      "exit_close": 0.0002373957684204279,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.1909393085027452,
+      "p_deadline_order_frac": 0.8350304199436118,
+      "by_year": {
+       "2021": -9467.984234126983,
+       "2022": -18122.253836653377,
+       "2023": -21816.071592000008,
+       "2024": -9008.549230158727,
+       "2025": -14279.518292000006,
+       "2026": -11944.023204651172
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -843.4551435950418,
+        "trades": 19326,
+        "total_usd": -816464.5790000005
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -1572.086246031747,
+        "trades": 6351,
+        "total_usd": -396165.73400000023
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -5309.838267871818,
+        "trades": 29461,
+        "total_usd": -6462073.172000002
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -2538.482338325391,
+        "trades": 50622,
+        "total_usd": -3729030.5549999997
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -4975.000916913945,
+        "trades": 25515,
+        "total_usd": -3353150.617999999
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -6369.517387225549,
+        "trades": 23367,
+        "total_usd": -3191128.211
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -3978.5219790502797,
+        "trades": 13853,
+        "total_usd": -2848621.737
+       }
+      }
+     },
+     "P_L0D0": {
+      "mean_daily_usd": -10723.229970748305,
+      "ci_lo": -11704.282361037416,
+      "ci_hi": -9789.976266496602,
+      "sharpe": -22.299059716368824,
+      "trades": 169093,
+      "trades_per_day": 115.02925170068028,
+      "win_rate": 0.052024625501942715,
+      "mean_hold_s": 220.58837444483214,
+      "pnl_per_trade": -93.22176587440046,
+      "mid_per_trade": 32.10964617104194,
+      "cost_per_trade": 108.64010225142343,
+      "fee_per_trade": 16.69130979401867,
+      "exit_z": 0.9896270099885862,
+      "exit_time": 0.010136433796786384,
+      "exit_close": 0.00023655621462745352,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.2894282351410338,
+      "p_deadline_order_frac": 0.7148465455749883,
+      "by_year": {
+       "2021": -6435.222591269845,
+       "2022": -12893.529362549807,
+       "2023": -15903.404740000005,
+       "2024": -6268.210099206351,
+       "2025": -11133.461656000001,
+       "2026": -11936.700232558147
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -829.1634607438023,
+        "trades": 19334,
+        "total_usd": -802630.2300000006
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -792.8285833333343,
+        "trades": 6425,
+        "total_usd": -199792.80300000025
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -3804.48765406738,
+        "trades": 29521,
+        "total_usd": -4630061.4750000015
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -1581.0242954390749,
+        "trades": 50973,
+        "total_usd": -2322524.690000001
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -3110.0437299703285,
+        "trades": 25607,
+        "total_usd": -2096169.4740000013
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -5761.561776447108,
+        "trades": 23380,
+        "total_usd": -2886542.450000001
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -3946.1270041899443,
+        "trades": 13853,
+        "total_usd": -2825426.935
+       }
+      }
+     }
+    },
+    "W30_z3_k1": {
+     "mid": {
+      "mean_daily_usd": 375.4319047619047,
+      "ci_lo": 232.6110807823129,
+      "ci_hi": 621.7552423469389,
+      "sharpe": 1.4462543509733112,
+      "trades": 12511,
+      "trades_per_day": 8.510884353741497,
+      "win_rate": 0.8578051314842938,
+      "mean_hold_s": 524.870513947726,
+      "pnl_per_trade": 44.11197346335224,
+      "mid_per_trade": 44.11197346335224,
+      "cost_per_trade": 0.0,
+      "fee_per_trade": 0.0,
+      "exit_z": 0.9687475021980657,
+      "exit_time": 0.030053552873471345,
+      "exit_close": 0.0011989449284629525,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": 551.9359126984127,
+       "2022": 485.20816733067727,
+       "2023": 812.8308000000001,
+       "2024": 115.65079365079364,
+       "2025": 141.22420000000002,
+       "2026": 108.61418604651162
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": 3.0038739669421486,
+        "trades": 1453,
+        "total_usd": 2907.75
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": 188.98809523809524,
+        "trades": 1603,
+        "total_usd": 47625.0
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": 153.35850451930978,
+        "trades": 3167,
+        "total_usd": 186637.3
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": 94.6500680735194,
+        "trades": 4945,
+        "total_usd": 139040.95
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": 127.78545994065286,
+        "trades": 828,
+        "total_usd": 86127.40000000002
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": 158.80359281437126,
+        "trades": 364,
+        "total_usd": 79560.6
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": 13.946787709497208,
+        "trades": 151,
+        "total_usd": 9985.900000000001
+       }
+      }
+     },
+     "M_L3D1": {
+      "mean_daily_usd": -678.9212108843541,
+      "ci_lo": -850.8944326530618,
+      "ci_hi": -465.19017857142876,
+      "sharpe": -3.5042901485969704,
+      "trades": 12511,
+      "trades_per_day": 8.510884353741497,
+      "win_rate": 0.03828630804891695,
+      "mean_hold_s": 524.870513947726,
+      "pnl_per_trade": -79.77093597634088,
+      "mid_per_trade": 44.11197346335236,
+      "cost_per_trade": 100.5400367676443,
+      "fee_per_trade": 23.34287267204861,
+      "exit_z": 0.9687475021980657,
+      "exit_time": 0.030053552873471345,
+      "exit_close": 0.0011989449284629525,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": -1605.9011904761912,
+       "2022": -1153.2234262948207,
+       "2023": -83.86176000000036,
+       "2024": -359.1939682539691,
+       "2025": -517.2866400000003,
+       "2026": -293.3210232558134
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -30.639070247933873,
+        "trades": 1453,
+        "total_usd": -29658.619999999988
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -497.37865079365105,
+        "trades": 1603,
+        "total_usd": -125339.42000000007
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -424.2470336894004,
+        "trades": 3167,
+        "total_usd": -516308.64000000025
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -216.5891218515998,
+        "trades": 4945,
+        "total_usd": -318169.4200000001
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -37.02712166172113,
+        "trades": 828,
+        "total_usd": -24956.280000000042
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": 59.39017964071855,
+        "trades": 364,
+        "total_usd": 29754.479999999992
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -18.626089385474888,
+        "trades": 151,
+        "total_usd": -13336.28000000002
+       }
+      }
+     },
+     "M_L0D0": {
+      "mean_daily_usd": -271.2844761904765,
+      "ci_lo": -392.6370867346943,
+      "ci_hi": -69.1467591836738,
+      "sharpe": -1.3154103780005497,
+      "trades": 12511,
+      "trades_per_day": 8.510884353741497,
+      "win_rate": 0.0733754296219327,
+      "mean_hold_s": 524.870513947726,
+      "pnl_per_trade": -31.87500439613144,
+      "mid_per_trade": 44.11197346335236,
+      "cost_per_trade": 52.64410518743511,
+      "fee_per_trade": 23.34287267204861,
+      "exit_z": 0.9687475021980657,
+      "exit_time": 0.030053552873471345,
+      "exit_close": 0.0011989449284629525,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": NaN,
+      "p_deadline_order_frac": NaN,
+      "by_year": {
+       "2021": -656.2646825396847,
+       "2022": -491.3903585657371,
+       "2023": 258.1758400000007,
+       "2024": -152.6487301587299,
+       "2025": -292.33184000000074,
+       "2026": -293.3210232558134
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -27.724400826446185,
+        "trades": 1453,
+        "total_usd": -26837.219999999907
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -193.19412698412773,
+        "trades": 1603,
+        "total_usd": -48684.92000000019
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -190.74818405916216,
+        "trades": 3167,
+        "total_usd": -232140.54000000033
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -91.3447379169503,
+        "trades": 4945,
+        "total_usd": -134185.41999999998
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": 31.612492581602407,
+        "trades": 828,
+        "total_usd": 21306.82000000002
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": 69.49536926147701,
+        "trades": 364,
+        "total_usd": 34817.17999999998
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -18.245921787709488,
+        "trades": 151,
+        "total_usd": -13064.079999999994
+       }
+      }
+     },
+     "P_L3D1": {
+      "mean_daily_usd": -777.4809129251705,
+      "ci_lo": -927.3733133163271,
+      "ci_hi": -650.0436704081637,
+      "sharpe": -6.543700650214231,
+      "trades": 12309,
+      "trades_per_day": 8.373469387755103,
+      "win_rate": 0.07896660979770899,
+      "mean_hold_s": 535.0889592980745,
+      "pnl_per_trade": -92.85051117068807,
+      "mid_per_trade": 37.400125924120566,
+      "cost_per_trade": 114.5274457713872,
+      "fee_per_trade": 15.723191323421918,
+      "exit_z": 0.9680721423348769,
+      "exit_time": 0.030709237143553496,
+      "exit_close": 0.0012186205215695832,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.31154737227167417,
+      "p_deadline_order_frac": 0.6704670162175345,
+      "by_year": {
+       "2021": -1372.906805555556,
+       "2022": -1131.5214223107578,
+       "2023": -833.6040119999997,
+       "2024": -366.96742460317597,
+       "2025": -550.0091040000008,
+       "2026": -346.6673488372101
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -29.16231095041349,
+        "trades": 1453,
+        "total_usd": -28229.11700000026
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -371.9810873015884,
+        "trades": 1585,
+        "total_usd": -93739.23400000027
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -403.60849630238295,
+        "trades": 3149,
+        "total_usd": -491191.54000000004
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -236.14207828454735,
+        "trades": 4876,
+        "total_usd": -346892.71300000005
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -163.12278931750768,
+        "trades": 789,
+        "total_usd": -109944.76000000018
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -110.21955289421162,
+        "trades": 306,
+        "total_usd": -55219.99600000002
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -24.69215363128497,
+        "trades": 151,
+        "total_usd": -17679.58200000004
+       }
+      }
+     },
+     "P_L0D0": {
+      "mean_daily_usd": -503.7960482993201,
+      "ci_lo": -651.5446000680275,
+      "ci_hi": -402.8715667687077,
+      "sharpe": -3.475087453919507,
+      "trades": 12343,
+      "trades_per_day": 8.396598639455782,
+      "win_rate": 0.15944259904399255,
+      "mean_hold_s": 533.4570201733776,
+      "pnl_per_trade": -60.00001547435803,
+      "mid_per_trade": 38.466961030543644,
+      "cost_per_trade": 84.80406384185375,
+      "fee_per_trade": 13.66291266304788,
+      "exit_z": 0.9681600907396906,
+      "exit_time": 0.030624645548083935,
+      "exit_close": 0.001215263712225553,
+      "exit_last": 0,
+      "p_one_leg_limit_frac": 0.372258927485712,
+      "p_deadline_order_frac": 0.4946698552956913,
+      "by_year": {
+       "2021": -749.4088492063498,
+       "2022": -671.679976095618,
+       "2023": -675.6529199999994,
+       "2024": -201.0388968253974,
+       "2025": -356.8224319999999,
+       "2026": -345.84580000000085
+      },
+      "by_pair": {
+       "GOOGL/GOOG": {
+        "pair_days": 968,
+        "per_pair_day_usd": -26.703209710744044,
+        "trades": 1453,
+        "total_usd": -25848.707000000235
+       },
+       "DISCA/DISCK": {
+        "pair_days": 252,
+        "per_pair_day_usd": -187.0671190476194,
+        "trades": 1591,
+        "total_usd": -47140.91400000009
+       },
+       "UAA/UA": {
+        "pair_days": 1217,
+        "per_pair_day_usd": -245.69230731306496,
+        "trades": 3153,
+        "total_usd": -299007.53800000006
+       },
+       "FOXA/FOX": {
+        "pair_days": 1469,
+        "per_pair_day_usd": -143.07018447923764,
+        "trades": 4888,
+        "total_usd": -210170.10100000008
+       },
+       "LSXMK/LSXMA": {
+        "pair_days": 674,
+        "per_pair_day_usd": -127.26977596439173,
+        "trades": 796,
+        "total_usd": -85779.82900000003
+       },
+       "LBRDK/LBRDA": {
+        "pair_days": 501,
+        "per_pair_day_usd": -110.41840319361262,
+        "trades": 311,
+        "total_usd": -55319.61999999992
+       },
+       "HEI/HEI.A": {
+        "pair_days": 716,
+        "per_pair_day_usd": -24.18084078212291,
+        "trades": 151,
+        "total_usd": -17313.482000000004
+       }
+      }
+     }
+    }
+   },
+   "cost_per_trade_M_vs_P": {
+    "W30_z2_k0": {
+     "L3D1": {
+      "M": {
+       "mean": 149.7881136924508,
+       "lo": 142.39893651466707,
+       "hi": 157.18929053145354
+      },
+      "P": {
+       "mean": 155.31836734621206,
+       "lo": 145.73928792551462,
+       "hi": 165.23582138924957
+      },
+      "P_minus_M": {
+       "mean": 5.530253653761264,
+       "lo": 2.418950141191774,
+       "hi": 10.22675073258312
+      }
+     },
+     "L0D0": {
+      "M": {
+       "mean": 112.30415891995935,
+       "lo": 105.35205845932992,
+       "hi": 119.68244473241651
+      },
+      "P": {
+       "mean": 125.33141204544246,
+       "lo": 116.00700804431438,
+       "hi": 135.48763830465293
+      },
+      "P_minus_M": {
+       "mean": 13.027253125483114,
+       "lo": 9.656360963005703,
+       "hi": 18.69706306810817
+      }
+     }
+    },
+    "W30_z3_k1": {
+     "L3D1": {
+      "M": {
+       "mean": 123.8829094396932,
+       "lo": 115.21250467375154,
+       "hi": 132.87343652680906
+      },
+      "P": {
+       "mean": 130.25063709480884,
+       "lo": 112.80243314717971,
+       "hi": 157.027643360388
+      },
+      "P_minus_M": {
+       "mean": 6.367727655115644,
+       "lo": -4.730465609335002,
+       "hi": 28.383288563401393
+      }
+     },
+     "L0D0": {
+      "M": {
+       "mean": 75.98697785948376,
+       "lo": 70.73414822982036,
+       "hi": 81.92938350990376
+      },
+      "P": {
+       "mean": 98.46697650490167,
+       "lo": 80.49162013101568,
+       "hi": 129.79274128802385
+      },
+      "P_minus_M": {
+       "mean": 22.479998645417908,
+       "lo": 9.349881790636005,
+       "hi": 49.65235883283567
+      }
+     }
+    }
+   },
+   "delay_check_astar_1s": {
+    "L3D1": {
+     "mean_daily_usd": -773.8985340136056,
+     "ci_lo": -925.7351119047618,
+     "ci_hi": -645.8652711224491,
+     "trades": 12289
+    },
+    "L0D0": {
+     "mean_daily_usd": -504.32350408163313,
+     "ci_lo": -655.896282908164,
+     "ci_hi": -402.2341547959189,
+     "trades": 12333
+    }
+   },
+   "pair_days_left_out_no_state_after_first_state": 0,
+   "trades_valued_at_last_valid_mids": {
+    "W30_z2_k0": {
+     "mid": 0,
+     "M_L3D1": 0,
+     "M_L0D0": 0,
+     "P_L3D1": 0,
+     "P_L0D0": 0
+    },
+    "W30_z3_k1": {
+     "mid": 0,
+     "M_L3D1": 0,
+     "M_L0D0": 0,
+     "P_L3D1": 0,
+     "P_L0D0": 0
+    }
+   }
+  }
+ },
+ "dev_candidates": {
+  "note": "the 16 candidates of the development run under L3D1 and L0D0 (selection: A* = W30_z3_k1_P, no H2)",
+  "rows": [
+   {
+    "name": "W10_z2_k0_M",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -24206.21330244871,
+    "ci_lo": -26557.71047154202,
+    "ci_hi": -22120.31907147584,
+    "sharpe": -35.07444517145412,
+    "trades": 406397,
+    "win_rate": 0.0005659490596633341,
+    "mean_hold_s": 102.92144134922256,
+    "pnl_per_trade": -89.99965132616617,
+    "mid_per_trade": 21.073825963282186,
+    "cost_per_trade": 93.91357059722411,
+    "fee_per_trade": 17.15990669222463
+   },
+   {
+    "name": "W10_z2_k0_M",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -14500.339642620773,
+    "ci_lo": -15828.189260754456,
+    "ci_hi": -13344.744051290527,
+    "sharpe": -36.611292707410556,
+    "trades": 406397,
+    "win_rate": 0.0022982453118502353,
+    "mean_hold_s": 102.92144134922256,
+    "pnl_per_trade": -53.912832033701285,
+    "mid_per_trade": 21.073825963282186,
+    "cost_per_trade": 57.82675130475844,
+    "fee_per_trade": 17.15990669222463
+   },
+   {
+    "name": "W10_z2_k0_P",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -17440.045771012574,
+    "ci_lo": -18912.427286019196,
+    "ci_hi": -16157.817366346793,
+    "sharpe": -40.786503778738776,
+    "trades": 338006,
+    "win_rate": 0.04059987100820695,
+    "mean_hold_s": 128.61098619551132,
+    "pnl_per_trade": -77.9628443282074,
+    "mid_per_trade": 20.961556895439717,
+    "cost_per_trade": 87.92485914451241,
+    "fee_per_trade": 10.999542079134725
+   },
+   {
+    "name": "W10_z2_k0_P",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -11851.856845797483,
+    "ci_lo": -12813.344529020515,
+    "ci_hi": -11008.650964278624,
+    "sharpe": -41.374618578098705,
+    "trades": 341286,
+    "win_rate": 0.08168515555868099,
+    "mean_hold_s": 127.19260385717551,
+    "pnl_per_trade": -52.47257635531487,
+    "mid_per_trade": 21.013588896116413,
+    "cost_per_trade": 64.14141728638124,
+    "fee_per_trade": 9.34474796504985
+   },
+   {
+    "name": "W10_z2_k1_M",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -3559.291158173395,
+    "ci_lo": -4184.6827723362,
+    "ci_hi": -3005.8672753143624,
+    "sharpe": -18.444570766132,
+    "trades": 58345,
+    "win_rate": 0.0027080298226069073,
+    "mean_hold_s": 183.25263518724827,
+    "pnl_per_trade": -92.17737492501499,
+    "mid_per_trade": 29.332433798954476,
+    "cost_per_trade": 97.97600394206887,
+    "fee_per_trade": 23.533804781900695
+   },
+   {
+    "name": "W10_z2_k1_M",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -1492.2138583719388,
+    "ci_lo": -1717.6232147584374,
+    "ci_hi": -1293.6754030443417,
+    "sharpe": -20.67142011919198,
+    "trades": 58345,
+    "win_rate": 0.012905990230525324,
+    "mean_hold_s": 183.25263518724827,
+    "pnl_per_trade": -38.6448734253148,
+    "mid_per_trade": 29.332433798954476,
+    "cost_per_trade": 44.44350244236869,
+    "fee_per_trade": 23.533804781900695
+   },
+   {
+    "name": "W10_z2_k1_P",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -2948.1861634679026,
+    "ci_lo": -3472.391343563866,
+    "ci_hi": -2503.292590751159,
+    "sharpe": -17.68676495691863,
+    "trades": 56750,
+    "win_rate": 0.06826431718061673,
+    "mean_hold_s": 190.9990308370044,
+    "pnl_per_trade": -78.49708005286344,
+    "mid_per_trade": 28.958659030837037,
+    "cost_per_trade": 94.49370748898676,
+    "fee_per_trade": 12.96203159471363
+   },
+   {
+    "name": "W10_z2_k1_P",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -1598.0421118464594,
+    "ci_lo": -1838.9545320483123,
+    "ci_hi": -1393.8110537227003,
+    "sharpe": -19.969674500920828,
+    "trades": 57058,
+    "win_rate": 0.17187773844158574,
+    "mean_hold_s": 189.55948333274912,
+    "pnl_per_trade": -42.31907236496194,
+    "mid_per_trade": 29.026461670580794,
+    "cost_per_trade": 61.4678267727576,
+    "fee_per_trade": 9.877707262785227
+   },
+   {
+    "name": "W10_z3_k0_M",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -6715.086260754467,
+    "ci_lo": -7223.147632031768,
+    "ci_hi": -6254.946303772336,
+    "sharpe": -42.837925942288784,
+    "trades": 107221,
+    "win_rate": 0.0011191837419908413,
+    "mean_hold_s": 159.02104065434943,
+    "pnl_per_trade": -94.63160518928211,
+    "mid_per_trade": 25.3183588103076,
+    "cost_per_trade": 99.4593666352672,
+    "fee_per_trade": 20.490597364322355
+   },
+   {
+    "name": "W10_z3_k0_M",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -3785.059854401056,
+    "ci_lo": -4075.261150231634,
+    "ci_hi": -3516.1004761747163,
+    "sharpe": -41.16111447004241,
+    "trades": 107221,
+    "win_rate": 0.006080898331483571,
+    "mean_hold_s": 159.02104065434943,
+    "pnl_per_trade": -53.34053441023673,
+    "mid_per_trade": 25.3183588103076,
+    "cost_per_trade": 58.16829585622225,
+    "fee_per_trade": 20.490597364322355
+   },
+   {
+    "name": "W10_z3_k0_P",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -5703.843001323627,
+    "ci_lo": -6123.973645152218,
+    "ci_hi": -5318.140863567174,
+    "sharpe": -42.76401813615292,
+    "trades": 100266,
+    "win_rate": 0.03765982486585682,
+    "mean_hold_s": 176.14096503301218,
+    "pnl_per_trade": -85.95642366305594,
+    "mid_per_trade": 25.22069545010271,
+    "cost_per_trade": 97.29475734546112,
+    "fee_per_trade": 13.88236176769798
+   },
+   {
+    "name": "W10_z3_k0_P",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -3701.9798014559883,
+    "ci_lo": -3977.9989235109197,
+    "ci_hi": -3446.2581915618775,
+    "sharpe": -41.445006429781564,
+    "trades": 100533,
+    "win_rate": 0.08400226791202889,
+    "mean_hold_s": 175.47307849163957,
+    "pnl_per_trade": -55.64035172530424,
+    "mid_per_trade": 25.241172550306832,
+    "cost_per_trade": 68.7352818477515,
+    "fee_per_trade": 12.146242427859503
+   },
+   {
+    "name": "W10_z3_k1_M",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -1771.0215618795507,
+    "ci_lo": -2052.021279947056,
+    "ci_hi": -1522.2026508934484,
+    "sharpe": -20.6268785998619,
+    "trades": 29306,
+    "win_rate": 0.0035146386405514227,
+    "mean_hold_s": 208.62792602197501,
+    "pnl_per_trade": -91.31282263017816,
+    "mid_per_trade": 30.204434245546963,
+    "cost_per_trade": 97.43137412134055,
+    "fee_per_trade": 24.085882754384755
+   },
+   {
+    "name": "W10_z3_k1_M",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -738.730231634679,
+    "ci_lo": -836.9955526141634,
+    "ci_hi": -652.3371551952345,
+    "sharpe": -22.339254430300393,
+    "trades": 29306,
+    "win_rate": 0.02081485020132396,
+    "mean_hold_s": 208.62792602197501,
+    "pnl_per_trade": -38.088493141336116,
+    "mid_per_trade": 30.204434245546963,
+    "cost_per_trade": 44.20704463249835,
+    "fee_per_trade": 24.085882754384755
+   },
+   {
+    "name": "W10_z3_k1_P",
+    "variant": "L3D1",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -1504.0377624090013,
+    "ci_lo": -1746.2090133189943,
+    "ci_hi": -1298.8041942753148,
+    "sharpe": -19.701013671316613,
+    "trades": 29032,
+    "win_rate": 0.0644461284100303,
+    "mean_hold_s": 213.93961835216314,
+    "pnl_per_trade": -78.27917673601549,
+    "mid_per_trade": 29.957514122347682,
+    "cost_per_trade": 94.57044537062554,
+    "fee_per_trade": 13.666245487737632
+   },
+   {
+    "name": "W10_z3_k1_P",
+    "variant": "L0D0",
+    "W": 10,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -808.2674480476502,
+    "ci_lo": -916.6894792190592,
+    "ci_hi": -715.5928869126409,
+    "sharpe": -21.32092312910922,
+    "trades": 29081,
+    "win_rate": 0.1668099446373921,
+    "mean_hold_s": 213.18524122279152,
+    "pnl_per_trade": -41.99622138165817,
+    "mid_per_trade": 29.983882947629006,
+    "cost_per_trade": 61.19292630927421,
+    "fee_per_trade": 10.787178020013041
+   },
+   {
+    "name": "W30_z2_k0_M",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -11291.19203176704,
+    "ci_lo": -12475.339228987421,
+    "ci_hi": -10243.110082395764,
+    "sharpe": -30.892320585433453,
+    "trades": 207420,
+    "win_rate": 0.0009931539870793558,
+    "mean_hold_s": 193.12732619805226,
+    "pnl_per_trade": -82.25335628194004,
+    "mid_per_trade": 24.77321184070968,
+    "cost_per_trade": 91.61397599074347,
+    "fee_per_trade": 15.41259213190635
+   },
+   {
+    "name": "W30_z2_k0_M",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -6890.4855459960245,
+    "ci_lo": -7630.4776363335495,
+    "ci_hi": -6241.209738252809,
+    "sharpe": -29.798882142174886,
+    "trades": 207420,
+    "win_rate": 0.005105582875325427,
+    "mean_hold_s": 193.12732619805226,
+    "pnl_per_trade": -50.19537007038868,
+    "mid_per_trade": 24.77321184070968,
+    "cost_per_trade": 59.555989779192096,
+    "fee_per_trade": 15.41259213190635
+   },
+   {
+    "name": "W30_z2_k0_P",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -8968.015784248842,
+    "ci_lo": -9793.940530559234,
+    "ci_hi": -8240.027579252148,
+    "sharpe": -35.61013792582985,
+    "trades": 182262,
+    "win_rate": 0.042532178951180166,
+    "mean_hold_s": 223.95809329426868,
+    "pnl_per_trade": -74.34721362653758,
+    "mid_per_trade": 25.027229208502096,
+    "cost_per_trade": 89.03414705204582,
+    "fee_per_trade": 10.340295782993705
+   },
+   {
+    "name": "W30_z2_k0_P",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -6191.8088934480475,
+    "ci_lo": -6777.424188500994,
+    "ci_hi": -5670.666929698876,
+    "sharpe": -34.13205946569085,
+    "trades": 183211,
+    "win_rate": 0.0848911910311062,
+    "mean_hold_s": 222.67718641347955,
+    "pnl_per_trade": -51.06583795732793,
+    "mid_per_trade": 25.04498801927833,
+    "cost_per_trade": 67.1768802091578,
+    "fee_per_trade": 8.933945767448447
+   },
+   {
+    "name": "W30_z2_k1_M",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -2752.4378027796165,
+    "ci_lo": -3131.727021508935,
+    "ci_hi": -2408.694973858373,
+    "sharpe": -24.0347374599178,
+    "trades": 49723,
+    "win_rate": 0.004122840536572612,
+    "mean_hold_s": 387.4283530760413,
+    "pnl_per_trade": -83.64204734227629,
+    "mid_per_trade": 32.69387004002176,
+    "cost_per_trade": 93.75638839168968,
+    "fee_per_trade": 22.579528990607802
+   },
+   {
+    "name": "W30_z2_k1_M",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -1117.5609662475176,
+    "ci_lo": -1237.7760996029126,
+    "ci_hi": -1011.0260807412301,
+    "sharpe": -28.783550653395984,
+    "trades": 49723,
+    "win_rate": 0.02129799086941657,
+    "mean_hold_s": 387.4283530760413,
+    "pnl_per_trade": -33.960835428272546,
+    "mid_per_trade": 32.69387004002176,
+    "cost_per_trade": 44.07517647768625,
+    "fee_per_trade": 22.579528990607802
+   },
+   {
+    "name": "W30_z2_k1_P",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -2379.169728656519,
+    "ci_lo": -2683.792300595632,
+    "ci_hi": -2107.684221889477,
+    "sharpe": -24.483989588715794,
+    "trades": 48782,
+    "win_rate": 0.07119429297691772,
+    "mean_hold_s": 396.64107662662457,
+    "pnl_per_trade": -73.69368742568967,
+    "mid_per_trade": 32.5494208929523,
+    "cost_per_trade": 92.65389979910617,
+    "fee_per_trade": 13.589208519535916
+   },
+   {
+    "name": "W30_z2_k1_P",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 2.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -1278.850963600265,
+    "ci_lo": -1408.5517812375908,
+    "ci_hi": -1163.4737003970884,
+    "sharpe": -28.339132881664618,
+    "trades": 48918,
+    "win_rate": 0.1714297395641686,
+    "mean_hold_s": 395.352937568993,
+    "pnl_per_trade": -39.501692751134655,
+    "mid_per_trade": 32.57504395110184,
+    "cost_per_trade": 61.061014146122034,
+    "fee_per_trade": 11.01572255611429
+   },
+   {
+    "name": "W30_z3_k0_M",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -2398.4836929185967,
+    "ci_lo": -2604.06383620119,
+    "ci_hi": -2219.856554268695,
+    "sharpe": -33.73350922827195,
+    "trades": 43791,
+    "win_rate": 0.003402525633120961,
+    "mean_hold_s": 344.3748715489484,
+    "pnl_per_trade": -82.7592167340321,
+    "mid_per_trade": 31.101351875956205,
+    "cost_per_trade": 95.52118243474675,
+    "fee_per_trade": 18.339386175241405
+   },
+   {
+    "name": "W30_z3_k0_M",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "M",
+    "mean_daily_usd": -1321.7241297154187,
+    "ci_lo": -1435.1181058901384,
+    "ci_hi": -1222.255851753804,
+    "sharpe": -31.156639660966498,
+    "trades": 43791,
+    "win_rate": 0.02055216825375077,
+    "mean_hold_s": 344.3748715489484,
+    "pnl_per_trade": -45.6058359023544,
+    "mid_per_trade": 31.101351875956205,
+    "cost_per_trade": 58.36780160306885,
+    "fee_per_trade": 18.339386175241405
+   },
+   {
+    "name": "W30_z3_k0_P",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -2176.05875049636,
+    "ci_lo": -2350.5066262408986,
+    "ci_hi": -2024.5913412309728,
+    "sharpe": -34.53331222922657,
+    "trades": 42219,
+    "win_rate": 0.04988275421018973,
+    "mean_hold_s": 361.5466969847699,
+    "pnl_per_trade": -77.88021440583604,
+    "mid_per_trade": 31.111121769819196,
+    "cost_per_trade": 96.50368933418585,
+    "fee_per_trade": 12.487646841469509
+   },
+   {
+    "name": "W30_z3_k0_P",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 0.0,
+    "exec": "P",
+    "mean_daily_usd": -1416.840908669755,
+    "ci_lo": -1532.102891214427,
+    "ci_hi": -1314.9052826108534,
+    "sharpe": -32.374718747925606,
+    "trades": 42278,
+    "win_rate": 0.10736080230852926,
+    "mean_hold_s": 360.9036614787833,
+    "pnl_per_trade": -50.637367259567576,
+    "mid_per_trade": 31.12232366715546,
+    "cost_per_trade": 70.8324757557122,
+    "fee_per_trade": 10.927215171010955
+   },
+   {
+    "name": "W30_z3_k1_M",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -1097.9088153540702,
+    "ci_lo": -1235.0377038385175,
+    "ci_hi": -975.6122346128386,
+    "sharpe": -25.795272644412133,
+    "trades": 19971,
+    "win_rate": 0.007611036002203195,
+    "mean_hold_s": 480.22332381953834,
+    "pnl_per_trade": -83.06745881528221,
+    "mid_per_trade": 34.669988984026816,
+    "cost_per_trade": 94.2660733062943,
+    "fee_per_trade": 23.471374493014853
+   },
+   {
+    "name": "W30_z3_k1_M",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "M",
+    "mean_daily_usd": -436.12661813368544,
+    "ci_lo": -477.2672495036397,
+    "ci_hi": -399.5107048312364,
+    "sharpe": -26.46022812910222,
+    "trades": 19971,
+    "win_rate": 0.04556607080266386,
+    "mean_hold_s": 480.22332381953834,
+    "pnl_per_trade": -32.997211957338,
+    "mid_per_trade": 34.669988984026816,
+    "cost_per_trade": 44.19582644834993,
+    "fee_per_trade": 23.471374493014853
+   },
+   {
+    "name": "W30_z3_k1_P",
+    "variant": "L3D1",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -976.8250595632029,
+    "ci_lo": -1090.311898643282,
+    "ci_hi": -876.7230625248183,
+    "sharpe": -25.365876260664994,
+    "trades": 19824,
+    "win_rate": 0.07395076674737691,
+    "mean_hold_s": 485.7077280064568,
+    "pnl_per_trade": -74.45433136602092,
+    "mid_per_trade": 34.55808868038746,
+    "cost_per_trade": 94.47900070621448,
+    "fee_per_trade": 14.533419340193642
+   },
+   {
+    "name": "W30_z3_k1_P",
+    "variant": "L0D0",
+    "W": 30,
+    "z_in": 3.0,
+    "kappa": 1.0,
+    "exec": "P",
+    "mean_daily_usd": -519.4658305757778,
+    "ci_lo": -566.4717694076774,
+    "ci_hi": -477.6872808735934,
+    "sharpe": -25.44661086595107,
+    "trades": 19843,
+    "win_rate": 0.17814846545381244,
+    "mean_hold_s": 485.0050395605503,
+    "pnl_per_trade": -39.55615935090454,
+    "mid_per_trade": 34.561613667288256,
+    "cost_per_trade": 62.019100942397905,
+    "fee_per_trade": 12.098672075794962
+   }
+  ],
+  "mid_rows": [
+   {
+    "name": "W10_z2_k0",
+    "trades": 406397,
+    "per_trade": {
+     "mean": 21.07382596328221,
+     "lo": 19.9392122922733,
+     "hi": 22.407037422806322
+    },
+    "mean_daily_usd": 5667.994473858372,
+    "ci_lo": 5176.400329252151,
+    "ci_hi": 6223.436107710125,
+    "win_rate": 0.9560897349143818
+   },
+   {
+    "name": "W10_z2_k1",
+    "trades": 58345,
+    "per_trade": {
+     "mean": 29.332433798954497,
+     "lo": 27.03191167425534,
+     "hi": 31.96851132060636
+    },
+    "mean_daily_usd": 1132.6279616148247,
+    "ci_lo": 964.9740461614824,
+    "ci_hi": 1322.2812243547319,
+    "win_rate": 0.889724912160425
+   },
+   {
+    "name": "W10_z3_k0",
+    "trades": 107221,
+    "per_trade": {
+     "mean": 25.318358810307682,
+     "lo": 23.949609924443852,
+     "hi": 27.036854518941258
+    },
+    "mean_daily_usd": 1796.5981138318994,
+    "ci_lo": 1661.617499172733,
+    "ci_hi": 1953.0566594970219,
+    "win_rate": 0.9301536079685883
+   },
+   {
+    "name": "W10_z3_k1",
+    "trades": 29306,
+    "per_trade": {
+     "mean": 30.204434245546988,
+     "lo": 27.791483608820915,
+     "hi": 33.02383288486295
+    },
+    "mean_daily_usd": 585.818100595632,
+    "ci_lo": 504.281450198544,
+    "ci_hi": 680.4060721376571,
+    "win_rate": 0.8791032553060807
+   },
+   {
+    "name": "W30_z2_k0",
+    "trades": 207420,
+    "per_trade": {
+     "mean": 24.77321184070967,
+     "lo": 23.45552904619638,
+     "hi": 26.297890366146643
+    },
+    "mean_daily_usd": 3400.7012574454,
+    "ci_lo": 3096.3896897749837,
+    "ci_hi": 3734.5094705493048,
+    "win_rate": 0.9661025937710924
+   },
+   {
+    "name": "W30_z2_k1",
+    "trades": 49723,
+    "per_trade": {
+     "mean": 32.693870040021714,
+     "lo": 30.397694353101915,
+     "hi": 35.224103157474744
+    },
+    "mean_daily_usd": 1075.868497683653,
+    "ci_lo": 949.5873237921908,
+    "ci_hi": 1213.7085216743878,
+    "win_rate": 0.908050600325805
+   },
+   {
+    "name": "W30_z3_k0",
+    "trades": 43791,
+    "per_trade": {
+     "mean": 31.101351875956244,
+     "lo": 29.324117314744754,
+     "hi": 33.209701671231194
+    },
+    "mean_daily_usd": 901.3628722700197,
+    "ci_lo": 826.6585572468564,
+    "ci_hi": 986.8427399073461,
+    "win_rate": 0.9364481286109018
+   },
+   {
+    "name": "W30_z3_k1",
+    "trades": 19971,
+    "per_trade": {
+     "mean": 34.66998898402684,
+     "lo": 32.122660537252024,
+     "hi": 37.476148163873326
+    },
+    "mean_daily_usd": 458.2358371939113,
+    "ci_lo": 407.2890395433488,
+    "ci_hi": 515.6328524156189,
+    "win_rate": 0.8907916478894397
+   }
+  ]
+ },
+ "dev_delayed_mid_all_settings": {
+  "W10_z2_k0": {
+   "0": {
+    "trades": 406397,
+    "per_trade_usd": 21.07382596328221,
+    "mean_daily_usd": 5667.994473858372,
+    "ci_lo": 5176.400329252151,
+    "ci_hi": 6223.436107710125,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.9560897349143818
+   },
+   "1": {
+    "trades": 406397,
+    "per_trade_usd": 16.266406617174834,
+    "mean_daily_usd": 4374.995929847783,
+    "ci_lo": 4055.859846128392,
+    "ci_hi": 4728.614568166777,
+    "ratio_to_delay0": 0.7718772398289926,
+    "win_rate": 0.8516721334064966
+   },
+   "5": {
+    "trades": 406397,
+    "per_trade_usd": 10.17427207878011,
+    "mean_daily_usd": 2736.461714096625,
+    "ci_lo": 2574.5171343481143,
+    "ci_hi": 2910.7437069821312,
+    "ratio_to_delay0": 0.48279188109967136,
+    "win_rate": 0.6892619778197182
+   },
+   "30": {
+    "trades": 406397,
+    "per_trade_usd": 3.4978404122077675,
+    "mean_daily_usd": 940.7755459960292,
+    "ci_lo": 864.9799478821973,
+    "ci_hi": 1019.71768861681,
+    "ratio_to_delay0": 0.16598032167021776,
+    "win_rate": 0.4784508743912972
+   }
+  },
+  "W10_z2_k1": {
+   "0": {
+    "trades": 58345,
+    "per_trade_usd": 29.332433798954497,
+    "mean_daily_usd": 1132.6279616148247,
+    "ci_lo": 964.9740461614824,
+    "ci_hi": 1322.2812243547319,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.889724912160425
+   },
+   "1": {
+    "trades": 58345,
+    "per_trade_usd": 22.63284086039935,
+    "mean_daily_usd": 873.9332230311053,
+    "ci_lo": 749.3218423229648,
+    "ci_hi": 1012.399264559894,
+    "ratio_to_delay0": 0.7715977820158264,
+    "win_rate": 0.8311766218184935
+   },
+   "5": {
+    "trades": 58345,
+    "per_trade_usd": 14.340549318707689,
+    "mean_daily_usd": 553.7388153540702,
+    "ci_lo": 475.55407677035083,
+    "ci_hi": 638.2959075115817,
+    "ratio_to_delay0": 0.4888973556370502,
+    "win_rate": 0.7219470391635958
+   },
+   "30": {
+    "trades": 58345,
+    "per_trade_usd": 6.34659353843517,
+    "mean_daily_usd": 245.06419589675713,
+    "ci_lo": 205.10666694242224,
+    "ci_hi": 287.6947303110523,
+    "ratio_to_delay0": 0.21636777847808128,
+    "win_rate": 0.5705715999657212
+   }
+  },
+  "W10_z3_k0": {
+   "0": {
+    "trades": 107221,
+    "per_trade_usd": 25.318358810307682,
+    "mean_daily_usd": 1796.5981138318994,
+    "ci_lo": 1661.617499172733,
+    "ci_hi": 1953.0566594970219,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.9301536079685883
+   },
+   "1": {
+    "trades": 107221,
+    "per_trade_usd": 19.88594398485371,
+    "mean_daily_usd": 1411.1123759099933,
+    "ci_lo": 1317.0021633024485,
+    "ci_hi": 1516.919258769027,
+    "ratio_to_delay0": 0.7854357438349318,
+    "win_rate": 0.8466158681601552
+   },
+   "5": {
+    "trades": 107221,
+    "per_trade_usd": 13.05221784911538,
+    "mean_daily_usd": 926.1891793514229,
+    "ci_lo": 865.030571641297,
+    "ci_hi": 990.062088021178,
+    "ratio_to_delay0": 0.5155238515618762,
+    "win_rate": 0.7106630231018177
+   },
+   "30": {
+    "trades": 107221,
+    "per_trade_usd": 5.258219938258363,
+    "mean_daily_usd": 373.1248180013236,
+    "ci_lo": 337.61269027134347,
+    "ci_hi": 411.06358123759105,
+    "ratio_to_delay0": 0.2076840753247253,
+    "win_rate": 0.5159437050577779
+   }
+  },
+  "W10_z3_k1": {
+   "0": {
+    "trades": 29306,
+    "per_trade_usd": 30.204434245546988,
+    "mean_daily_usd": 585.818100595632,
+    "ci_lo": 504.281450198544,
+    "ci_hi": 680.4060721376571,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.8791032553060807
+   },
+   "1": {
+    "trades": 29306,
+    "per_trade_usd": 23.542987784071524,
+    "mean_daily_usd": 456.6186631369954,
+    "ci_lo": 395.1982933487757,
+    "ci_hi": 527.2116942422236,
+    "ratio_to_delay0": 0.7794546851193693,
+    "win_rate": 0.8222889510680407
+   },
+   "5": {
+    "trades": 29306,
+    "per_trade_usd": 15.183329352351056,
+    "mean_daily_usd": 294.4822303110523,
+    "ci_lo": 254.6549909000662,
+    "ci_hi": 338.38251737260094,
+    "ratio_to_delay0": 0.5026854411149754,
+    "win_rate": 0.72159284788098
+   },
+   "30": {
+    "trades": 29306,
+    "per_trade_usd": 6.945872858800246,
+    "mean_daily_usd": 134.71591661151555,
+    "ci_lo": 112.60130459960291,
+    "ci_hi": 158.73197385837196,
+    "ratio_to_delay0": 0.22996202485813055,
+    "win_rate": 0.5843854500784822
+   }
+  },
+  "W30_z2_k0": {
+   "0": {
+    "trades": 207420,
+    "per_trade_usd": 24.77321184070967,
+    "mean_daily_usd": 3400.7012574454,
+    "ci_lo": 3096.3896897749837,
+    "ci_hi": 3734.5094705493048,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.9661025937710924
+   },
+   "1": {
+    "trades": 207420,
+    "per_trade_usd": 19.50870914087359,
+    "mean_daily_usd": 2678.025446724024,
+    "ci_lo": 2476.2004045334215,
+    "ci_hi": 2901.298222203838,
+    "ratio_to_delay0": 0.7874921211796625,
+    "win_rate": 0.8881592903288015
+   },
+   "5": {
+    "trades": 207420,
+    "per_trade_usd": 12.966521791534085,
+    "mean_daily_usd": 1779.957610853739,
+    "ci_lo": 1663.7268092322963,
+    "ci_hi": 1904.130555095963,
+    "ratio_to_delay0": 0.5234089901183615,
+    "win_rate": 0.7528348278854499
+   },
+   "30": {
+    "trades": 207420,
+    "per_trade_usd": 5.163076366792016,
+    "mean_daily_usd": 708.7526803441428,
+    "ci_lo": 650.5545896757114,
+    "ci_hi": 769.1530650231634,
+    "ratio_to_delay0": 0.20841368491055176,
+    "win_rate": 0.5420836949185228
+   }
+  },
+  "W30_z2_k1": {
+   "0": {
+    "trades": 49723,
+    "per_trade_usd": 32.693870040021714,
+    "mean_daily_usd": 1075.868497683653,
+    "ci_lo": 949.5873237921908,
+    "ci_hi": 1213.7085216743878,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.908050600325805
+   },
+   "1": {
+    "trades": 49723,
+    "per_trade_usd": 26.165700983448303,
+    "mean_daily_usd": 861.0437789543348,
+    "ci_lo": 765.2476455989411,
+    "ci_hi": 965.6103491065519,
+    "ratio_to_delay0": 0.8003243712481254,
+    "win_rate": 0.8659372926010096
+   },
+   "5": {
+    "trades": 49723,
+    "per_trade_usd": 17.943805683486517,
+    "mean_daily_usd": 590.4830244870947,
+    "ci_lo": 524.6205716412971,
+    "ci_hi": 659.7826505625412,
+    "ratio_to_delay0": 0.5488431214022957,
+    "win_rate": 0.7752549122136637
+   },
+   "30": {
+    "trades": 49723,
+    "per_trade_usd": 8.853920720793194,
+    "mean_daily_usd": 291.3590337524818,
+    "ci_lo": 253.96715254798144,
+    "ci_hi": 331.1765180344143,
+    "ratio_to_delay0": 0.2708128682824884,
+    "win_rate": 0.6246807312511312
+   }
+  },
+  "W30_z3_k0": {
+   "0": {
+    "trades": 43791,
+    "per_trade_usd": 31.101351875956244,
+    "mean_daily_usd": 901.3628722700197,
+    "ci_lo": 826.6585572468564,
+    "ci_hi": 986.8427399073461,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.9364481286109018
+   },
+   "1": {
+    "trades": 43791,
+    "per_trade_usd": 24.906988878993406,
+    "mean_daily_usd": 721.8411317008605,
+    "ci_lo": 668.7687210456651,
+    "ci_hi": 781.8142182329584,
+    "ratio_to_delay0": 0.8008329984603801,
+    "win_rate": 0.8804777237331872
+   },
+   "5": {
+    "trades": 43791,
+    "per_trade_usd": 17.21050101619054,
+    "mean_daily_usd": 498.78560555923224,
+    "ci_lo": 463.1069763401721,
+    "ci_hi": 537.3202564526804,
+    "ratio_to_delay0": 0.5533682614451108,
+    "win_rate": 0.7754104724715124
+   },
+   "30": {
+    "trades": 43791,
+    "per_trade_usd": 7.88906738827613,
+    "mean_daily_usd": 228.6367637326274,
+    "ci_lo": 206.72176786896097,
+    "ci_hi": 251.5980890138981,
+    "ratio_to_delay0": 0.2536567355573695,
+    "win_rate": 0.5968349660889224
+   }
+  },
+  "W30_z3_k1": {
+   "0": {
+    "trades": 19971,
+    "per_trade_usd": 34.66998898402684,
+    "mean_daily_usd": 458.2358371939113,
+    "ci_lo": 407.2890395433488,
+    "ci_hi": 515.6328524156189,
+    "ratio_to_delay0": 1.0,
+    "win_rate": 0.8907916478894397
+   },
+   "1": {
+    "trades": 19971,
+    "per_trade_usd": 28.16107856391768,
+    "mean_daily_usd": 372.20708140304436,
+    "ci_lo": 332.36385009927204,
+    "ci_hi": 416.6622220383852,
+    "ratio_to_delay0": 0.8122609608238427,
+    "win_rate": 0.8502829102198187
+   },
+   "5": {
+    "trades": 19971,
+    "per_trade_usd": 19.636069801211754,
+    "mean_daily_usd": 259.53140304434146,
+    "ci_lo": 231.51975264725348,
+    "ci_hi": 290.43058735936467,
+    "ratio_to_delay0": 0.5663708116624578,
+    "win_rate": 0.7688648540383556
+   },
+   "30": {
+    "trades": 19971,
+    "per_trade_usd": 10.04477742726954,
+    "mean_daily_usd": 132.76257445400398,
+    "ci_lo": 115.29316181336864,
+    "ci_hi": 151.4594167769689,
+    "ratio_to_delay0": 0.2897254288686787,
+    "win_rate": 0.6404786941064543
+   }
+  }
+ },
+ "daily_file": {
+  "name": "study20_daily.csv",
+  "columns": [
+   "date",
+   "period",
+   "h1_mid_d0",
+   "h1_mid_d1",
+   "h1_mid_d5",
+   "h1_mid_d30",
+   "default_M_L3D1",
+   "default_M_L0D0",
+   "default_P_L3D1",
+   "default_P_L0D0",
+   "astar_sig_M_L3D1",
+   "astar_sig_M_L0D0",
+   "astar_sig_P_L3D1",
+   "astar_sig_P_L0D0"
+  ],
+  "rows": {
+   "dev": 1511,
+   "sealed": 1470
+  },
+  "empty_columns_sealed": [
+   "default_M_L3D1",
+   "default_M_L0D0",
+   "default_P_L3D1",
+   "default_P_L0D0"
+  ],
+  "empty_reason": "the sealed result files hold no daily M or P series of the default signal; sealed bars are not read again",
+  "dev_recomputation_check": {
+   "max_abs_diff_vs_rehearsal20_daily_csv": 5.445599526865408e-11,
+   "max_abs_diff_of_means_vs_rehearsal_summary": 0.0
+  }
+ },
+ "pairs_file": {
+  "name": "study20_pairs.csv",
+  "rows": 48
+ },
+ "data_note_sizes": "post hoc: from 2025-11-03 the depth penalty D1 is 0 on every sealed day (displayed sizes above every order); the SIPs switched quote sizes from round lots to shares on that day. H1 does not use sizes; the L3D1 rows of the sealed period are less strict from that day (research20/DEVIATIONS20.md 4.22)",
+ "not_included": "quotes, trades, bars, per-order and per-trade data"
+}

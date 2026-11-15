@@ -1,0 +1,40 @@
+{
+ "built": "2026-11-10T14:43:58",
+ "sources": {
+  "test19b_summary.json": "abe8693bb00481edb20b022e4b5b7471649478f76ec3e67617e0fa121d8f60f0",
+  "test19_summary.json": "9613055a20935691d5dba281b109494c67a78b3818e5e9e3c2cd41e8fae07996",
+  "dev19_monthly.csv": "8e5d1d0fe09e0cedd3f0cdcf681ed2bc2845bdd9afaf737155a32c2f71135ec3",
+  "portfolio19_dev.json": "7c41b5eec79a110933cabaaf1759e051fad7100779ff761fde3625721cd74b5b",
+  "portfolio19_sealed.json": "6c7c4cc02816dbb9c6c80610e54391399ac47bc2c6c76e473bae46012ea995b9"
+ },
+ "unit": "monthly return per dollar of capital, net of cost, no compounding (0.01 = 1%)",
+ "columns": {
+  "month": "holding month (carry: first business day of the month to the first business day of the next)",
+  "period": "1979-89 (first seen in study 19B), 1990-2012 (development of study 19), 2013-26 (sealed test of study 19)",
+  "carry_c0": "carry without a filter, 1979-02..2026-02; cost 8 bp of the gross notional before 1990, 4 bp from 1990-01 (test19b_summary.json)",
+  "carry_cs40m": "carry with the monthly credit-spread filter (A* of study 19), 1990-01..2026-02 (dev19_monthly.csv, test19_summary.json)",
+  "option_o2": "option seller O2 of studies 13-14, calendar-month sum of the daily P&L on $1M notional / 1,000,000, 1996-03..2025-08",
+  "mix": "weights fixed on 1996-03..2012-12: carry_cs40m x 0.2625 + option_o2 x 0.7375, 1996-03..2025-08"
+ },
+ "weights": {
+  "carry": 0.2624939648178827,
+  "option": 0.7375060351821173
+ },
+ "rows": {
+  "study19_monthly.csv": 565,
+  "study19_worst_months.csv": 10
+ },
+ "values_per_column": {
+  "carry_c0": 565,
+  "carry_cs40m": 434,
+  "option_o2": 354,
+  "mix": 354
+ },
+ "months_by_period": {
+  "1979-89": 131,
+  "1990-2012": 276,
+  "2013-26": 158
+ },
+ "note_2012_12": "carry_c0 for 2012-12 is the full month (exit 2013-01-02, study 19B). carry_cs40m and mix use the development value of study 19, marked at 2012-12-31 because the exit day was sealed then; the filter was off that month, so the two carry columns differ there only by that last day: +0.008975.",
+ "not_included": "no exchange rate, interest rate or option price; monthly returns only"
+}

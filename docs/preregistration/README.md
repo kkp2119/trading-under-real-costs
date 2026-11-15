@@ -9,10 +9,15 @@ These are the original rule files, written before any result they govern was com
 | 15 | `SPLIT15.md` (data split), `FEATURES15.md`, `EXEC15_DECLARATION.md`, `TEST15_DECLARATION.md` (sealed test rule), `TEST15_PREDICTIONS.md` and `test15_prediction_scoring.md`, `DEVIATIONS15.md` (deviations log) |
 | 16 | `GATE16.md`, `QUEUE16.md`, `ROBUST16.md`, `QTY16.md` with their `.sha256` files, and `DEVIATIONS16.md` |
 | 17 | `SPEC17.md` (plan), `SPEC17_QUESTIONS.md` and `SPEC17_ANSWERS.md` (open points and Kyle's answers), `FREEZE17.md` (A* and SHA-256 of the frozen files), `PREDICTIONS17.md`, `DEVIATIONS17.md` |
+| 18 | `SPEC18.md` (plan), `SPEC18_ANSWERS.md` (Kyle's answers to the open points), `FREEZE18.md`, `PREDICTIONS18.md`, `DEVIATIONS18.md` |
+| 19, 19B | `SPEC19.md`, `SPEC19_ADDENDUM.md`, `SPEC19_ANSWERS.md`, `FREEZE19.md`, `PREDICTIONS19.md`, `DEVIATIONS19.md`, `PORTFOLIO19.md` (the mix with the Option Seller); Study 19B: `SPEC19B.md`, `FREEZE19B.md`, `PREDICTIONS19B.md`, `DEVIATIONS19B.md` |
+| 20–22 | `SPECnn.md`, `SPECnn_ADDENDUM.md`, `SPECnn_ANSWERS.md`, `FREEZEnn.md`, `PREDICTIONSnn.md`, `DEVIATIONSnn.md` |
+| 23 | `SPEC23.md`, `SPEC23_ANSWERS.md`, `FREEZE23.md`, `PREDICTIONS23.md`, `DEVIATIONS23.md` |
+| 24, 25 | `SPECnn.md`, `SPECnn_ANSWERS.md`, `PREDICTIONSnn.md`, `DEVIATIONSnn.md` (no freeze file: no rule passed the build stage, so there was no sealed run) |
 
 **Changes from the originals.** The files in this public copy differ from the originals in three ways:
 - The "(Korean)" first line was added.
-- Local folder paths were replaced with `$DATA_DIR/`, and the name of the local WRDS credential file was replaced with a generic description.
+- Local folder paths were replaced with `$DATA_DIR/`, and the name of the local WRDS credential file was replaced with a generic description. (Studies 18–25: also the name of a local Python environment.)
 - In `DEVIATIONS16.md`, the quote and trade values of one stock-second used in a hand check were removed, because they are licensed TAQ data.
 
 Because of these changes, the SHA-256 values recorded in the `.sha256` files and manifests refer to the unmodified originals in the private research repository, not to these copies. Nothing else was changed.

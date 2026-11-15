@@ -1,0 +1,3908 @@
+{
+ "astar": "R0",
+ "h2_exists": false,
+ "selection": {
+  "lowest_mean": "R2_0.40",
+  "lowest_mean_c": 3.211076730924507,
+  "r0_mean_c": 3.2171084951554314,
+  "r0_minus_lowest_c": 0.006031764230924441,
+  "threshold_c": 0.02,
+  "improves_in_development": false,
+  "astar": "R0"
+ },
+ "sentence_no_h2": "신호를 합친 예측은 검증 구간에서 E*를 이기지 못했다. 그래서 개선 가설은 봉인 데이터로 시험하지 않았다",
+ "hypotheses": [
+  "H1"
+ ],
+ "holm_levels": [
+  0.05
+ ],
+ "model": {
+  "features": [
+   "imbalance",
+   "spread_ticks",
+   "vol_pre",
+   "mid_change_5s",
+   "a_spy",
+   "a_own",
+   "trade_imbalance_30s",
+   "trade_intensity_60s",
+   "imbalance_x_intensity"
+  ],
+  "cols": [
+   0,
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   8
+  ],
+  "mean": [
+   0.00014628949894103646,
+   5.5490523938189735,
+   7.696168469550037,
+   0.001393861369797885,
+   0.0013145973505570075,
+   -0.0018641662742355986,
+   0.00068919289254142,
+   0.943059871454472,
+   0.0009068363215451268
+  ],
+  "sd": [
+   0.33282098310355357,
+   3.0327658745934882,
+   7.443282825487783,
+   1.9382733870915987,
+   1.3453515702450023,
+   1.3598492069674308,
+   0.669214564481096,
+   1.3910667252389115,
+   1.109198260046724
+  ],
+  "coef": [
+   0.29427372818798286,
+   0.004077192803216744,
+   0.0018144761834900042,
+   0.025542910979437936,
+   0.06415947005991642,
+   -0.05636289433255356,
+   0.15138541778270945,
+   0.0009053438431429824,
+   0.003526788558304989
+  ],
+  "intercept": -0.0005731420766939537,
+  "fills": {
+   "vol_pre": 5.480766169410919,
+   "intensity": 0.4970226752137855
+  },
+  "n_train_points": 10567048,
+  "n_train_parents": 196880,
+  "base_rate_train": 0.4998615507377273,
+  "n_iter": 8,
+  "sklearn": "1.7.2",
+  "estimator": "LogisticRegression(penalty='l2', C=1.0, solver='lbfgs', max_iter=1000)",
+  "check_vs_predict_proba_max_abs": 0.0
+ },
+ "model_sha256": "61b6610038345f60e088df7260a84a380c2aa5665bdd43d03a17b0be86c5bc04",
+ "train": {
+  "scored_points": 10567048,
+  "grid_points": 11812800,
+  "base_rate": 0.4998615507377273,
+  "auc_combined": 0.59844662759398,
+  "auc_research18": 0.5891481650314293,
+  "intensity_undefined_share_of_scored": 0.020382797541943595,
+  "vol_pre_undefined_parents": 2465,
+  "no_signal_share": {
+   "a_spy": 0.06626481443857513,
+   "a_own": 0.06047304618718674
+  }
+ },
+ "prediction": {
+  "counts": {
+   "grid_points": 5944800,
+   "valid_points": 5944800,
+   "y_missing_points": 789226,
+   "y_missing_share_of_valid": 0.13275904992598572,
+   "scored_points": 5155574,
+   "days": 505
+  },
+  "combined": {
+   "n": 5155574,
+   "base_rate": 0.5010607936187125,
+   "auc": 0.5745296273689919,
+   "accuracy_0.5": 0.5533160808088489,
+   "brier": 0.24614494805112574,
+   "brier_ref_train_base_rate": 0.2500003129003861,
+   "bss": 0.015421440095543137,
+   "auc_boot": {
+    "se": 0.0019385841041379235,
+    "ci_lo": 0.5707325234188699,
+    "ci_hi": 0.578263633157178,
+    "share_le_0.5": 0.0
+   }
+  },
+  "research18": {
+   "n": 5155574,
+   "base_rate": 0.5010607936187125,
+   "auc": 0.568675224143437,
+   "accuracy_0.5": 0.5464442950484272,
+   "brier": 0.24653629982972491,
+   "brier_ref_train_base_rate": 0.2500003129003861,
+   "bss": 0.01385603494040999,
+   "auc_boot": {
+    "se": 0.0015906990010062958,
+    "ci_lo": 0.5655620937803836,
+    "ci_hi": 0.5717739993749615,
+    "share_le_0.5": 0.0
+   }
+  },
+  "auc_diff": {
+   "mean": 0.005854403225554972,
+   "ci_lo": 0.004678379710560213,
+   "ci_hi": 0.007085752599168707,
+   "share_le_0": 0.0
+  },
+  "by_year": {
+   "2019": {
+    "n": 2554304,
+    "auc_combined": 0.5786743812817051,
+    "auc_research18": 0.5714259533581881,
+    "base_rate": 0.4999968680313698
+   },
+   "2020": {
+    "n": 2601270,
+    "auc_combined": 0.5708189930980508,
+    "auc_research18": 0.566070363235629,
+    "base_rate": 0.5021055100008842
+   }
+  },
+  "deciles_combined": [
+   {
+    "decile": 1,
+    "n": 515558,
+    "p_lo": 0.09282198082472552,
+    "p_hi": 0.38700918744969093,
+    "mean_p": 0.3558936284970503,
+    "mean_y": 0.3909860772211856
+   },
+   {
+    "decile": 2,
+    "n": 515410,
+    "p_lo": 0.38700918744969093,
+    "p_hi": 0.4278587161067286,
+    "mean_p": 0.41045721729726087,
+    "mean_y": 0.4271686618420287
+   },
+   {
+    "decile": 3,
+    "n": 515704,
+    "p_lo": 0.4278587161067286,
+    "p_hi": 0.4480978879886425,
+    "mean_p": 0.4380765721788961,
+    "mean_y": 0.45279462637481965
+   },
+   {
+    "decile": 4,
+    "n": 515558,
+    "p_lo": 0.4480978879886425,
+    "p_hi": 0.484677369407457,
+    "mean_p": 0.4657478985428944,
+    "mean_y": 0.4748292141718294
+   },
+   {
+    "decile": 5,
+    "n": 515557,
+    "p_lo": 0.484677369407457,
+    "p_hi": 0.5005279656470201,
+    "mean_p": 0.4944361884586499,
+    "mean_y": 0.49269818856110964
+   },
+   {
+    "decile": 6,
+    "n": 515557,
+    "p_lo": 0.5005279656470201,
+    "p_hi": 0.5153304572248271,
+    "mean_p": 0.5058228570601041,
+    "mean_y": 0.507480259214791
+   },
+   {
+    "decile": 7,
+    "n": 515558,
+    "p_lo": 0.5153304572248271,
+    "p_hi": 0.5517226167665682,
+    "mean_p": 0.5341229430196892,
+    "mean_y": 0.5278571955046765
+   },
+   {
+    "decile": 8,
+    "n": 515557,
+    "p_lo": 0.5517226167665682,
+    "p_hi": 0.5727083221875938,
+    "mean_p": 0.5619267563649487,
+    "mean_y": 0.5495454430838879
+   },
+   {
+    "decile": 9,
+    "n": 515557,
+    "p_lo": 0.5727083221875938,
+    "p_hi": 0.6129009036645687,
+    "mean_p": 0.5896755014168238,
+    "mean_y": 0.5773988133222903
+   },
+   {
+    "decile": 10,
+    "n": 515558,
+    "p_lo": 0.6129009036645687,
+    "p_hi": 0.9091350995458997,
+    "mean_p": 0.6439749996533022,
+    "mean_y": 0.609842151610488
+   }
+  ],
+  "p_range_combined": [
+   0.09282198082472552,
+   0.9091350995458997
+  ],
+  "boot": {
+   "B": 10000,
+   "block": 21,
+   "seed": 23
+  }
+ },
+ "leave_one_out": {
+  "imbalance": {
+   "auc": 0.5327735093652335,
+   "auc_drop": 0.04175611800375845,
+   "inputs": [
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "spread_ticks": {
+   "auc": 0.574545342930232,
+   "auc_drop": -1.5715561240026155e-05,
+   "inputs": [
+    "imbalance",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "vol_pre": {
+   "auc": 0.5745362554250112,
+   "auc_drop": -6.6280560192533144e-06,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "mid_change_5s": {
+   "auc": 0.5748744700613935,
+   "auc_drop": -0.00034484269240153687,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "a_spy": {
+   "auc": 0.5733896655904562,
+   "auc_drop": 0.001139961778535703,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "a_own": {
+   "auc": 0.5740368686771171,
+   "auc_drop": 0.0004927586918748172,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "trade_imbalance_30s",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "trade_imbalance_30s": {
+   "auc": 0.5730337719382707,
+   "auc_drop": 0.0014958554307212824,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_intensity_60s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "trade_intensity_60s": {
+   "auc": 0.5745325263145633,
+   "auc_drop": -2.89894557137238e-06,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "imbalance_x_intensity"
+   ]
+  },
+  "imbalance_x_intensity": {
+   "auc": 0.5745190378216751,
+   "auc_drop": 1.0589547316808279e-05,
+   "inputs": [
+    "imbalance",
+    "spread_ticks",
+    "vol_pre",
+    "mid_change_5s",
+    "a_spy",
+    "a_own",
+    "trade_imbalance_30s",
+    "trade_intensity_60s"
+   ]
+  }
+ },
+ "tables": {
+  "L3D1": {
+   "S0": {
+    "run": "S0",
+    "n_parents": 99080,
+    "is_mean": 4.537230520791289,
+    "is_ci_lo": 4.230265222536531,
+    "is_ci_hi": 4.896275000979399,
+    "p95": 10.100000000000001,
+    "minus_R0_mean": 1.3201220256358497,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 1.1862544286616155,
+    "minus_R0_ci_hi": 1.4631420632859082,
+    "minus_R0_upper_97_5": 1.4631420632859082,
+    "p95_minus_R0": -8.099999999999998,
+    "p95_minus_R0_ci_lo": -9.100000000000001,
+    "p95_minus_R0_ci_hi": -7.299999999999999,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.0,
+    "deadline_parent_frac": 0.0,
+    "mean_done_s": 0.0,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 4.436434523809524,
+      "minus_R0": 1.239514023809524,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 4.641587921117502,
+      "minus_R0": 1.403578132703369,
+      "n_parents": 48680
+     }
+    }
+   },
+   "S2i": {
+    "run": "S2i",
+    "n_parents": 99080,
+    "is_mean": 3.2169096507872434,
+    "is_ci_lo": 2.9857593153229867,
+    "is_ci_hi": 3.4898681253288903,
+    "p95": 18.89097499999989,
+    "minus_R0_mean": -0.00019884436818748053,
+    "minus_R0_p_one_sided": 0.4955,
+    "minus_R0_ci_lo": -0.028266926419113405,
+    "minus_R0_ci_hi": 0.028712404323293902,
+    "minus_R0_upper_97_5": 0.028712404323293902,
+    "p95_minus_R0": 0.6909749999998915,
+    "p95_minus_R0_ci_lo": 0.509999999999998,
+    "p95_minus_R0_ci_hi": 0.992871249999871,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.6308877270892208,
+    "deadline_parent_frac": 0.5378078320549051,
+    "mean_done_s": 223.01743035930562,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.197490573412699,
+      "minus_R0": 0.0005700734126985173,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.237014858258011,
+      "minus_R0": -0.000994930156122015,
+      "n_parents": 48680
+     }
+    }
+   },
+   "C3": {
+    "run": "C3",
+    "n_parents": 99080,
+    "is_mean": 3.1791345337101347,
+    "is_ci_lo": 2.9514044540346522,
+    "is_ci_hi": 3.4506107394995835,
+    "p95": 18.6,
+    "minus_R0_mean": -0.037973961445296675,
+    "minus_R0_p_one_sided": 0.0008,
+    "minus_R0_ci_lo": -0.061075535907368535,
+    "minus_R0_ci_hi": -0.01444978764632767,
+    "minus_R0_upper_97_5": -0.01444978764632767,
+    "p95_minus_R0": 0.40000000000000213,
+    "p95_minus_R0_ci_lo": 0.23000000000000043,
+    "p95_minus_R0_ci_hi": 0.6000000000000014,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.5956314897052887,
+    "deadline_parent_frac": 0.4967601937828018,
+    "mean_done_s": 213.84699232943078,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.156255232142857,
+      "minus_R0": -0.04066526785714255,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.202822224732949,
+      "minus_R0": -0.03518756368118344,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R0": {
+    "run": "R0",
+    "n_parents": 99080,
+    "is_mean": 3.2171084951554314,
+    "is_ci_lo": 3.003668666942556,
+    "is_ci_hi": 3.47267898040693,
+    "p95": 18.2,
+    "minus_R0_mean": 0.0,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.0,
+    "minus_R0_ci_hi": 0.0,
+    "minus_R0_upper_97_5": 0.0,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.38248789866774324,
+    "deadline_parent_frac": 0.3606883326604764,
+    "mean_done_s": 159.09252119499394,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1969205000000005,
+      "minus_R0": 0.0,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.238009788414133,
+      "minus_R0": 0.0,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.60": {
+    "run": "R1_0.60",
+    "n_parents": 99080,
+    "is_mean": 3.5138568318530514,
+    "is_ci_lo": 3.2837783861444763,
+    "is_ci_hi": 3.78200706809064,
+    "p95": 14.200000000000001,
+    "minus_R0_mean": 0.29674833669761846,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.23838276129151334,
+    "minus_R0_ci_hi": 0.3564145084136901,
+    "minus_R0_upper_97_5": 0.3564145084136901,
+    "p95_minus_R0": -3.9999999999999982,
+    "p95_minus_R0_ci_lo": -4.513025000000174,
+    "p95_minus_R0_ci_hi": -3.339999999999998,
+    "firing": {
+     "parents": 0.5065199838514332,
+     "decisions": 0.02965695297943467,
+     "early_parents": 0.5065199838514332,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.1858259689140089,
+    "deadline_parent_frac": 0.1013019781994348,
+    "mean_done_s": 81.21608800968914,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.49332399404762,
+      "minus_R0": 0.2964034940476194,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5351151520131476,
+      "minus_R0": 0.2971053635990144,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.65": {
+    "run": "R1_0.65",
+    "n_parents": 99080,
+    "is_mean": 3.3094278270084803,
+    "is_ci_lo": 3.0962356028955202,
+    "is_ci_hi": 3.565751875464798,
+    "p95": 16.7,
+    "minus_R0_mean": 0.09231933185304837,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.0606534026006361,
+    "minus_R0_ci_hi": 0.12319306716594916,
+    "minus_R0_upper_97_5": 0.12319306716594916,
+    "p95_minus_R0": -1.5,
+    "p95_minus_R0_ci_lo": -1.879999999999999,
+    "p95_minus_R0_ci_hi": -0.9999999999999982,
+    "firing": {
+     "parents": 0.22517157852240613,
+     "decisions": 0.00853185218441803,
+     "early_parents": 0.22517157852240613,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.2953829531691562,
+    "deadline_parent_frac": 0.2435607589826403,
+    "mean_done_s": 128.7326907549455,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.290911700396826,
+      "minus_R0": 0.09399120039682567,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.328598179950699,
+      "minus_R0": 0.09058839153656574,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.70": {
+    "run": "R1_0.70",
+    "n_parents": 99080,
+    "is_mean": 3.2420708982640307,
+    "is_ci_lo": 3.0197976927946724,
+    "is_ci_hi": 3.5093390308119634,
+    "p95": 18.139999999999997,
+    "minus_R0_mean": 0.024962403108599165,
+    "minus_R0_p_one_sided": 0.9996,
+    "minus_R0_ci_lo": 0.009742600928523469,
+    "minus_R0_ci_hi": 0.04226994227373175,
+    "minus_R0_upper_97_5": 0.04226994227373175,
+    "p95_minus_R0": -0.060000000000002274,
+    "p95_minus_R0_ci_lo": -0.21999999999999886,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.027926927735163504,
+     "decisions": 0.0008818634440671657,
+     "early_parents": 0.027926927735163504,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.37033041986273724,
+    "deadline_parent_frac": 0.34747678643520385,
+    "mean_done_s": 155.81596689543804,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2170331111111117,
+      "minus_R0": 0.020112611111111275,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.267993340180772,
+      "minus_R0": 0.029983551766639215,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.75": {
+    "run": "R1_0.75",
+    "n_parents": 99080,
+    "is_mean": 3.221066852038758,
+    "is_ci_lo": 3.0071955669966464,
+    "is_ci_hi": 3.4773845258883114,
+    "p95": 18.2,
+    "minus_R0_mean": 0.00395835688332663,
+    "minus_R0_p_one_sided": 0.9987,
+    "minus_R0_ci_lo": 0.0011977143366077867,
+    "minus_R0_ci_hi": 0.007208917228513934,
+    "minus_R0_upper_97_5": 0.007208917228513934,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.07000000000000028,
+    "firing": {
+     "parents": 0.0008477997577714978,
+     "decisions": 2.6255792684260965e-05,
+     "early_parents": 0.0008477997577714978,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.3820474465078724,
+    "deadline_parent_frac": 0.36039563988696005,
+    "mean_done_s": 159.02209325797335,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.198224527777778,
+      "minus_R0": 0.0013040277777777868,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.244716259244042,
+      "minus_R0": 0.006706470829909655,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.30": {
+    "run": "R2_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.216743449737587,
+    "is_ci_lo": 3.003109411480245,
+    "is_ci_hi": 3.4724028627699166,
+    "p95": 18.2,
+    "minus_R0_mean": -0.0003650454178441675,
+    "minus_R0_p_one_sided": 0.0528,
+    "minus_R0_ci_lo": -0.0008097566995687003,
+    "minus_R0_ci_hi": 7.462626294622703e-05,
+    "minus_R0_upper_97_5": 7.462626294622703e-05,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.018999999999937955,
+    "firing": {
+     "parents": 0.0022002422285022204,
+     "decisions": 0.00040315793516933104,
+     "early_parents": 0.0,
+     "hold_parents": 0.0022002422285022204,
+     "holds_per_parent": 0.013029874848607187
+    },
+    "limit_share_frac": 0.3828824182478805,
+    "deadline_parent_frac": 0.36079935405732744,
+    "mean_done_s": 159.17397052886557,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1965120972222225,
+      "minus_R0": -0.00040840277777777777,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2376896322925224,
+      "minus_R0": -0.0003201561216105201,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.35": {
+    "run": "R2_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.2163784588211555,
+    "is_ci_lo": 3.0029274723290182,
+    "is_ci_hi": 3.4726482030766324,
+    "p95": 18.2,
+    "minus_R0_mean": -0.0007300363342753543,
+    "minus_R0_p_one_sided": 0.217,
+    "minus_R0_ci_lo": -0.0024757498797748465,
+    "minus_R0_ci_hi": 0.0011918370178285558,
+    "minus_R0_upper_97_5": 0.0011918370178285558,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.0013518750000747187,
+    "p95_minus_R0_ci_hi": 0.030000000000001137,
+    "firing": {
+     "parents": 0.014079531691562374,
+     "decisions": 0.0022381370333713047,
+     "early_parents": 0.0,
+     "hold_parents": 0.014079531691562374,
+     "holds_per_parent": 0.07257771497779572
+    },
+    "limit_share_frac": 0.3851530177634235,
+    "deadline_parent_frac": 0.3619398465886153,
+    "mean_done_s": 159.7270993136859,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.196116051587302,
+      "minus_R0": -0.0008044484126984387,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.237356793344289,
+      "minus_R0": -0.0006529950698438953,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.40": {
+    "run": "R2_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.211076730924507,
+    "is_ci_lo": 2.9965321912158056,
+    "is_ci_hi": 3.468953911451203,
+    "p95": 18.2,
+    "minus_R0_mean": -0.006031764230924543,
+    "minus_R0_p_one_sided": 0.003,
+    "minus_R0_ci_lo": -0.009698035944531296,
+    "minus_R0_ci_hi": -0.0018311115716430752,
+    "minus_R0_upper_97_5": -0.0018311115716430752,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0900295000000009,
+    "firing": {
+     "parents": 0.05065603552684699,
+     "decisions": 0.00719567502350698,
+     "early_parents": 0.0,
+     "hold_parents": 0.05065603552684699,
+     "holds_per_parent": 0.23596083972547435
+    },
+    "limit_share_frac": 0.3931116774323779,
+    "deadline_parent_frac": 0.3655732741219217,
+    "mean_done_s": 161.58977593863546,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1893734722222224,
+      "minus_R0": -0.007547027777777795,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2335468262119966,
+      "minus_R0": -0.004462962202136458,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.30": {
+    "run": "R3_0.60_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.5135439836495794,
+    "is_ci_lo": 3.2833817169459056,
+    "is_ci_hi": 3.78167314906533,
+    "p95": 14.200000000000001,
+    "minus_R0_mean": 0.29643548849414647,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.23806053311010036,
+    "minus_R0_ci_hi": 0.3562762813365109,
+    "minus_R0_upper_97_5": 0.3562762813365109,
+    "p95_minus_R0": -3.9999999999999982,
+    "p95_minus_R0_ci_lo": -4.513025000000174,
+    "p95_minus_R0_ci_hi": -3.339999999999998,
+    "firing": {
+     "parents": 0.508589018974566,
+     "decisions": 0.030387694480477116,
+     "early_parents": 0.5065704481227291,
+     "hold_parents": 0.002069035123132822,
+     "holds_per_parent": 0.012878482034719418
+    },
+    "limit_share_frac": 0.18617195195801373,
+    "deadline_parent_frac": 0.10138272103350827,
+    "mean_done_s": 81.29105773112636,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.4930276944444447,
+      "minus_R0": 0.2961071944444448,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5347851705012325,
+      "minus_R0": 0.2967753820870999,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.35": {
+    "run": "R3_0.60_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.5136525797335523,
+    "is_ci_lo": 3.2826166501100347,
+    "is_ci_hi": 3.7832473269648,
+    "p95": 14.200000000000001,
+    "minus_R0_mean": 0.296544084578119,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.23777488737485916,
+    "minus_R0_ci_hi": 0.3564190050782845,
+    "minus_R0_upper_97_5": 0.3564190050782845,
+    "p95_minus_R0": -3.9999999999999982,
+    "p95_minus_R0_ci_lo": -4.5100105,
+    "p95_minus_R0_ci_hi": -3.338109999999812,
+    "firing": {
+     "parents": 0.5190654016955996,
+     "decisions": 0.0336123543921878,
+     "early_parents": 0.5073274121921679,
+     "hold_parents": 0.01254541784416633,
+     "holds_per_parent": 0.07015542995559144
+    },
+    "limit_share_frac": 0.18792922890593458,
+    "deadline_parent_frac": 0.10212959224868792,
+    "mean_done_s": 81.73211546225272,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.4926641587301592,
+      "minus_R0": 0.295743658730159,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5353825801150376,
+      "minus_R0": 0.29737279170090425,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.40": {
+    "run": "R3_0.60_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.509938903916031,
+    "is_ci_lo": 3.2780282467849426,
+    "is_ci_hi": 3.7811946331602684,
+    "p95": 14.200000000000001,
+    "minus_R0_mean": 0.29283040876059785,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.23434315831731592,
+    "minus_R0_ci_hi": 0.35276368011540493,
+    "minus_R0_upper_97_5": 0.35276368011540493,
+    "p95_minus_R0": -3.9999999999999982,
+    "p95_minus_R0_ci_lo": -4.5,
+    "p95_minus_R0_ci_hi": -3.3199999999999985,
+    "firing": {
+     "parents": 0.5499192571659265,
+     "decisions": 0.0419445508839236,
+     "early_parents": 0.5106984255147355,
+     "hold_parents": 0.043399273314493336,
+     "holds_per_parent": 0.22068025837706903
+    },
+    "limit_share_frac": 0.19381951958013724,
+    "deadline_parent_frac": 0.10388574888978604,
+    "mean_done_s": 83.03693984658861,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.48981074404762,
+      "minus_R0": 0.29289024404761943,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5307782477403458,
+      "minus_R0": 0.2927684593262124,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.30": {
+    "run": "R3_0.65_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.309138377069037,
+    "is_ci_lo": 3.0960694986868034,
+    "is_ci_hi": 3.565510128383736,
+    "p95": 16.7,
+    "minus_R0_mean": 0.09202988191360553,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.06051894319658137,
+    "minus_R0_ci_hi": 0.12279382491539174,
+    "minus_R0_upper_97_5": 0.12279382491539174,
+    "p95_minus_R0": -1.5,
+    "p95_minus_R0_ci_lo": -1.879999999999999,
+    "p95_minus_R0_ci_hi": -0.9999999999999982,
+    "firing": {
+     "parents": 0.22728098506257569,
+     "decisions": 0.009018019987555553,
+     "early_parents": 0.2252018570851837,
+     "hold_parents": 0.00210940654016956,
+     "holds_per_parent": 0.012939039160274526
+    },
+    "limit_share_frac": 0.2957441663302382,
+    "deadline_parent_frac": 0.24364150181671376,
+    "mean_done_s": 128.8106782398062,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.290629488095239,
+      "minus_R0": 0.09370898809523837,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.3283012366474947,
+      "minus_R0": 0.09029144823336116,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.35": {
+    "run": "R3_0.65_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.309218266047641,
+    "is_ci_lo": 3.0955217783508866,
+    "is_ci_hi": 3.5662239708907895,
+    "p95": 16.7,
+    "minus_R0_mean": 0.09210977089220863,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.060012896956425914,
+    "minus_R0_ci_hi": 0.12328275587818924,
+    "minus_R0_upper_97_5": 0.12328275587818924,
+    "p95_minus_R0": -1.5,
+    "p95_minus_R0_ci_lo": -1.8705000000000283,
+    "p95_minus_R0_ci_hi": -0.9999999999999982,
+    "firing": {
+     "parents": 0.2387363746467501,
+     "decisions": 0.011217960921805535,
+     "early_parents": 0.2256459426725878,
+     "hold_parents": 0.013564796124343964,
+     "holds_per_parent": 0.07170972951150585
+    },
+    "limit_share_frac": 0.2978048445700444,
+    "deadline_parent_frac": 0.24455995155429955,
+    "mean_done_s": 129.32025635849817,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2903977837301586,
+      "minus_R0": 0.09347728373015897,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.328703728430568,
+      "minus_R0": 0.09069394001643424,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.40": {
+    "run": "R3_0.65_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.304349198627374,
+    "is_ci_lo": 3.0904171512217524,
+    "is_ci_hi": 3.562221251487839,
+    "p95": 16.7,
+    "minus_R0_mean": 0.08724070347194215,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.05588134643130695,
+    "minus_R0_ci_hi": 0.11846382197646081,
+    "minus_R0_upper_97_5": 0.11846382197646081,
+    "p95_minus_R0": -1.5,
+    "p95_minus_R0_ci_lo": -1.8402666250001423,
+    "p95_minus_R0_ci_hi": -0.9999999999999982,
+    "firing": {
+     "parents": 0.2734557932983448,
+     "decisions": 0.017080663578552098,
+     "early_parents": 0.2270690351231328,
+     "hold_parents": 0.04828421477593864,
+     "holds_per_parent": 0.23128784820347195
+    },
+    "limit_share_frac": 0.30496303996770285,
+    "deadline_parent_frac": 0.24745660072668552,
+    "mean_done_s": 130.99345983044006,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2848653531746037,
+      "minus_R0": 0.0879448531746034,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.3245214626129833,
+      "minus_R0": 0.08651167419885002,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.30": {
+    "run": "R3_0.70_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.241705852846186,
+    "is_ci_lo": 3.0194094395770694,
+    "is_ci_hi": 3.509059251289226,
+    "p95": 18.139999999999997,
+    "minus_R0_mean": 0.024597357690755002,
+    "minus_R0_p_one_sided": 0.9996,
+    "minus_R0_ci_lo": 0.009433291356152536,
+    "minus_R0_ci_hi": 0.04177481445704445,
+    "minus_R0_upper_97_5": 0.04177481445704445,
+    "p95_minus_R0": -0.060000000000002274,
+    "p95_minus_R0_ci_lo": -0.213512250000005,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.030127169963665726,
+     "decisions": 0.0012926617396016066,
+     "early_parents": 0.027926927735163504,
+     "hold_parents": 0.0022002422285022204,
+     "holds_per_parent": 0.013029874848607187
+    },
+    "limit_share_frac": 0.3707249394428745,
+    "deadline_parent_frac": 0.3475878078320549,
+    "mean_done_s": 155.89741622930964,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2166247083333332,
+      "minus_R0": 0.019704208333333494,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2676731840591615,
+      "minus_R0": 0.029663395645028696,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.35": {
+    "run": "R3_0.70_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.241327236576505,
+    "is_ci_lo": 3.018867624096217,
+    "is_ci_hi": 3.5095266636495372,
+    "p95": 18.139999999999997,
+    "minus_R0_mean": 0.024218741421073914,
+    "minus_R0_p_one_sided": 0.9995,
+    "minus_R0_ci_lo": 0.008789794414740338,
+    "minus_R0_ci_hi": 0.04175899432452019,
+    "minus_R0_upper_97_5": 0.04175899432452019,
+    "p95_minus_R0": -0.060000000000002274,
+    "p95_minus_R0_ci_lo": -0.21000000000000085,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.04194590230117077,
+     "decisions": 0.003157839932087552,
+     "early_parents": 0.02795720629794106,
+     "hold_parents": 0.014018974566007267,
+     "holds_per_parent": 0.07243641501816714
+    },
+    "limit_share_frac": 0.3729803996770287,
+    "deadline_parent_frac": 0.3487081146548244,
+    "mean_done_s": 156.44825393621315,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.216231242063492,
+      "minus_R0": 0.019310742063492196,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2673099424815115,
+      "minus_R0": 0.029300154067378723,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.40": {
+    "run": "R3_0.70_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.2361199182478817,
+    "is_ci_lo": 3.01214204758094,
+    "is_ci_hi": 3.5052505163178798,
+    "p95": 18.190259999999927,
+    "minus_R0_mean": 0.019011423092450564,
+    "minus_R0_p_one_sided": 0.9906,
+    "minus_R0_ci_lo": 0.002831950817056937,
+    "minus_R0_ci_hi": 0.03789527228779741,
+    "minus_R0_upper_97_5": 0.03789527228779741,
+    "p95_minus_R0": -0.009740000000071802,
+    "p95_minus_R0_ci_lo": -0.17999999999999972,
+    "p95_minus_R0_ci_hi": 0.020475125000022572,
+    "firing": {
+     "parents": 0.07833064190553088,
+     "decisions": 0.008192913432787097,
+     "early_parents": 0.028068227694792086,
+     "hold_parents": 0.05040371417036738,
+     "holds_per_parent": 0.23536536132418248
+    },
+    "limit_share_frac": 0.3808718712151797,
+    "deadline_parent_frac": 0.3522507064997981,
+    "mean_done_s": 158.29860718611224,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2093533412698414,
+      "minus_R0": 0.012432841269841415,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.263832232949877,
+      "minus_R0": 0.02582244453574351,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.30": {
+    "run": "R3_0.75_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.2207018066209137,
+    "is_ci_lo": 3.006781526018091,
+    "is_ci_hi": 3.4770395434567223,
+    "p95": 18.2,
+    "minus_R0_mean": 0.003593311465482462,
+    "minus_R0_p_one_sided": 0.9973,
+    "minus_R0_ci_lo": 0.0009136007810404365,
+    "minus_R0_ci_hi": 0.006714484006768869,
+    "minus_R0_upper_97_5": 0.006714484006768869,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.070215875000029,
+    "firing": {
+     "parents": 0.003048041986273718,
+     "decisions": 0.0004295695026272471,
+     "early_parents": 0.0008477997577714978,
+     "hold_parents": 0.0022002422285022204,
+     "holds_per_parent": 0.013029874848607187
+    },
+    "limit_share_frac": 0.3824419660880097,
+    "deadline_parent_frac": 0.36050666128381104,
+    "mean_done_s": 159.10354259184498,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.197816125,
+      "minus_R0": 0.0008956250000000088,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2443961031224324,
+      "minus_R0": 0.0063863147082991335,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.35": {
+    "run": "R3_0.75_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.2203368157044823,
+    "is_ci_lo": 3.006188969231029,
+    "is_ci_hi": 3.4782478835270125,
+    "p95": 18.2,
+    "minus_R0_mean": 0.0032283205490512743,
+    "minus_R0_p_one_sided": 0.9641,
+    "minus_R0_ci_lo": -0.00020207917825634954,
+    "minus_R0_ci_hi": 0.007670173596260022,
+    "minus_R0_upper_97_5": 0.007670173596260022,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0803411250000181,
+    "firing": {
+     "parents": 0.014927331449333872,
+     "decisions": 0.0022652260555486364,
+     "early_parents": 0.0008477997577714978,
+     "hold_parents": 0.014079531691562374,
+     "holds_per_parent": 0.07257771497779572
+    },
+    "limit_share_frac": 0.3847125656035527,
+    "deadline_parent_frac": 0.36164715381509893,
+    "mean_done_s": 159.65667137666532,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1974200793650795,
+      "minus_R0": 0.000499579365079348,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2440632641741987,
+      "minus_R0": 0.006053475760065759,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.40": {
+    "run": "R3_0.75_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.2150350878078333,
+    "is_ci_lo": 2.999960130653306,
+    "is_ci_hi": 3.473946582180381,
+    "p95": 18.2,
+    "minus_R0_mean": -0.002073407347597913,
+    "minus_R0_p_one_sided": 0.2343,
+    "minus_R0_ci_lo": -0.007227104660740015,
+    "minus_R0_ci_hi": 0.004250759229779967,
+    "minus_R0_upper_97_5": 0.004250759229779967,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.12999999999999554,
+    "firing": {
+     "parents": 0.05150383528461849,
+     "decisions": 0.00722450845907636,
+     "early_parents": 0.0008477997577714978,
+     "hold_parents": 0.05065603552684699,
+     "holds_per_parent": 0.23596083972547435
+    },
+    "limit_share_frac": 0.39267122527250714,
+    "deadline_parent_frac": 0.36528058134840535,
+    "mean_done_s": 161.51934800161484,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1906775,
+      "minus_R0": -0.006243000000000009,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2402532970419062,
+      "minus_R0": 0.0022435086277731962,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.60": {
+    "run": "m18:R1_0.60",
+    "n_parents": 99080,
+    "is_mean": 3.5675993863544644,
+    "is_ci_lo": 3.327757079734587,
+    "is_ci_hi": 3.847767955266195,
+    "p95": 15.700000000000001,
+    "minus_R0_mean": 0.3504908911990314,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.2941357759929115,
+    "minus_R0_ci_hi": 0.4087078432116122,
+    "minus_R0_upper_97_5": 0.4087078432116122,
+    "p95_minus_R0": -2.4999999999999982,
+    "p95_minus_R0_ci_lo": -3.2699999999999996,
+    "p95_minus_R0_ci_hi": -2.099999999999998,
+    "firing": {
+     "parents": 0.4254743641501817,
+     "decisions": 0.021178694101103696,
+     "early_parents": 0.4254743641501817,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.2159701857085184,
+    "deadline_parent_frac": 0.14437828017763424,
+    "mean_done_s": 96.53312474767864,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.549190549603175,
+      "minus_R0": 0.3522700496031749,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5866586585866886,
+      "minus_R0": 0.34864887017255575,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.65": {
+    "run": "m18:R1_0.65",
+    "n_parents": 99080,
+    "is_mean": 3.331280793298346,
+    "is_ci_lo": 3.100584655303313,
+    "is_ci_hi": 3.6054676948141675,
+    "p95": 17.77,
+    "minus_R0_mean": 0.11417229814291502,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08506248254728621,
+    "minus_R0_ci_hi": 0.1474596361450388,
+    "minus_R0_upper_97_5": 0.1474596361450388,
+    "p95_minus_R0": -0.4299999999999997,
+    "p95_minus_R0_ci_lo": -0.5700000000000003,
+    "p95_minus_R0_ci_hi": -0.07000000000000028,
+    "firing": {
+     "parents": 0.1103451756156641,
+     "decisions": 0.0037315495982432056,
+     "early_parents": 0.1103451756156641,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.3359810254339927,
+    "deadline_parent_frac": 0.30504642712959223,
+    "mean_done_s": 145.02389987888574,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.305404486111111,
+      "minus_R0": 0.10848398611111124,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.3580713824979465,
+      "minus_R0": 0.12006159408381294,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.70": {
+    "run": "m18:R1_0.70",
+    "n_parents": 99080,
+    "is_mean": 3.2456850444085603,
+    "is_ci_lo": 3.025239475453379,
+    "is_ci_hi": 3.509945061434036,
+    "p95": 18.21,
+    "minus_R0_mean": 0.028576549253128865,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.016248319571934906,
+    "minus_R0_ci_hi": 0.04223519336163969,
+    "minus_R0_upper_97_5": 0.04223519336163969,
+    "p95_minus_R0": 0.010000000000001563,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.22000000000000242,
+    "firing": {
+     "parents": 0.012414210738796932,
+     "decisions": 0.0003874206102725047,
+     "early_parents": 0.012414210738796932,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.3767139281388777,
+    "deadline_parent_frac": 0.3548647557529269,
+    "mean_done_s": 157.7454481227291,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.215438799603174,
+      "minus_R0": 0.018518299603174714,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2769999732949873,
+      "minus_R0": 0.038990184880854616,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.75": {
+    "run": "m18:R1_0.75",
+    "n_parents": 99080,
+    "is_mean": 3.226520938635448,
+    "is_ci_lo": 3.0100517958216533,
+    "is_ci_hi": 3.487717132691181,
+    "p95": 18.2,
+    "minus_R0_mean": 0.009412443480016167,
+    "minus_R0_p_one_sided": 0.9862,
+    "minus_R0_ci_lo": 0.0010439870924433233,
+    "minus_R0_ci_hi": 0.018524415399544213,
+    "minus_R0_upper_97_5": 0.018524415399544213,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.11000000000000298,
+    "firing": {
+     "parents": 0.0016955995155429956,
+     "decisions": 5.253920738350994e-05,
+     "early_parents": 0.0016955995155429956,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.381515421881308,
+    "deadline_parent_frac": 0.36005248284214775,
+    "mean_done_s": 158.9340028259992,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2004536865079367,
+      "minus_R0": 0.003533186507936506,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.253509219391948,
+      "minus_R0": 0.01549943097781434,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.30": {
+    "run": "m18:R2_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.216978548647559,
+    "is_ci_lo": 3.003359086667326,
+    "is_ci_hi": 3.472622951451856,
+    "p95": 18.2,
+    "minus_R0_mean": -0.00012994650787242514,
+    "minus_R0_p_one_sided": 0.1614,
+    "minus_R0_ci_lo": -0.0003721000856915105,
+    "minus_R0_ci_hi": 0.00013669721808727865,
+    "minus_R0_upper_97_5": 0.00013669721808727865,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.0006055712555510698,
+     "decisions": 0.00042410251413466847,
+     "early_parents": 0.0,
+     "hold_parents": 0.0006055712555510698,
+     "holds_per_parent": 0.013706096083972547
+    },
+    "limit_share_frac": 0.3826166532095277,
+    "deadline_parent_frac": 0.36089018974566006,
+    "mean_done_s": 159.1656237383932,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1967554206349207,
+      "minus_R0": -0.00016507936507936504,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.237916216105176,
+      "minus_R0": -9.357230895644787e-05,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.35": {
+    "run": "m18:R2_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.218550712555512,
+    "is_ci_lo": 3.005204192948874,
+    "is_ci_hi": 3.4746438086405598,
+    "p95": 18.2,
+    "minus_R0_mean": 0.0014422174000807246,
+    "minus_R0_p_one_sided": 0.9295,
+    "minus_R0_ci_lo": -0.0004331534642471163,
+    "minus_R0_ci_hi": 0.0035655926248177893,
+    "minus_R0_upper_97_5": 0.0035655926248177893,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.03389500000000902,
+    "firing": {
+     "parents": 0.008326604763827211,
+     "decisions": 0.0031267554349432894,
+     "early_parents": 0.0,
+     "hold_parents": 0.008326604763827211,
+     "holds_per_parent": 0.10140290674202665
+    },
+    "limit_share_frac": 0.38454781994348003,
+    "deadline_parent_frac": 0.3623839321760194,
+    "mean_done_s": 159.7426322163908,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.197129775793651,
+      "minus_R0": 0.00020927579365073016,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2407285106820054,
+      "minus_R0": 0.002718722267871845,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.40": {
+    "run": "m18:R2_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.215776287848205,
+    "is_ci_lo": 3.0025566983295673,
+    "is_ci_hi": 3.4718491716460567,
+    "p95": 18.2,
+    "minus_R0_mean": -0.001332207307226484,
+    "minus_R0_p_one_sided": 0.2001,
+    "minus_R0_ci_lo": -0.004290053227564878,
+    "minus_R0_ci_hi": 0.001925709829791394,
+    "minus_R0_upper_97_5": 0.001925709829791394,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.07050000000002754,
+    "firing": {
+     "parents": 0.03939241017359709,
+     "decisions": 0.00742495568306663,
+     "early_parents": 0.0,
+     "hold_parents": 0.03939241017359709,
+     "holds_per_parent": 0.24303593056116268
+    },
+    "limit_share_frac": 0.39133243843358895,
+    "deadline_parent_frac": 0.3653209527654421,
+    "mean_done_s": 161.2838716188938,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1933079861111113,
+      "minus_R0": -0.0036125138888888643,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.23903845727198,
+      "minus_R0": 0.0010286688578471394,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.30": {
+    "run": "m18:R3_0.60_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.5675571134436854,
+    "is_ci_lo": 3.3275764532782155,
+    "is_ci_hi": 3.847772991997084,
+    "p95": 15.700000000000001,
+    "minus_R0_mean": 0.3504486182882522,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.2939771184513889,
+    "minus_R0_ci_hi": 0.40867715616460015,
+    "minus_R0_upper_97_5": 0.40867715616460015,
+    "p95_minus_R0": -2.4999999999999982,
+    "p95_minus_R0_ci_lo": -3.2699999999999996,
+    "p95_minus_R0_ci_hi": -2.099999999999998,
+    "firing": {
+     "parents": 0.42602947113443684,
+     "decisions": 0.02184156755644137,
+     "early_parents": 0.42549454985870006,
+     "hold_parents": 0.0005551069842551473,
+     "holds_per_parent": 0.013605167541380702
+    },
+    "limit_share_frac": 0.2160700847799758,
+    "deadline_parent_frac": 0.14458013726281793,
+    "mean_done_s": 96.60493540573275,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.549066541666667,
+      "minus_R0": 0.3521460416666669,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5867010086277737,
+      "minus_R0": 0.3486912202136404,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.35": {
+    "run": "m18:R3_0.60_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.569174154218816,
+    "is_ci_lo": 3.3285234742896055,
+    "is_ci_hi": 3.849949318911123,
+    "p95": 15.700000000000001,
+    "minus_R0_mean": 0.3520656590633833,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.2957525601402916,
+    "minus_R0_ci_hi": 0.41062672442313525,
+    "minus_R0_upper_97_5": 0.41062672442313525,
+    "p95_minus_R0": -2.4999999999999982,
+    "p95_minus_R0_ci_lo": -3.2600000000000016,
+    "p95_minus_R0_ci_hi": -2.085117499999925,
+    "firing": {
+     "parents": 0.4329935405732741,
+     "decisions": 0.026018576420452844,
+     "early_parents": 0.4258477997577715,
+     "hold_parents": 0.007519176423092451,
+     "holds_per_parent": 0.09990916431166734
+    },
+    "limit_share_frac": 0.21764842551473557,
+    "deadline_parent_frac": 0.14587202260799353,
+    "mean_done_s": 97.13113645538958,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.54965,
+      "minus_R0": 0.35272950000000014,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.589388151191455,
+      "minus_R0": 0.35137836277732165,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.40": {
+    "run": "m18:R3_0.60_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.5670475524828453,
+    "is_ci_lo": 3.3265644392497435,
+    "is_ci_hi": 3.8486605704997707,
+    "p95": 15.700000000000001,
+    "minus_R0_mean": 0.34993905732741254,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.29391944146241733,
+    "minus_R0_ci_hi": 0.4085107703831054,
+    "minus_R0_upper_97_5": 0.4085107703831054,
+    "p95_minus_R0": -2.4999999999999982,
+    "p95_minus_R0_ci_lo": -3.2596049999999726,
+    "p95_minus_R0_ci_hi": -2.080877500000047,
+    "firing": {
+     "parents": 0.4608195397658458,
+     "decisions": 0.03242725328710295,
+     "early_parents": 0.42830036334275334,
+     "hold_parents": 0.03534517561566411,
+     "holds_per_parent": 0.2347093257973355
+    },
+    "limit_share_frac": 0.22301145538958417,
+    "deadline_parent_frac": 0.14769882922890593,
+    "mean_done_s": 98.34920266451353,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.547277154761905,
+      "minus_R0": 0.350356654761905,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.5875164934264587,
+      "minus_R0": 0.3495067050123257,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.30": {
+    "run": "m18:R3_0.65_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.3311793591037566,
+    "is_ci_lo": 3.1004799032927846,
+    "is_ci_hi": 3.6053910861185634,
+    "p95": 17.77,
+    "minus_R0_mean": 0.11407086394832479,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08487425384747598,
+    "minus_R0_ci_hi": 0.1473235929774033,
+    "minus_R0_upper_97_5": 0.1473235929774033,
+    "p95_minus_R0": -0.4299999999999997,
+    "p95_minus_R0_ci_lo": -0.5700000000000003,
+    "p95_minus_R0_ci_hi": -0.07000000000000028,
+    "firing": {
+     "parents": 0.11094065401695599,
+     "decisions": 0.00419302445299811,
+     "early_parents": 0.1103552684699233,
+     "hold_parents": 0.0005954784012918853,
+     "holds_per_parent": 0.013696003229713363
+    },
+    "limit_share_frac": 0.33610221033508275,
+    "deadline_parent_frac": 0.30524828421477596,
+    "mean_done_s": 145.09663907953168,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.305239406746032,
+      "minus_R0": 0.10831890674603185,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.3580358422350045,
+      "minus_R0": 0.12002605382087128,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.35": {
+    "run": "m18:R3_0.65_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.332964675010095,
+    "is_ci_lo": 3.101513403242084,
+    "is_ci_hi": 3.6084369398474494,
+    "p95": 17.77149999999965,
+    "minus_R0_mean": 0.11585617985466307,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08669601511538302,
+    "minus_R0_ci_hi": 0.14958258426822751,
+    "minus_R0_upper_97_5": 0.14958258426822751,
+    "p95_minus_R0": -0.4285000000003478,
+    "p95_minus_R0_ci_lo": -0.5595101249999718,
+    "p95_minus_R0_ci_hi": -0.05084250000006581,
+    "firing": {
+     "parents": 0.11850020185708518,
+     "decisions": 0.007127482731887898,
+     "early_parents": 0.11047638272103351,
+     "hold_parents": 0.008155026241421073,
+     "holds_per_parent": 0.10118086394832458
+    },
+    "limit_share_frac": 0.33793712151796523,
+    "deadline_parent_frac": 0.3066915623738393,
+    "mean_done_s": 145.66271699636658,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.3057133650793653,
+      "minus_R0": 0.10879286507936513,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.3611788496302384,
+      "minus_R0": 0.12316906121610546,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.40": {
+    "run": "m18:R3_0.65_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.3304221326201064,
+    "is_ci_lo": 3.099146001038674,
+    "is_ci_hi": 3.6057265618837993,
+    "p95": 17.84,
+    "minus_R0_mean": 0.1133136374646752,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08385871766789925,
+    "minus_R0_ci_hi": 0.14785079321480457,
+    "minus_R0_upper_97_5": 0.14785079321480457,
+    "p95_minus_R0": -0.35999999999999943,
+    "p95_minus_R0_ci_lo": -0.5300000000000011,
+    "p95_minus_R0_ci_hi": -0.03999999999999915,
+    "firing": {
+     "parents": 0.14898062171982238,
+     "decisions": 0.011764218800332427,
+     "early_parents": 0.1111324182478805,
+     "hold_parents": 0.038635446104158255,
+     "holds_per_parent": 0.24161283811061768
+    },
+    "limit_share_frac": 0.34438309446911586,
+    "deadline_parent_frac": 0.30928542591844976,
+    "mean_done_s": 147.13635446104158,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.302161670634921,
+      "minus_R0": 0.10524117063492075,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.359681115447823,
+      "minus_R0": 0.12167132703368966,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.30": {
+    "run": "m18:R3_0.70_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.245555097900688,
+    "is_ci_lo": 3.0250372942614585,
+    "is_ci_hi": 3.5097623657940185,
+    "p95": 18.21,
+    "minus_R0_mean": 0.02844660274525644,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.016099867281392025,
+    "minus_R0_ci_hi": 0.04218977501442002,
+    "minus_R0_upper_97_5": 0.04218977501442002,
+    "p95_minus_R0": 0.010000000000001563,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.22000000000000242,
+    "firing": {
+     "parents": 0.013019781994348001,
+     "decisions": 0.0008147932194595793,
+     "early_parents": 0.012414210738796932,
+     "hold_parents": 0.0006055712555510698,
+     "holds_per_parent": 0.013706096083972547
+    },
+    "limit_share_frac": 0.37684268268066207,
+    "deadline_parent_frac": 0.35506661283811064,
+    "mean_done_s": 157.81855066612837,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.215273720238095,
+      "minus_R0": 0.018353220238095345,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.276906400986031,
+      "minus_R0": 0.038896612571898165,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.35": {
+    "run": "m18:R3_0.70_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.2473278976584594,
+    "is_ci_lo": 3.026702709100866,
+    "is_ci_hi": 3.5112688828217262,
+    "p95": 18.231260000000333,
+    "minus_R0_mean": 0.03021940250302791,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.01755236440721239,
+    "minus_R0_ci_hi": 0.04463910996414732,
+    "minus_R0_upper_97_5": 0.04463910996414732,
+    "p95_minus_R0": 0.031260000000333577,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.23000000000000043,
+    "firing": {
+     "parents": 0.020700444085587404,
+     "decisions": 0.0035370488137207627,
+     "early_parents": 0.012444489301574485,
+     "hold_parents": 0.008286233346790472,
+     "holds_per_parent": 0.10134234961647154
+    },
+    "limit_share_frac": 0.3787365058538555,
+    "deadline_parent_frac": 0.35655026241421073,
+    "mean_done_s": 158.39323778764634,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2157163293650792,
+      "minus_R0": 0.018795829365079404,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2800563907148725,
+      "minus_R0": 0.04204660230073959,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.40": {
+    "run": "m18:R3_0.70_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.2446463796931786,
+    "is_ci_lo": 3.024544413961562,
+    "is_ci_hi": 3.509251354041954,
+    "p95": 18.267245000000187,
+    "minus_R0_mean": 0.027537884537747345,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.014325904271786502,
+    "minus_R0_ci_hi": 0.0425049548301758,
+    "minus_R0_upper_97_5": 0.0425049548301758,
+    "p95_minus_R0": 0.06724500000018807,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.259999999999998,
+    "firing": {
+     "parents": 0.05172587807832055,
+     "decisions": 0.007863293451161513,
+     "early_parents": 0.012464675010092855,
+     "hold_parents": 0.03931166733952362,
+     "holds_per_parent": 0.24286435203875656
+    },
+    "limit_share_frac": 0.385488786838918,
+    "deadline_parent_frac": 0.3594872830036334,
+    "mean_done_s": 159.9314796124344,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.2117788650793653,
+      "minus_R0": 0.014858365079365216,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.278675195152013,
+      "minus_R0": 0.040665406737880036,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.30": {
+    "run": "m18:R3_0.75_0.30",
+    "n_parents": 99080,
+    "is_mean": 3.2263909921275746,
+    "is_ci_lo": 3.0098773650869783,
+    "is_ci_hi": 3.487464254345514,
+    "p95": 18.2,
+    "minus_R0_mean": 0.009282496972143742,
+    "minus_R0_p_one_sided": 0.9853,
+    "minus_R0_ci_lo": 0.000901438112410797,
+    "minus_R0_ci_hi": 0.01845101430212294,
+    "minus_R0_upper_97_5": 0.01845101430212294,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.11000000000000298,
+    "firing": {
+     "parents": 0.0023011707710940653,
+     "decisions": 0.0004770190001106584,
+     "early_parents": 0.0016955995155429956,
+     "hold_parents": 0.0006055712555510698,
+     "holds_per_parent": 0.013706096083972547
+    },
+    "limit_share_frac": 0.3816441764230924,
+    "deadline_parent_frac": 0.36025433992733147,
+    "mean_done_s": 159.00710536939846,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.200288607142858,
+      "minus_R0": 0.00336810714285714,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2534156470829916,
+      "minus_R0": 0.01540585866885789,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.35": {
+    "run": "m18:R3_0.75_0.35",
+    "n_parents": 99080,
+    "is_mean": 3.2281697466693595,
+    "is_ci_lo": 3.0116168433469275,
+    "is_ci_hi": 3.489210975226428,
+    "p95": 18.2,
+    "minus_R0_mean": 0.01106125151392813,
+    "minus_R0_p_one_sided": 0.9931,
+    "minus_R0_ci_lo": 0.0020502000047972545,
+    "minus_R0_ci_hi": 0.02133450598781972,
+    "minus_R0_upper_97_5": 0.02133450598781972,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.12975212499998354,
+    "firing": {
+     "parents": 0.010022204279370206,
+     "decisions": 0.0031823443436134434,
+     "early_parents": 0.00170569236980218,
+     "hold_parents": 0.008326604763827211,
+     "holds_per_parent": 0.10140290674202665
+    },
+    "limit_share_frac": 0.38356525030278565,
+    "deadline_parent_frac": 0.36174808235769074,
+    "mean_done_s": 159.58404319741624,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.200662962301587,
+      "minus_R0": 0.003742462301587236,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.256648422350042,
+      "minus_R0": 0.018638633935908023,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.40": {
+    "run": "m18:R3_0.75_0.40",
+    "n_parents": 99080,
+    "is_mean": 3.2253953219620524,
+    "is_ci_lo": 3.0087754886612488,
+    "is_ci_hi": 3.487413974648814,
+    "p95": 18.2,
+    "minus_R0_mean": 0.00828682680662092,
+    "minus_R0_p_one_sided": 0.956,
+    "minus_R0_ci_lo": -0.0010330920851253692,
+    "minus_R0_ci_hi": 0.01904651153968627,
+    "minus_R0_upper_97_5": 0.01904651153968627,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.15993999999999886,
+    "firing": {
+     "parents": 0.04108800968914009,
+     "decisions": 0.007484042129641918,
+     "early_parents": 0.00170569236980218,
+     "hold_parents": 0.03939241017359709,
+     "holds_per_parent": 0.24303593056116268
+    },
+    "limit_share_frac": 0.3903498687928946,
+    "deadline_parent_frac": 0.3646851029471134,
+    "mean_done_s": 161.12528259991925,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.1968411726190475,
+      "minus_R0": -7.932738095235997e-05,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.2549583689400166,
+      "minus_R0": 0.016948580525883317,
+      "n_parents": 48680
+     }
+    }
+   }
+  },
+  "L0D0": {
+   "S0": {
+    "run": "S0",
+    "n_parents": 99080,
+    "is_mean": 3.745448122729102,
+    "is_ci_lo": 3.440881011798221,
+    "is_ci_hi": 4.104908700002711,
+    "p95": 9.3,
+    "minus_R0_mean": 1.0764908185304811,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.9564475700667724,
+    "minus_R0_ci_hi": 1.207848997039029,
+    "minus_R0_upper_97_5": 1.207848997039029,
+    "p95_minus_R0": -7.5,
+    "p95_minus_R0_ci_lo": -8.61,
+    "p95_minus_R0_ci_hi": -7.0,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.0,
+    "deadline_parent_frac": 0.0,
+    "mean_done_s": 0.0,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 3.6184920634920634,
+      "minus_R0": 1.0076513472222217,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 3.8768898931799507,
+      "minus_R0": 1.1477625801150373,
+      "n_parents": 48680
+     }
+    }
+   },
+   "S2i": {
+    "run": "S2i",
+    "n_parents": 99080,
+    "is_mean": 2.742200796326201,
+    "is_ci_lo": 2.5240363689340493,
+    "is_ci_hi": 3.003363149210686,
+    "p95": 17.5,
+    "minus_R0_mean": 0.07324349212757375,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.0549284936081409,
+    "minus_R0_ci_hi": 0.09306552313820149,
+    "minus_R0_upper_97_5": 0.09306552313820149,
+    "p95_minus_R0": 0.6999999999999993,
+    "p95_minus_R0_ci_lo": 0.3999874999999979,
+    "p95_minus_R0_ci_hi": 0.8000000000000007,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.7416491421073881,
+    "deadline_parent_frac": 0.30396649172385953,
+    "mean_done_s": 159.29434800161485,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6797972222222226,
+      "minus_R0": 0.0689565059523811,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.8068092625308134,
+      "minus_R0": 0.07768194946589972,
+      "n_parents": 48680
+     }
+    }
+   },
+   "C3": {
+    "run": "C3",
+    "n_parents": 99080,
+    "is_mean": 2.7028486566410987,
+    "is_ci_lo": 2.4855659675287898,
+    "is_ci_hi": 2.9647289893354385,
+    "p95": 17.3,
+    "minus_R0_mean": 0.03389135244247081,
+    "minus_R0_p_one_sided": 0.9998,
+    "minus_R0_ci_lo": 0.01859919209226329,
+    "minus_R0_ci_hi": 0.050346748612684115,
+    "minus_R0_upper_97_5": 0.050346748612684115,
+    "p95_minus_R0": 0.5,
+    "p95_minus_R0_ci_lo": 0.1329750000000056,
+    "p95_minus_R0_ci_hi": 0.5,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.7105908054097699,
+    "deadline_parent_frac": 0.289331853048042,
+    "mean_done_s": 155.43655631812678,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6386759761904766,
+      "minus_R0": 0.027835259920635024,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7692887366474936,
+      "minus_R0": 0.04016142358258014,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R0": {
+    "run": "R0",
+    "n_parents": 99080,
+    "is_mean": 2.6689573041986283,
+    "is_ci_lo": 2.4533998796248504,
+    "is_ci_hi": 2.9302673336353595,
+    "p95": 16.8,
+    "minus_R0_mean": 0.0,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.0,
+    "minus_R0_ci_hi": 0.0,
+    "minus_R0_upper_97_5": 0.0,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.0,
+     "decisions": 0.0,
+     "early_parents": 0.0,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.4817869499394429,
+    "deadline_parent_frac": 0.24228905934598305,
+    "mean_done_s": 127.11899475171579,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.610840716269842,
+      "minus_R0": 0.0,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7291273130649136,
+      "minus_R0": 0.0,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.60": {
+    "run": "R1_0.60",
+    "n_parents": 99080,
+    "is_mean": 2.8034589160274543,
+    "is_ci_lo": 2.5803822054480876,
+    "is_ci_hi": 3.0677652554413544,
+    "p95": 13.3,
+    "minus_R0_mean": 0.1345016118288254,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08400343647132813,
+    "minus_R0_ci_hi": 0.18533072795870323,
+    "minus_R0_upper_97_5": 0.18533072795870323,
+    "p95_minus_R0": -3.5,
+    "p95_minus_R0_ci_lo": -4.199999999999999,
+    "p95_minus_R0_ci_hi": -3.0,
+    "firing": {
+     "parents": 0.4419257165926524,
+     "decisions": 0.030238553499643307,
+     "early_parents": 0.4419257165926524,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.25651374646750097,
+    "deadline_parent_frac": 0.0746063786838918,
+    "mean_done_s": 69.12180056519983,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.756539533730159,
+      "minus_R0": 0.14569881746031763,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.852036090797041,
+      "minus_R0": 0.12290877773212845,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.65": {
+    "run": "R1_0.65",
+    "n_parents": 99080,
+    "is_mean": 2.6883404955591454,
+    "is_ci_lo": 2.4779098201129424,
+    "is_ci_hi": 2.9432430963752,
+    "p95": 15.8,
+    "minus_R0_mean": 0.019383191360516784,
+    "minus_R0_p_one_sided": 0.8952,
+    "minus_R0_ci_lo": -0.010610750306231456,
+    "minus_R0_ci_hi": 0.04789810596157787,
+    "minus_R0_upper_97_5": 0.04789810596157787,
+    "p95_minus_R0": -1.0,
+    "p95_minus_R0_ci_lo": -1.6707308750000407,
+    "p95_minus_R0_ci_hi": -1.0,
+    "firing": {
+     "parents": 0.18954380298748486,
+     "decisions": 0.0087897439881755,
+     "early_parents": 0.18954380298748486,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.3863573778764635,
+    "deadline_parent_frac": 0.16716794509487282,
+    "mean_done_s": 104.68937222446507,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6410968710317464,
+      "minus_R0": 0.03025615476190478,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7372533689400167,
+      "minus_R0": 0.008126055875102794,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.70": {
+    "run": "R1_0.70",
+    "n_parents": 99080,
+    "is_mean": 2.6827479259184503,
+    "is_ci_lo": 2.459754450755781,
+    "is_ci_hi": 2.950329244526541,
+    "p95": 16.8,
+    "minus_R0_mean": 0.013790621719822527,
+    "minus_R0_p_one_sided": 0.9819,
+    "minus_R0_ci_lo": 0.0006757951166143029,
+    "minus_R0_ci_hi": 0.028632707792159484,
+    "minus_R0_upper_97_5": 0.028632707792159484,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.21900249999995838,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.023375050464271296,
+     "decisions": 0.0009188055210849205,
+     "early_parents": 0.023375050464271296,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.46922865361324184,
+    "deadline_parent_frac": 0.23344771901493744,
+    "mean_done_s": 124.6330843762616,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6212993015873023,
+      "minus_R0": 0.010458585317460425,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.746367701314708,
+      "minus_R0": 0.017240388249794795,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R1_0.75": {
+    "run": "R1_0.75",
+    "n_parents": 99080,
+    "is_mean": 2.672850451150586,
+    "is_ci_lo": 2.456351414959537,
+    "is_ci_hi": 2.935248405860081,
+    "p95": 16.82077499999982,
+    "minus_R0_mean": 0.003893146951958002,
+    "minus_R0_p_one_sided": 0.9941,
+    "minus_R0_ci_lo": 0.0007054333842326098,
+    "minus_R0_ci_hi": 0.007838605503545105,
+    "minus_R0_upper_97_5": 0.007838605503545105,
+    "p95_minus_R0": 0.020774999999819244,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.09510374999954183,
+    "firing": {
+     "parents": 0.0007165926524020993,
+     "decisions": 2.765455488046416e-05,
+     "early_parents": 0.0007165926524020993,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.48133065199838515,
+    "deadline_parent_frac": 0.24210738796931772,
+    "mean_done_s": 127.06867178037949,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.611555795634921,
+      "minus_R0": 0.0007150793650793652,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.736310817584223,
+      "minus_R0": 0.007183504519309754,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.30": {
+    "run": "R2_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.668335816511911,
+    "is_ci_lo": 2.452696173617862,
+    "is_ci_hi": 2.9296693120454194,
+    "p95": 16.8,
+    "minus_R0_mean": -0.0006214876867177992,
+    "minus_R0_p_one_sided": 0.0023,
+    "minus_R0_ci_lo": -0.0010906746080886255,
+    "minus_R0_ci_hi": -0.00017890919636524323,
+    "minus_R0_upper_97_5": -0.00017890919636524323,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0008207500000257608,
+    "firing": {
+     "parents": 0.00210940654016956,
+     "decisions": 0.00048330214439060154,
+     "early_parents": 0.0,
+     "hold_parents": 0.00210940654016956,
+     "holds_per_parent": 0.012535324989907146
+    },
+    "limit_share_frac": 0.482305218005652,
+    "deadline_parent_frac": 0.24238998788857488,
+    "mean_done_s": 127.1955490512717,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.610229535714286,
+      "minus_R0": -0.0006111805555555556,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7284951540673785,
+      "minus_R0": -0.0006321589975349123,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.35": {
+    "run": "R2_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.666102380904321,
+    "is_ci_lo": 2.4502296686544054,
+    "is_ci_hi": 2.927128610134036,
+    "p95": 16.8,
+    "minus_R0_mean": -0.0028549232943076404,
+    "minus_R0_p_one_sided": 0.0,
+    "minus_R0_ci_lo": -0.0042321624726967474,
+    "minus_R0_ci_hi": -0.0015393506899944206,
+    "minus_R0_upper_97_5": -0.0015393506899944206,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.010000000000001563,
+    "p95_minus_R0_ci_hi": 0.020000000000003126,
+    "firing": {
+     "parents": 0.01173798950343157,
+     "decisions": 0.002448812029328317,
+     "early_parents": 0.0,
+     "hold_parents": 0.01173798950343157,
+     "holds_per_parent": 0.06369600322971336
+    },
+    "limit_share_frac": 0.48522181065805414,
+    "deadline_parent_frac": 0.2430258377069035,
+    "mean_done_s": 127.57775534921275,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6091496051587306,
+      "minus_R0": -0.0016911111111111157,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7250674568611335,
+      "minus_R0": -0.004059856203779803,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R2_0.40": {
+    "run": "R2_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.659409980823578,
+    "is_ci_lo": 2.4422341449140674,
+    "is_ci_hi": 2.921428828781423,
+    "p95": 16.82077499999982,
+    "minus_R0_mean": -0.009547323375050439,
+    "minus_R0_p_one_sided": 0.0,
+    "minus_R0_ci_lo": -0.012187389278163804,
+    "minus_R0_ci_hi": -0.006824115840641749,
+    "minus_R0_upper_97_5": -0.006824115840641749,
+    "p95_minus_R0": 0.020774999999819244,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.09849999999991255,
+    "firing": {
+     "parents": 0.039745660072668554,
+     "decisions": 0.007449315561904205,
+     "early_parents": 0.0,
+     "hold_parents": 0.039745660072668554,
+     "holds_per_parent": 0.1953774727492935
+    },
+    "limit_share_frac": 0.49507728098506265,
+    "deadline_parent_frac": 0.2447920872022608,
+    "mean_done_s": 128.69699232943077,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.602182690476191,
+      "minus_R0": -0.008658025793650739,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7186592707477404,
+      "minus_R0": -0.010468042317173382,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.30": {
+    "run": "R3_0.60_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.8028502462656455,
+    "is_ci_lo": 2.5796090100472853,
+    "is_ci_hi": 3.0675531750724265,
+    "p95": 13.3,
+    "minus_R0_mean": 0.13389294206701674,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08336216130620924,
+    "minus_R0_ci_hi": 0.18464283956545305,
+    "minus_R0_upper_97_5": 0.18464283956545305,
+    "p95_minus_R0": -3.5,
+    "p95_minus_R0_ci_lo": -4.199999999999999,
+    "p95_minus_R0_ci_hi": -3.0,
+    "firing": {
+     "parents": 0.4439241017359709,
+     "decisions": 0.031060803114152713,
+     "early_parents": 0.4419660880096891,
+     "hold_parents": 0.0019983851433185303,
+     "holds_per_parent": 0.012404117884537748
+    },
+    "limit_share_frac": 0.25699265240209934,
+    "deadline_parent_frac": 0.0746770286637061,
+    "mean_done_s": 69.19221840936616,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.756048194444445,
+      "minus_R0": 0.14520747817460333,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.85130594494659,
+      "minus_R0": 0.12217863188167655,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.35": {
+    "run": "R3_0.60_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.801186025433995,
+    "is_ci_lo": 2.5772824274574346,
+    "is_ci_hi": 3.06599831695458,
+    "p95": 13.3,
+    "minus_R0_mean": 0.13222872123536555,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.08164159545024272,
+    "minus_R0_ci_hi": 0.1831158097902813,
+    "minus_R0_upper_97_5": 0.1831158097902813,
+    "p95_minus_R0": -3.5,
+    "p95_minus_R0_ci_lo": -4.199999999999999,
+    "p95_minus_R0_ci_hi": -3.0,
+    "firing": {
+     "parents": 0.45288655631812674,
+     "decisions": 0.03435082255269194,
+     "early_parents": 0.4423193379087606,
+     "hold_parents": 0.010960839725474365,
+     "holds_per_parent": 0.06239402503027856
+    },
+    "limit_share_frac": 0.2595220226079935,
+    "deadline_parent_frac": 0.07518167137666532,
+    "mean_done_s": 69.52427331449334,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.7549369761904767,
+      "minus_R0": 0.14409625992063507,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.849069182415777,
+      "minus_R0": 0.11994186935086305,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.60_0.40": {
+    "run": "R3_0.60_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.7957119348001633,
+    "is_ci_lo": 2.5714825626471267,
+    "is_ci_hi": 3.0608650054146964,
+    "p95": 13.3,
+    "minus_R0_mean": 0.12675463060153436,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.07677868625221845,
+    "minus_R0_ci_hi": 0.17822584933832894,
+    "minus_R0_upper_97_5": 0.17822584933832894,
+    "p95_minus_R0": -3.5,
+    "p95_minus_R0_ci_lo": -4.199999999999999,
+    "p95_minus_R0_ci_hi": -3.0,
+    "firing": {
+     "parents": 0.47835082761404923,
+     "decisions": 0.0425073577085363,
+     "early_parents": 0.44410577311263627,
+     "hold_parents": 0.03642511102139685,
+     "holds_per_parent": 0.18781792490916432
+    },
+    "limit_share_frac": 0.2676607287040775,
+    "deadline_parent_frac": 0.07625151392813888,
+    "mean_done_s": 70.41863140896245,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.7507218571428576,
+      "minus_R0": 0.13988114087301606,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.842291637222678,
+      "minus_R0": 0.11316432415776528,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.30": {
+    "run": "R3_0.65_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.687795511707712,
+    "is_ci_lo": 2.4769570769563876,
+    "is_ci_hi": 2.9428288466985832,
+    "p95": 15.8,
+    "minus_R0_mean": 0.0188382075090836,
+    "minus_R0_p_one_sided": 0.8893,
+    "minus_R0_ci_lo": -0.0110779461550706,
+    "minus_R0_ci_hi": 0.04720855359709629,
+    "minus_R0_upper_97_5": 0.04720855359709629,
+    "p95_minus_R0": -1.0,
+    "p95_minus_R0_ci_lo": -1.6707308750000407,
+    "p95_minus_R0_ci_hi": -1.0,
+    "firing": {
+     "parents": 0.19156237383932176,
+     "decisions": 0.009362029337726228,
+     "early_parents": 0.18957408155026242,
+     "hold_parents": 0.0020185708518368995,
+     "holds_per_parent": 0.012444489301574485
+    },
+    "limit_share_frac": 0.3868393116673395,
+    "deadline_parent_frac": 0.16723859507468714,
+    "mean_done_s": 104.7624646750101,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.640623587301588,
+      "minus_R0": 0.029782871031746053,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.736634151602301,
+      "minus_R0": 0.007506838537387116,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.35": {
+    "run": "R3_0.65_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.685909562979411,
+    "is_ci_lo": 2.4747241830537132,
+    "is_ci_hi": 2.94120195316655,
+    "p95": 15.8,
+    "minus_R0_mean": 0.016952258780783245,
+    "minus_R0_p_one_sided": 0.866,
+    "minus_R0_ci_lo": -0.013123099797967835,
+    "minus_R0_ci_hi": 0.04564724624143636,
+    "minus_R0_upper_97_5": 0.04564724624143636,
+    "p95_minus_R0": -1.0,
+    "p95_minus_R0_ci_lo": -1.6699999999999982,
+    "p95_minus_R0_ci_hi": -1.0,
+    "firing": {
+     "parents": 0.20101937828017763,
+     "decisions": 0.011691296075534435,
+     "early_parents": 0.1898364957610012,
+     "hold_parents": 0.011475575292692773,
+     "holds_per_parent": 0.06326201049656843
+    },
+    "limit_share_frac": 0.3895915926524021,
+    "deadline_parent_frac": 0.16778360920468308,
+    "mean_done_s": 105.12263827210334,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6396947301587304,
+      "minus_R0": 0.02885401388888892,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.733757294576828,
+      "minus_R0": 0.00462998151191465,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.65_0.40": {
+    "run": "R3_0.65_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.6797796830843774,
+    "is_ci_lo": 2.4678000821804753,
+    "is_ci_hi": 2.936598471422722,
+    "p95": 15.8,
+    "minus_R0_mean": 0.010822378885748949,
+    "minus_R0_p_one_sided": 0.767,
+    "minus_R0_ci_lo": -0.019332821090908184,
+    "minus_R0_ci_hi": 0.03960097108207618,
+    "minus_R0_upper_97_5": 0.03960097108207618,
+    "p95_minus_R0": -1.0,
+    "p95_minus_R0_ci_lo": -1.6600000000000037,
+    "p95_minus_R0_ci_hi": -0.988749999999925,
+    "firing": {
+     "parents": 0.22822971336293904,
+     "decisions": 0.017563713206849962,
+     "early_parents": 0.1905429955591441,
+     "hold_parents": 0.03868591037545418,
+     "holds_per_parent": 0.1932377876463464
+    },
+    "limit_share_frac": 0.39880783205490516,
+    "deadline_parent_frac": 0.1692773516350424,
+    "mean_done_s": 106.16722850222042,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6336363035714285,
+      "minus_R0": 0.022795587301587355,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.727553436729663,
+      "minus_R0": -0.001573876335250514,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.30": {
+    "run": "R3_0.70_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.6821264382317334,
+    "is_ci_lo": 2.4592826914975405,
+    "is_ci_hi": 2.949526617070488,
+    "p95": 16.8,
+    "minus_R0_mean": 0.013169134033104728,
+    "minus_R0_p_one_sided": 0.9769,
+    "minus_R0_ci_lo": 0.00023705199654561958,
+    "minus_R0_ci_hi": 0.027934488988564824,
+    "minus_R0_upper_97_5": 0.027934488988564824,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.21899999999994435,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.025484457004440856,
+     "decisions": 0.0014107045434360607,
+     "early_parents": 0.023375050464271296,
+     "hold_parents": 0.00210940654016956,
+     "holds_per_parent": 0.012535324989907146
+    },
+    "limit_share_frac": 0.469746921679451,
+    "deadline_parent_frac": 0.23354864755752927,
+    "mean_done_s": 124.70963867581752,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.620688121031746,
+      "minus_R0": 0.009847404761904871,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.745735542317173,
+      "minus_R0": 0.016608229252259882,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.35": {
+    "run": "R3_0.70_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.6799165189745673,
+    "is_ci_lo": 2.45698659573617,
+    "is_ci_hi": 2.947634911070591,
+    "p95": 16.8,
+    "minus_R0_mean": 0.010959214775938786,
+    "minus_R0_p_one_sided": 0.9461,
+    "minus_R0_ci_lo": -0.0021284744845133105,
+    "minus_R0_ci_hi": 0.02588055106141777,
+    "minus_R0_upper_97_5": 0.02588055106141777,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.2189999999999408,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.03508276140492531,
+     "decisions": 0.0034086057213340293,
+     "early_parents": 0.02338514331853048,
+     "hold_parents": 0.011707710940654016,
+     "holds_per_parent": 0.06363544610415825
+    },
+    "limit_share_frac": 0.472652412192168,
+    "deadline_parent_frac": 0.2341844973758579,
+    "mean_done_s": 125.09122930964877,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6196081904761908,
+      "minus_R0": 0.008767474206349312,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.742355708709942,
+      "minus_R0": 0.01322839564502896,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.70_0.40": {
+    "run": "R3_0.70_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.67331000908357,
+    "is_ci_lo": 2.4493066163966586,
+    "is_ci_hi": 2.941380849489309,
+    "p95": 16.8,
+    "minus_R0_mean": 0.0043527048849416475,
+    "minus_R0_p_one_sided": 0.7206,
+    "minus_R0_ci_lo": -0.00921347573512003,
+    "minus_R0_ci_hi": 0.019758538429283344,
+    "minus_R0_upper_97_5": 0.019758538429283344,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": -0.1999999999999993,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.06302987484860718,
+     "decisions": 0.008488200922443043,
+     "early_parents": 0.023435607589826404,
+     "hold_parents": 0.03965482438433589,
+     "holds_per_parent": 0.19509487283003635
+    },
+    "limit_share_frac": 0.4824604461041582,
+    "deadline_parent_frac": 0.23592046830843763,
+    "mean_done_s": 126.20478401291885,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.612747228174604,
+      "minus_R0": 0.0019065119047620702,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.736012641741988,
+      "minus_R0": 0.006885328677074988,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.30": {
+    "run": "R3_0.75_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.6722289634638687,
+    "is_ci_lo": 2.455785861663064,
+    "is_ci_hi": 2.934824789513579,
+    "p95": 16.82077499999982,
+    "minus_R0_mean": 0.003271659265240202,
+    "minus_R0_p_one_sided": 0.983,
+    "minus_R0_ci_lo": 0.00020199692050264348,
+    "minus_R0_ci_hi": 0.00709329346560889,
+    "minus_R0_upper_97_5": 0.00709329346560889,
+    "p95_minus_R0": 0.020774999999819244,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.098499999999909,
+    "firing": {
+     "parents": 0.002825999192571659,
+     "decisions": 0.000511119874154735,
+     "early_parents": 0.0007165926524020993,
+     "hold_parents": 0.00210940654016956,
+     "holds_per_parent": 0.012535324989907146
+    },
+    "limit_share_frac": 0.4818489200645943,
+    "deadline_parent_frac": 0.24220831651190958,
+    "mean_done_s": 127.14522607993541,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.610944615079365,
+      "minus_R0": 0.00010389880952380952,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.735678658586688,
+      "minus_R0": 0.006551345521774841,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.35": {
+    "run": "R3_0.75_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.669995527856279,
+    "is_ci_lo": 2.4531530373265413,
+    "is_ci_hi": 2.9318155725584387,
+    "p95": 16.82077499999982,
+    "minus_R0_mean": 0.0010382236576503615,
+    "minus_R0_p_one_sided": 0.695,
+    "minus_R0_ci_lo": -0.0022179139876284237,
+    "minus_R0_ci_hi": 0.005107957011495596,
+    "minus_R0_upper_97_5": 0.005107957011495596,
+    "p95_minus_R0": 0.020774999999819244,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.09976499999996591,
+    "firing": {
+     "parents": 0.01245458215583367,
+     "decisions": 0.002477276750086173,
+     "early_parents": 0.0007165926524020993,
+     "hold_parents": 0.01173798950343157,
+     "holds_per_parent": 0.06369600322971336
+    },
+    "limit_share_frac": 0.4847655127169964,
+    "deadline_parent_frac": 0.2428441663302382,
+    "mean_done_s": 127.52743237787647,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6098646845238096,
+      "minus_R0": -0.0009760317460317503,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7322509613804433,
+      "minus_R0": 0.003123648315529951,
+      "n_parents": 48680
+     }
+    }
+   },
+   "R3_0.75_0.40": {
+    "run": "R3_0.75_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.663303127775536,
+    "is_ci_lo": 2.4457191968135144,
+    "is_ci_hi": 2.926016825865932,
+    "p95": 16.9,
+    "minus_R0_mean": -0.005654176423092436,
+    "minus_R0_p_one_sided": 0.0079,
+    "minus_R0_ci_lo": -0.009757452699187773,
+    "minus_R0_ci_hi": -0.0010750169008591115,
+    "minus_R0_upper_97_5": -0.0010750169008591115,
+    "p95_minus_R0": 0.09999999999999787,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.1415000000000859,
+    "firing": {
+     "parents": 0.040462252725070647,
+     "decisions": 0.007479377720701119,
+     "early_parents": 0.0007165926524020993,
+     "hold_parents": 0.039745660072668554,
+     "holds_per_parent": 0.1953774727492935
+    },
+    "limit_share_frac": 0.4946209830440048,
+    "deadline_parent_frac": 0.24461041582559548,
+    "mean_done_s": 128.64666935809447,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6028977698412703,
+      "minus_R0": -0.007942946428571374,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7258427752670493,
+      "minus_R0": -0.003284537797863626,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.60": {
+    "run": "m18:R1_0.60",
+    "n_parents": 99080,
+    "is_mean": 2.8704805006055722,
+    "is_ci_lo": 2.6358757161559674,
+    "is_ci_hi": 3.146812972791737,
+    "p95": 14.37,
+    "minus_R0_mean": 0.20152319640694416,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.15604223655164573,
+    "minus_R0_ci_hi": 0.24836575976917638,
+    "minus_R0_upper_97_5": 0.24836575976917638,
+    "p95_minus_R0": -2.4300000000000015,
+    "p95_minus_R0_ci_lo": -3.0,
+    "p95_minus_R0_ci_hi": -2.0,
+    "firing": {
+     "parents": 0.36116269681065805,
+     "decisions": 0.021328259944426366,
+     "early_parents": 0.36116269681065805,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.29758942268873634,
+    "deadline_parent_frac": 0.10334073475979007,
+    "mean_done_s": 80.96929753734356,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.8248172321428577,
+      "minus_R0": 0.2139765158730162,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.917757179539852,
+      "minus_R0": 0.1886298664749386,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.65": {
+    "run": "m18:R1_0.65",
+    "n_parents": 99080,
+    "is_mean": 2.7397052452563595,
+    "is_ci_lo": 2.512514870401915,
+    "is_ci_hi": 3.0137122278563924,
+    "p95": 16.74089999999979,
+    "minus_R0_mean": 0.07074794105773144,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.046772259995906514,
+    "minus_R0_ci_hi": 0.09834648819502628,
+    "minus_R0_upper_97_5": 0.09834648819502628,
+    "p95_minus_R0": -0.05910000000021043,
+    "p95_minus_R0_ci_lo": -0.5,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.09057327412192168,
+     "decisions": 0.0037883233186624104,
+     "early_parents": 0.09057327412192168,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.43406016350423904,
+    "deadline_parent_frac": 0.20577311263625353,
+    "mean_done_s": 116.73266047638272,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6806958273809527,
+      "minus_R0": 0.06985511111111131,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.800799630238291,
+      "minus_R0": 0.07167231717337762,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.70": {
+    "run": "m18:R1_0.70",
+    "n_parents": 99080,
+    "is_mean": 2.692700095882116,
+    "is_ci_lo": 2.471916745856123,
+    "is_ci_hi": 2.962148902587463,
+    "p95": 17.0,
+    "minus_R0_mean": 0.02374279168348818,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.012662962356200286,
+    "minus_R0_ci_hi": 0.03588367805460188,
+    "minus_R0_upper_97_5": 0.03588367805460188,
+    "p95_minus_R0": 0.1999999999999993,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.24890737499999227,
+    "firing": {
+     "parents": 0.010113039967702867,
+     "decisions": 0.00039307281732784235,
+     "early_parents": 0.010113039967702867,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.47608351836899476,
+    "deadline_parent_frac": 0.238403310456197,
+    "mean_done_s": 126.11436213161082,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6229217519841272,
+      "minus_R0": 0.012081035714285808,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7649439030402627,
+      "minus_R0": 0.0358165899753493,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R1_0.75": {
+    "run": "m18:R1_0.75",
+    "n_parents": 99080,
+    "is_mean": 2.6780585203875664,
+    "is_ci_lo": 2.4585421530800007,
+    "is_ci_hi": 2.943018006222746,
+    "p95": 16.870499999999886,
+    "minus_R0_mean": 0.00910121618893823,
+    "minus_R0_p_one_sided": 0.9865,
+    "minus_R0_ci_lo": 0.0009659355581651184,
+    "minus_R0_ci_hi": 0.017607089183413232,
+    "minus_R0_upper_97_5": 0.017607089183413232,
+    "p95_minus_R0": 0.07049999999988543,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.13000000000000256,
+    "firing": {
+     "parents": 0.0013928138877674606,
+     "decisions": 5.377617886736456e-05,
+     "early_parents": 0.0013928138877674606,
+     "hold_parents": 0.0,
+     "holds_per_parent": 0.0
+    },
+    "limit_share_frac": 0.4808493742430359,
+    "deadline_parent_frac": 0.24188534517561566,
+    "mean_done_s": 127.00588413403311,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6123052797619053,
+      "minus_R0": 0.0014645634920634728,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.746135006162694,
+      "minus_R0": 0.01700769309778145,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.30": {
+    "run": "m18:R2_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.668756587605976,
+    "is_ci_lo": 2.4530970615813716,
+    "is_ci_hi": 2.930053822095045,
+    "p95": 16.8,
+    "minus_R0_mean": -0.00020071659265240326,
+    "minus_R0_p_one_sided": 0.0754,
+    "minus_R0_ci_lo": -0.000461517640379402,
+    "minus_R0_ci_hi": 7.968150705758126e-05,
+    "minus_R0_upper_97_5": 7.968150705758126e-05,
+    "p95_minus_R0": 0.0,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.0005651998385143318,
+     "decisions": 0.0004693406891913875,
+     "early_parents": 0.0,
+     "hold_parents": 0.0005651998385143318,
+     "holds_per_parent": 0.012171982236576505
+    },
+    "limit_share_frac": 0.4819620609608397,
+    "deadline_parent_frac": 0.24246063786838917,
+    "mean_done_s": 127.18200444085588,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6105970654761914,
+      "minus_R0": -0.0002436507936507936,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.728971047658175,
+      "minus_R0": -0.0001562654067378824,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.35": {
+    "run": "m18:R2_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.667883974566008,
+    "is_ci_lo": 2.452208995599655,
+    "is_ci_hi": 2.929335310075046,
+    "p95": 16.8003699999999,
+    "minus_R0_mean": -0.001073329632620093,
+    "minus_R0_p_one_sided": 0.0777,
+    "minus_R0_ci_lo": -0.0024640634542298554,
+    "minus_R0_ci_hi": 0.0004039743049658292,
+    "minus_R0_upper_97_5": 0.0004039743049658292,
+    "p95_minus_R0": 0.0003699999999007275,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.03100000000005747,
+    "firing": {
+     "parents": 0.007448526443278159,
+     "decisions": 0.003629511444728562,
+     "early_parents": 0.0,
+     "hold_parents": 0.007448526443278159,
+     "holds_per_parent": 0.09447920872022608
+    },
+    "limit_share_frac": 0.4843973153007671,
+    "deadline_parent_frac": 0.24367178037949133,
+    "mean_done_s": 127.6774222850222,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.610223543650794,
+      "minus_R0": -0.0006171726190476096,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.727581709120788,
+      "minus_R0": -0.0015456039441248827,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R2_0.40": {
+    "run": "m18:R2_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.6622429138070256,
+    "is_ci_lo": 2.4459769298732406,
+    "is_ci_hi": 2.923642249918538,
+    "p95": 16.810024999999996,
+    "minus_R0_mean": -0.006714390391602745,
+    "minus_R0_p_one_sided": 0.0,
+    "minus_R0_ci_lo": -0.008941840982361322,
+    "minus_R0_ci_hi": -0.004221450597274207,
+    "minus_R0_upper_97_5": -0.004221450597274207,
+    "p95_minus_R0": 0.010024999999995288,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.07000000000000028,
+    "firing": {
+     "parents": 0.03264029067420266,
+     "decisions": 0.008260739596265585,
+     "early_parents": 0.0,
+     "hold_parents": 0.03264029067420266,
+     "holds_per_parent": 0.21671376665320952
+    },
+    "limit_share_frac": 0.4930946406943884,
+    "deadline_parent_frac": 0.24507468712151798,
+    "mean_done_s": 128.7259890997174,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.604098029761905,
+      "minus_R0": -0.0067426865079365066,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7224422185702544,
+      "minus_R0": -0.0066850944946589995,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.30": {
+    "run": "m18:R3_0.60_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.8703111223253948,
+    "is_ci_lo": 2.6357230305665653,
+    "is_ci_hi": 3.1467537385945312,
+    "p95": 14.37,
+    "minus_R0_mean": 0.20135381812676653,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.15584470059217756,
+    "minus_R0_ci_hi": 0.24824653846285163,
+    "minus_R0_upper_97_5": 0.24824653846285163,
+    "p95_minus_R0": -2.4300000000000015,
+    "p95_minus_R0_ci_lo": -3.0,
+    "p95_minus_R0_ci_hi": -2.0,
+    "firing": {
+     "parents": 0.361707710940654,
+     "decisions": 0.022030493314139265,
+     "early_parents": 0.3611727896649172,
+     "hold_parents": 0.0005450141299959629,
+     "holds_per_parent": 0.012151796528058135
+    },
+    "limit_share_frac": 0.2977509083568833,
+    "deadline_parent_frac": 0.1035123132821962,
+    "mean_done_s": 81.03201453371014,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.824600962301588,
+      "minus_R0": 0.21376024603174634,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.917636349630238,
+      "minus_R0": 0.18850903656532478,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.35": {
+    "run": "m18:R3_0.60_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.869700290674204,
+    "is_ci_lo": 2.6345487937619416,
+    "is_ci_hi": 3.1469108195298103,
+    "p95": 14.401999999999534,
+    "minus_R0_mean": 0.20074298647557554,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.1550054540734804,
+    "minus_R0_ci_hi": 0.24788242428136387,
+    "minus_R0_upper_97_5": 0.24788242428136387,
+    "p95_minus_R0": -2.398000000000467,
+    "p95_minus_R0_ci_lo": -3.0,
+    "p95_minus_R0_ci_hi": -2.0,
+    "firing": {
+     "parents": 0.3681166733952362,
+     "decisions": 0.026697179986327063,
+     "early_parents": 0.3614049253128785,
+     "hold_parents": 0.006953976584578118,
+     "holds_per_parent": 0.0934295518772709
+    },
+    "limit_share_frac": 0.29989033104561974,
+    "deadline_parent_frac": 0.10463262010496568,
+    "mean_done_s": 81.49801170771094,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.824583988095239,
+      "minus_R0": 0.21374327182539715,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.9164106778964665,
+      "minus_R0": 0.18728336483155322,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.60_0.40": {
+    "run": "m18:R3_0.60_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.8651415119095693,
+    "is_ci_lo": 2.629670981936457,
+    "is_ci_hi": 3.1421803859539357,
+    "p95": 14.44,
+    "minus_R0_mean": 0.19618420771094092,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.1503077784938585,
+    "minus_R0_ci_hi": 0.24355488251866314,
+    "minus_R0_upper_97_5": 0.24355488251866314,
+    "p95_minus_R0": -2.360000000000001,
+    "p95_minus_R0_ci_lo": -3.0,
+    "p95_minus_R0_ci_hi": -2.0,
+    "firing": {
+     "parents": 0.39163302381913606,
+     "decisions": 0.03336638813451877,
+     "early_parents": 0.3627371820750908,
+     "hold_parents": 0.030470327008477998,
+     "holds_per_parent": 0.2115260395639887
+    },
+    "limit_share_frac": 0.30728552684699234,
+    "deadline_parent_frac": 0.1056620912394025,
+    "mean_done_s": 82.39433790876059,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.8199527281746044,
+      "minus_R0": 0.20911201190476222,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.9119269412489728,
+      "minus_R0": 0.18279962818405943,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.30": {
+    "run": "m18:R3_0.65_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.7395219388373038,
+    "is_ci_lo": 2.5121637186379195,
+    "is_ci_hi": 3.0135509276264996,
+    "p95": 16.74089999999979,
+    "minus_R0_mean": 0.07056463463867613,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.04659395883856977,
+    "minus_R0_ci_hi": 0.09818361856783943,
+    "minus_R0_upper_97_5": 0.09818361856783943,
+    "p95_minus_R0": -0.05910000000021043,
+    "p95_minus_R0_ci_lo": -0.5,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.09112838110617683,
+     "decisions": 0.004295222725019251,
+     "early_parents": 0.09058336697618087,
+     "hold_parents": 0.0005551069842551473,
+     "holds_per_parent": 0.012161889382317319
+    },
+    "limit_share_frac": 0.4342277048849415,
+    "deadline_parent_frac": 0.20594469115865968,
+    "mean_done_s": 116.79542793702059,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.680452176587302,
+      "minus_R0": 0.06961146031746052,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.800678800328677,
+      "minus_R0": 0.0715514872637638,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.35": {
+    "run": "m18:R3_0.65_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.738719065401697,
+    "is_ci_lo": 2.511404757088329,
+    "is_ci_hi": 3.0132462239691122,
+    "p95": 16.77,
+    "minus_R0_mean": 0.06976176120306857,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.04582788518886429,
+    "minus_R0_ci_hi": 0.09740319684279018,
+    "minus_R0_upper_97_5": 0.09740319684279018,
+    "p95_minus_R0": -0.030000000000001137,
+    "p95_minus_R0_ci_lo": -0.5,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.09792087202260799,
+     "decisions": 0.007702697478016907,
+     "early_parents": 0.09065401695599516,
+     "hold_parents": 0.007347597900686314,
+     "holds_per_parent": 0.0943379087605975
+    },
+    "limit_share_frac": 0.4365999192571659,
+    "deadline_parent_frac": 0.20713564796124345,
+    "mean_done_s": 117.28579935405733,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.680203654761905,
+      "minus_R0": 0.06936293849206371,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7993019884963024,
+      "minus_R0": 0.07017467543138914,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.65_0.40": {
+    "run": "m18:R3_0.65_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.733405124142109,
+    "is_ci_lo": 2.505784109174323,
+    "is_ci_hi": 3.007884678984416,
+    "p95": 16.770499999999885,
+    "minus_R0_mean": 0.06444781994348034,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.04015053247890546,
+    "minus_R0_ci_hi": 0.09255898370323191,
+    "minus_R0_upper_97_5": 0.09255898370323191,
+    "p95_minus_R0": -0.02950000000011599,
+    "p95_minus_R0_ci_lo": -0.5,
+    "p95_minus_R0_ci_hi": 0.0,
+    "firing": {
+     "parents": 0.12279975777149778,
+     "decisions": 0.012674704941838656,
+     "early_parents": 0.09097698829228906,
+     "hold_parents": 0.0322264836495761,
+     "holds_per_parent": 0.2159366168752523
+    },
+    "limit_share_frac": 0.4449975878078321,
+    "deadline_parent_frac": 0.2084578118691966,
+    "mean_done_s": 118.30695397658458,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6744777500000003,
+      "minus_R0": 0.06363703373015894,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.794414566557108,
+      "minus_R0": 0.06528725349219439,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.30": {
+    "run": "m18:R3_0.70_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.6924993792894636,
+    "is_ci_lo": 2.4716996798788284,
+    "is_ci_hi": 2.961862178947767,
+    "p95": 17.0,
+    "minus_R0_mean": 0.023542075090835776,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.012474238345646474,
+    "minus_R0_ci_hi": 0.0357244810292772,
+    "minus_R0_upper_97_5": 0.0357244810292772,
+    "p95_minus_R0": 0.1999999999999993,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.24890737499999227,
+    "firing": {
+     "parents": 0.010678239806217198,
+     "decisions": 0.0008657577517274964,
+     "early_parents": 0.010113039967702867,
+     "hold_parents": 0.0005651998385143318,
+     "holds_per_parent": 0.012171982236576505
+    },
+    "limit_share_frac": 0.4762586293903916,
+    "deadline_parent_frac": 0.23857488897860316,
+    "mean_done_s": 126.1773718207509,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.622678101190477,
+      "minus_R0": 0.011837384920635014,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7647876376335243,
+      "minus_R0": 0.03566032456861141,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.35": {
+    "run": "m18:R3_0.70_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.6915730702462666,
+    "is_ci_lo": 2.4706097957363573,
+    "is_ci_hi": 2.9607042438373985,
+    "p95": 17.0,
+    "minus_R0_mean": 0.02261576604763838,
+    "minus_R0_p_one_sided": 1.0,
+    "minus_R0_ci_lo": 0.011699297580008775,
+    "minus_R0_ci_hi": 0.034781546351345095,
+    "minus_R0_upper_97_5": 0.034781546351345095,
+    "p95_minus_R0": 0.1999999999999993,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.259999999999998,
+    "firing": {
+     "parents": 0.017531287848203472,
+     "decisions": 0.004046604508571348,
+     "early_parents": 0.01012313282196205,
+     "hold_parents": 0.007418247880500606,
+     "holds_per_parent": 0.09442874444893015
+    },
+    "limit_share_frac": 0.47868231731933786,
+    "deadline_parent_frac": 0.2397860314897053,
+    "mean_done_s": 126.67192167945095,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.622304579365079,
+      "minus_R0": 0.011463863095238195,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.763289009860312,
+      "minus_R0": 0.034161696795398634,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.70_0.40": {
+    "run": "m18:R3_0.70_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.6860353603148983,
+    "is_ci_lo": 2.4642596423223884,
+    "is_ci_hi": 2.955474662915937,
+    "p95": 17.0,
+    "minus_R0_mean": 0.017078056116269776,
+    "minus_R0_p_one_sided": 0.9983,
+    "minus_R0_ci_lo": 0.005513952427716818,
+    "minus_R0_ci_hi": 0.029769633570393497,
+    "minus_R0_upper_97_5": 0.029769633570393497,
+    "p95_minus_R0": 0.1999999999999993,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.2699999999999996,
+    "firing": {
+     "parents": 0.04271295922486879,
+     "decisions": 0.00870957176937522,
+     "early_parents": 0.01014331853048042,
+     "hold_parents": 0.032599919257165925,
+     "holds_per_parent": 0.21665320952765443
+    },
+    "limit_share_frac": 0.4873513827210335,
+    "deadline_parent_frac": 0.24118893823173193,
+    "mean_done_s": 127.71854057327413,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.616179065476191,
+      "minus_R0": 0.0053383492063493,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7583598726376337,
+      "minus_R0": 0.029232559572719894,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.30": {
+    "run": "m18:R3_0.75_0.30",
+    "n_parents": 99080,
+    "is_mean": 2.677857803794914,
+    "is_ci_lo": 2.458251403373664,
+    "is_ci_hi": 2.9427695971765937,
+    "p95": 16.870499999999886,
+    "minus_R0_mean": 0.008900499596285829,
+    "minus_R0_p_one_sided": 0.9842,
+    "minus_R0_ci_lo": 0.0007563868928540234,
+    "minus_R0_ci_hi": 0.01742604381319813,
+    "minus_R0_upper_97_5": 0.01742604381319813,
+    "p95_minus_R0": 0.07049999999988543,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.13000000000000256,
+    "firing": {
+     "parents": 0.0019580137262817923,
+     "decisions": 0.0005234841453244959,
+     "early_parents": 0.0013928138877674606,
+     "hold_parents": 0.0005651998385143318,
+     "holds_per_parent": 0.012171982236576505
+    },
+    "limit_share_frac": 0.4810244852644328,
+    "deadline_parent_frac": 0.24205692369802181,
+    "mean_done_s": 127.0688938231732,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6120616289682546,
+      "minus_R0": 0.0012209126984126797,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7459787407559575,
+      "minus_R0": 0.016851427691043565,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.35": {
+    "run": "m18:R3_0.75_0.35",
+    "n_parents": 99080,
+    "is_mean": 2.6770092097295124,
+    "is_ci_lo": 2.4574876475948058,
+    "is_ci_hi": 2.942479858063586,
+    "p95": 16.9,
+    "minus_R0_mean": 0.008051905530884154,
+    "minus_R0_p_one_sided": 0.977,
+    "minus_R0_ci_lo": 0.0001324347733288473,
+    "minus_R0_ci_hi": 0.016546561963362766,
+    "minus_R0_upper_97_5": 0.016546561963362766,
+    "p95_minus_R0": 0.09999999999999787,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.13999999999999702,
+    "firing": {
+     "parents": 0.00884134033104562,
+     "decisions": 0.003686477148110234,
+     "early_parents": 0.0014029067420266452,
+     "hold_parents": 0.007448526443278159,
+     "holds_per_parent": 0.09447920872022608
+    },
+    "limit_share_frac": 0.48345826604763825,
+    "deadline_parent_frac": 0.24326806620912395,
+    "mean_done_s": 127.56430157448527,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6116881071428573,
+      "minus_R0": 0.0008473908730158632,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.744638288824979,
+      "minus_R0": 0.015510975760065784,
+      "n_parents": 48680
+     }
+    }
+   },
+   "m18:R3_0.75_0.40": {
+    "run": "m18:R3_0.75_0.40",
+    "n_parents": 99080,
+    "is_mean": 2.67136814897053,
+    "is_ci_lo": 2.451571657415531,
+    "is_ci_hi": 2.936843954165327,
+    "p95": 16.939999999999998,
+    "minus_R0_mean": 0.002410844771901503,
+    "minus_R0_p_one_sided": 0.7114,
+    "minus_R0_ci_lo": -0.006027111883524984,
+    "minus_R0_ci_hi": 0.011379317066614002,
+    "minus_R0_upper_97_5": 0.011379317066614002,
+    "p95_minus_R0": 0.13999999999999702,
+    "p95_minus_R0_ci_lo": 0.0,
+    "p95_minus_R0_ci_hi": 0.16899762499955598,
+    "firing": {
+     "parents": 0.034033104561970125,
+     "decisions": 0.00832109548448405,
+     "early_parents": 0.0014029067420266452,
+     "hold_parents": 0.03264029067420266,
+     "holds_per_parent": 0.21671376665320952
+    },
+    "limit_share_frac": 0.4921555914412596,
+    "deadline_parent_frac": 0.2446709729511506,
+    "mean_done_s": 128.61286838918045,
+    "market_nonpositive_price": 0,
+    "by_year": {
+     "2019": {
+      "is_mean": 2.6055625932539686,
+      "minus_R0": -0.005278123015873033,
+      "n_parents": 50400
+     },
+     "2020": {
+      "is_mean": 2.7394987982744454,
+      "minus_R0": 0.010371485209531668,
+      "n_parents": 48680
+     }
+    }
+   }
+  }
+ },
+ "research18_candidates": {
+  "astar_research18": "R0",
+  "note": "research 18's A* was R0, so the comparison with it is the comparison with R0",
+  "lowest_mean": "R2_0.40",
+  "lowest_mean_c": 3.215776287848205,
+  "lowest_minus_R0_c": -0.001332207307226484
+ },
+ "delay_check": null,
+ "control": null,
+ "power": {
+  "days_new": 1471,
+  "n_new": 20,
+  "H1_auc": {
+   "se_valid": 0.0019385841041379235,
+   "stocks_per_day_valid": 9.80990099009901,
+   "days_valid": 505,
+   "n_new": 20,
+   "days_new": 1471,
+   "se_new_orders": 0.0007955020703179879,
+   "se_new_days": 0.0011358578923584754,
+   "mde_auc_minus_0.5_orders": {
+    "0.0250": 0.002228666841181138,
+    "0.0500": 0.0019779958993407796
+   },
+   "mde_auc_minus_0.5_days": {
+    "0.0250": 0.003182202681108456,
+    "0.0500": 0.0028242820944775634
+   }
+  },
+  "reference_lowest_candidate": {
+   "days_dev": 505,
+   "stocks_per_day_dev": 9.80990099009901,
+   "W_within_day_var": 0.01742729176839852,
+   "V_dev_daymean_var": 0.0017214516774895971,
+   "c_common_var": -5.504859361279545e-05,
+   "n_new": 20,
+   "days_new": 1471,
+   "V_new_daymean_var": 0.0008163159948071305,
+   "VIF": 1.2568607601587087,
+   "se_new_c": 0.0008351536825819863,
+   "effect_dev_c": -0.006031764230924543,
+   "mde_c": {
+    "0.0250": 0.002339754211974303,
+    "0.0500": 0.0020765886364144718
+   },
+   "underpowered": {
+    "0.0250": false,
+    "0.0500": false
+   }
+  }
+ },
+ "years": [
+  2019,
+  2020
+ ],
+ "sim": {
+  "symbol_days": 4955,
+  "parents": 99080,
+  "dropped_parents": 20,
+  "symbol_days_without_parents": 1,
+  "symbol_days_without_ref": 0,
+  "grid_counts": {
+   "points": 5944800,
+   "invalid_decision_quote": 0,
+   "zero_size_imbalance_0": 0,
+   "d5_prev_invalid_0": 0,
+   "signal_spy": 5558858,
+   "signal_own": 5568398,
+   "intensity_undefined": 120000
+  },
+  "runs": [
+   "S0",
+   "S2i",
+   "R0",
+   "R1_0.60",
+   "R1_0.65",
+   "R1_0.70",
+   "R1_0.75",
+   "R2_0.30",
+   "R2_0.35",
+   "R2_0.40",
+   "R3_0.60_0.30",
+   "R3_0.60_0.35",
+   "R3_0.60_0.40",
+   "R3_0.65_0.30",
+   "R3_0.65_0.35",
+   "R3_0.65_0.40",
+   "R3_0.70_0.30",
+   "R3_0.70_0.35",
+   "R3_0.70_0.40",
+   "R3_0.75_0.30",
+   "R3_0.75_0.35",
+   "R3_0.75_0.40",
+   "m18:R1_0.60",
+   "m18:R1_0.65",
+   "m18:R1_0.70",
+   "m18:R1_0.75",
+   "m18:R2_0.30",
+   "m18:R2_0.35",
+   "m18:R2_0.40",
+   "m18:R3_0.60_0.30",
+   "m18:R3_0.60_0.35",
+   "m18:R3_0.60_0.40",
+   "m18:R3_0.65_0.30",
+   "m18:R3_0.65_0.35",
+   "m18:R3_0.65_0.40",
+   "m18:R3_0.70_0.30",
+   "m18:R3_0.70_0.35",
+   "m18:R3_0.70_0.40",
+   "m18:R3_0.75_0.30",
+   "m18:R3_0.75_0.35",
+   "m18:R3_0.75_0.40"
+  ],
+  "delay_runs": [],
+  "workers": 4,
+  "years": [
+   2019,
+   2020
+  ],
+  "plan_symbol_days_all_years": 14800,
+  "ref_files_all_years": 1510,
+  "days_without_ref": [],
+  "adv": {
+   "symbol_days": 4955,
+   "adv_undefined": 100,
+   "adv_zero": 0,
+   "day_volume_zero": 1
+  },
+  "days": 505,
+  "first_day": "20190102",
+  "last_day": "20201231",
+  "sealed_days_for_power": 1471,
+  "n_new": 20
+ },
+ "checks": {
+  "regression": {
+   "n_parents": 99080,
+   "n_parents_equal_research18": true,
+   "mean_is_3dp": {
+    "L3D1 S0": {
+     "got": 4.53723052079128,
+     "want": 4.537231,
+     "pass": true
+    },
+    "L3D1 S2i": {
+     "got": 3.216909650787242,
+     "want": 3.21691,
+     "pass": true
+    },
+    "L3D1 C3": {
+     "got": 3.1791345337101333,
+     "want": 3.179135,
+     "pass": true
+    },
+    "L3D1 R0": {
+     "got": 3.21710849515543,
+     "want": 3.217108,
+     "pass": true
+    },
+    "L0D0 S0": {
+     "got": 3.745448122729108,
+     "want": 3.745448,
+     "pass": true
+    },
+    "L0D0 S2i": {
+     "got": 2.7422007963262005,
+     "want": 2.742201,
+     "pass": true
+    },
+    "L0D0 C3": {
+     "got": 2.702848656641098,
+     "want": 2.702849,
+     "pass": true
+    },
+    "L0D0 R0": {
+     "got": 2.668957304198627,
+     "want": 2.668957,
+     "pass": true
+    }
+   },
+   "targets": "research 18's validation values (dev18_rows.csv, dev18_summary.json)",
+   "research18_candidates": {
+    "compared": 38,
+    "max_abs_diff_mean_is": 4.993944289211072e-07,
+    "pass": true
+   },
+   "auc_research18": {
+    "got": 0.568675224143437,
+    "want": 0.568675224143437,
+    "scored_points": 5155574,
+    "pass": true
+   },
+   "shares_sum_to_qty": true,
+   "no_rule_action_in_base_runs": true,
+   "market_at_nonpositive_price": 0,
+   "no_date_after_2020": true
+  },
+  "second_pass_equal": null,
+  "daily_file_max_gap_c": 0.0
+ },
+ "daily": {
+  "file": "results/dev23_daily.csv",
+  "rows": 42420,
+  "columns": [
+   "date",
+   "variant",
+   "run",
+   "n_parents",
+   "is_sum_c"
+  ],
+  "prediction_file": "results/dev23_daily_pred.csv",
+  "prediction_rows": 505
+ },
+ "candidates": [
+  "R1_0.60",
+  "R1_0.65",
+  "R1_0.70",
+  "R1_0.75",
+  "R2_0.30",
+  "R2_0.35",
+  "R2_0.40",
+  "R3_0.60_0.30",
+  "R3_0.60_0.35",
+  "R3_0.60_0.40",
+  "R3_0.65_0.30",
+  "R3_0.65_0.35",
+  "R3_0.65_0.40",
+  "R3_0.70_0.30",
+  "R3_0.70_0.35",
+  "R3_0.70_0.40",
+  "R3_0.75_0.30",
+  "R3_0.75_0.35",
+  "R3_0.75_0.40"
+ ],
+ "trials_before": 826,
+ "trials_added": 20,
+ "trials_cumulative": 846,
+ "boot": {
+  "B": 10000,
+  "block": 21,
+  "seed": 23
+ },
+ "runtime_s": 117.4,
+ "written": "2026-11-13T14:07:53"
+}
