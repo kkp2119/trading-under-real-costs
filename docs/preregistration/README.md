@@ -14,6 +14,7 @@ These are the original rule files, written before any result they govern was com
 | 20–22 | `SPECnn.md`, `SPECnn_ADDENDUM.md`, `SPECnn_ANSWERS.md`, `FREEZEnn.md`, `PREDICTIONSnn.md`, `DEVIATIONSnn.md` |
 | 23 | `SPEC23.md`, `SPEC23_ANSWERS.md`, `FREEZE23.md`, `PREDICTIONS23.md`, `DEVIATIONS23.md` |
 | 24, 25 | `SPECnn.md`, `SPECnn_ANSWERS.md`, `PREDICTIONSnn.md`, `DEVIATIONSnn.md` (no freeze file: no rule passed the build stage, so there was no sealed run) |
+| 26 | `SPEC26.md` (plan), `PREDICTIONS26.md`, `DEVIATIONS26.md` (interpretations, tests, the build run). No freeze file: no setting passed the build stage, so there was no sealed run |
 
 **Changes from the originals.** The files in this public copy differ from the originals in three ways:
 - The "(Korean)" first line was added.

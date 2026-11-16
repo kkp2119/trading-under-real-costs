@@ -15,7 +15,7 @@ Data: WRDS TAQ (1-second quotes and trades), CRSP, OptionMetrics, FRED. Licensed
 
 | Algorithm | Idea | How it was tested | Result after costs | Verdict |
 |---|---|---|---|---|
-| [Market Maker](docs/market_maker.md) | Quote both sides every 5 s and earn the spread | Build 2019–2020 only | −1.8¢ a share; lost money on all 505 days. Even first in line: −0.84¢ | Stopped on build data |
+| [Market Maker](docs/market_maker.md) | Quote both sides every 5 s and earn the spread | Build 2015–2020 only | −1.7¢ a share; lost money on all 1,511 days. Even first in line (2019–20 check): −0.84¢ | Stopped on build data |
 | **[Patient Trader](docs/ml_market_maker_and_patient_trader.md)** (execution) | Fill 1,000 shares within 5 min: wait 1¢ inside the spread, cross when it narrows to 1–2¢, finish at market | Picked on 2015–2020 → sealed 2021–Oct 2025, opened once; then three random sets of never-used stocks | **1.30¢ a share cheaper than a market order** (95% range 1.14–1.46); 1.19 · 1.63 · 1.29¢ on the new stocks under the strictest fill rules | Held, 4 times |
 | [Order-book forecast](docs/smarter_patient_trader.md) | Predict an adverse move every 5 s and act on it | Build 2015–2020 → sealed, new stocks 2021–2026 | AUC 0.591 on unseen stocks (0.601 with trade and market inputs). No rule using it beat plain waiting by the 0.02¢ bar | Predicted, did not pay |
 | [Statistical arbitrage](docs/stat_arb_pairs.md) | Trade the gap between near-identical prices: same company, same industry, ETF twins | Build 2015–2020 → sealed 2021–2026 | The gap closed in all three kinds (same company: +$4,174 a day before costs), but costs were about 3× the gain (−$10,036 a day after) | Predicted, did not pay |
@@ -36,7 +36,7 @@ Data: WRDS TAQ (1-second quotes and trades), CRSP, OptionMetrics, FRED. Licensed
 
 1. **Rules first.** Every setting, cost assumption and pass/fail test was written down and committed before any result was computed.
 2. **Build vs. sealed data.** Settings were chosen on build years only. Sealed data were opened once, with a typed unlock phrase, and never re-run. Ideas that failed on build data never touched sealed data.
-3. **Every try counted.** 865 configurations across all studies are logged, including every one that failed.
+3. **Every try counted.** 892 configurations across all studies are logged, including every one that failed.
 4. **Realistic costs.** Real bid–ask spreads, $0.003 a share on market orders, fills that wait in line behind displayed orders, and a strictest rule: filled only by trades through our price, at most the displayed size, +1¢ beyond it.
 5. **Replication.** The Patient Trader was re-tested on three random draws of 20 never-used stocks a year, each opened once.
 6. **Errors reported.** From 3 Nov 2025, displayed quote sizes in our data are 100× too big. We found it ourselves, did not rerun any sealed test, and now quote results before that date (1.30¢ instead of 1.50¢). See [docs/data_unit_correction.md](docs/data_unit_correction.md).
@@ -47,7 +47,7 @@ Pre-registration documents are in `docs/preregistration/` (Korean). Their tags a
 
 | What we tried | Judged on | Result | Verdict |
 |---|---|---|---|
-| Market Maker | Build 2019–20 | −1.8¢ a share, realistic fills | Stopped on build data |
+| Market Maker | Build 2015–20 | −1.7¢ a share; lost on all 1,511 days | Stopped on build data |
 | Option Seller | Sealed 2013–25 | Sharpe 0.55 in backtest, 0.10 sealed | Did not hold |
 | Currency carry trade | Sealed 2013–26 | Sharpe 0.35 in backtest, 0.04 sealed | Did not hold |
 | Patient Trader vs. market order | Sealed, 4 stock sets | Saved 1.30, 1.19, 1.63, 1.29¢ a share | Held, 4 times |
@@ -107,6 +107,7 @@ trading-under-real-costs/
 │   ├── study23/
 │   ├── study24/
 │   ├── study25/
+│   ├── study26/
 │   └── universe_tickers.csv
 └── src/    # study code, copied as run (paths generalised)
     ├── common/
@@ -122,7 +123,8 @@ trading-under-real-costs/
     ├── study22_market_signal/
     ├── study23_combined_forecast/
     ├── study24_big_gaps/
-    └── study25_volatility/
+    ├── study25_volatility/
+    └── study26_market_maker_2015_2020/
 ```
 
 ## Reproducing

@@ -1,4 +1,5 @@
 """Draw the seven figures in figures/ from the aggregated files in results/ only (no licensed data needed).
+The Market Maker figure uses the 2015-2020 rebuild (results/study26).
   python src/common/make_figures.py"""
 import json
 import os
@@ -35,14 +36,19 @@ def shade(ax, start, end, label):
 
 
 def mm_cumulative_pnl():
-    d = pd.read_csv(os.path.join(RES, "study12", "s12_daily_pnl.csv"))
-    t = dates(d.date)
+    """The 2015-2020 rebuild (results/study26): cumulative daily net P&L under cost R."""
+    d = pd.read_csv(os.path.join(RES, "study26", "study26_daily.csv"))
+    best = json.load(open(os.path.join(RES, "study26", "study26_summary.json"), encoding="utf-8"))["report_setting"]["name"]
+    line = lambda s, m: d[(d.setting == s) & (d.model == m)]   # noqa: E731
     fig, ax = plt.subplots(figsize=(8, 4.5))
-    ax.plot(t, d.B0_Q.cumsum() / 1e6, color=NAVY, lw=2, label="As designed (B0, queue fill model)")
-    ax.plot(t, d.best_tuned.cumsum() / 1e6, color=NAVY, lw=1.5, ls="--", label="Best tuned setting (picked after the fact)")
-    ax.plot(t, d.B0_T.cumsum() / 1e6, color=ORANGE, lw=1.5, ls=":", label="Upper bound (fill whenever a trade touches our price)")
+    ax.axvspan(pd.Timestamp("2019-01-01"), pd.Timestamp("2020-12-31"), color=GREY, alpha=0.10, lw=0, label="Original build years (2019–2020)")
+    for (s, m), kw in ((("B0", "Q"), dict(color=NAVY, lw=2, label="As designed (B0, queue fill model)")),
+                       ((best, "Q"), dict(color=NAVY, lw=1.5, ls="--", label="Best tuned setting (picked after the fact)")),
+                       (("B0", "T"), dict(color=ORANGE, lw=1.5, ls=":", label="Upper bound (fill whenever a trade touches our price)"))):
+        x = line(s, m)
+        ax.plot(dates(x.date), x.cum_net_usd / 1e6, **kw)
     ax.axhline(0, color=GREY, lw=0.8)
-    ax.set_title("Market Maker, 2019–2020: cumulative net P&L after costs")
+    ax.set_title("Market Maker, 2015–2020: cumulative net P&L after costs")
     ax.set_ylabel("Cumulative net P&L ($ millions)")
     ax.xaxis.set_major_formatter(mdates.DateFormatter("%Y-%m"))
     ax.legend(frameon=False, loc="lower left")
