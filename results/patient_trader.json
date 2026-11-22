@@ -1,0 +1,74 @@
+{
+  "what": "Patient Trader: fill a 1,000-share order within 5 minutes; wait 1 cent inside the spread, buy the rest at market when the spread narrows to 1-2 cents, finish at market at 5 minutes. Compared with buying at market at once",
+  "unit": "cents a share, E* minus market order (negative = cheaper)",
+  "sealed_original_stocks": {
+    "window": [
+      "20210104",
+      "20261023"
+    ],
+    "orders": 286700,
+    "fill_rules": "original (L0D0)",
+    "pre_registered": {
+      "mean": -1.498,
+      "ci95": [
+        -1.673,
+        -1.328
+      ],
+      "verdict": "confirmed"
+    },
+    "before_the_3_Nov_2025_unit_change": {
+      "mean": -1.299,
+      "ci95": [
+        -1.463,
+        -1.145
+      ],
+      "orders": 237900,
+      "note": "post hoc split, no verdict changed; from 3 Nov 2025 displayed quote sizes in the data are 100x too big"
+    }
+  },
+  "never_used_stocks_strictest_fills_L3D1": {
+    "120_stocks_2021_2026": {
+      "mean": -1.252,
+      "upper_97_5": -1.14,
+      "verdict": "confirmed"
+    },
+    "third_set": {
+      "mean": -1.63,
+      "ci95": [
+        -1.837,
+        -1.435
+      ],
+      "verdict": "confirmed"
+    },
+    "fourth_set": {
+      "mean": -1.29,
+      "ci95": [
+        -1.414,
+        -1.172
+      ],
+      "note": "reported alongside that study's forecast test, not its verdict"
+    }
+  },
+  "sources": [
+    {
+      "file": "research15/results15/test15/test15_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research17/results/test17_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research22/results/test22_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research23/results/test23_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "synthesis/size_unit_audit/split_summary.json",
+      "committed_in_research_repo": false
+    }
+  ]
+}

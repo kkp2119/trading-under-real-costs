@@ -1,0 +1,68 @@
+{
+  "what": "Share classes of one company (7 pairs, e.g. GOOGL/GOOG): when the price gap is unusually wide (2 SD over 30 min), sell the dear class and buy the cheap one, $50,000 a side",
+  "sealed_window": [
+    "20210104",
+    "20261109"
+  ],
+  "days": 1470,
+  "gap_closes_before_costs": {
+    "usd_a_day": 4173.8,
+    "ci95": [
+      3611.2,
+      5024.8
+    ],
+    "p_one_sided": 0.0,
+    "verdict": "confirmed",
+    "trades": 185993,
+    "per_trade_usd": 32.99
+  },
+  "after_costs_market_orders": {
+    "fill_rules": "original (L0D0)",
+    "usd_a_day": -10035.6,
+    "ci95": [
+      -10855.4,
+      -9199.6
+    ],
+    "per_trade_usd": {
+      "gap_at_mid": 32.99,
+      "spread": -90.05,
+      "fees": -22.26,
+      "net": -79.32
+    },
+    "win_rate": 0.01,
+    "strictest_fill_rules_L3D1_usd_a_day": -14778.3
+  },
+  "profit_was_not_a_sealed_test": "no development variant made money after costs, so no profit hypothesis was taken to sealed data",
+  "more_pairs_same_design": {
+    "same_industry_stocks": {
+      "before_usd_a_day": 1420.6,
+      "ci95": [
+        1239.9,
+        1626.6
+      ],
+      "after_L0D0_usd_a_day": -3582.4
+    },
+    "near_identical_etfs": {
+      "before_usd_a_day": 345.1,
+      "ci95": [
+        252.0,
+        448.8
+      ],
+      "after_L0D0_usd_a_day": -584.9
+    }
+  },
+  "sources": [
+    {
+      "file": "research20/results/test20_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research20/results/test20_daily.csv",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research21/results/test21_summary.json",
+      "committed_in_research_repo": true
+    }
+  ]
+}

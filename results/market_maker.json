@@ -1,0 +1,76 @@
+{
+  "what": "Market maker: quote 100 shares at the best bid and ask every 5 s, 10 liquid US stocks a year, 2015-2020 build data",
+  "days": 1511,
+  "window": [
+    "20150102",
+    "20201231"
+  ],
+  "costs": "market orders pay the spread + $0.003 a share; limit orders pay no fee and get no rebate (cost R)",
+  "as_designed": {
+    "fill_model": "Q: our order waits behind the displayed queue",
+    "net_usd": -5418911,
+    "cents_per_share": -1.714,
+    "losing_days": 1511,
+    "sharpe": -28.63
+  },
+  "best_tuned": {
+    "setting": "C_all (the grid's highest development Sharpe)",
+    "net_usd": -1585732,
+    "cents_per_share": -1.435,
+    "losing_days": 1149
+  },
+  "front_of_queue_check_2019_2020": {
+    "fill_model": "Q with nobody ahead of us (queue fraction 0)",
+    "days": 505,
+    "net_usd": -1479672,
+    "cents_per_share": -0.844,
+    "losing_day_share": 0.996
+  },
+  "upper_bound": {
+    "fill_model": "T: filled in full whenever a trade touches our price (not achievable)",
+    "net_usd": 712248,
+    "net_usd_2015_2018": -213089,
+    "losing_days": 622,
+    "net_usd_with_class_simulator_fees": 4959124,
+    "class_simulator_fees": "market orders 1 cent a share, limit fills earn a 0.5 cent rebate (cost C)"
+  },
+  "adverse_selection": {
+    "mid_move_5s_after_limit_fill_ticks": {
+      "real_queue_Q": -1.367,
+      "upper_bound_T": 0.595
+    },
+    "before_cost_split_usd_as_designed": {
+      "spread_earned_on_limit_fills": 5730000.0,
+      "spread_paid_on_market_orders": -970000.0,
+      "inventory": -10070000.0,
+      "total": -5310000.0,
+      "note": "as written in the study 28 plan (SPEC28.md, section 0)"
+    }
+  },
+  "sources": [
+    {
+      "file": "research26/results/dev26_daily.csv",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research26/results/dev26_yearly.csv",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research26/results/dev26_markouts.csv",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research26/results/dev26_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research16/results/queue16_result.json",
+      "committed_in_research_repo": false
+    },
+    {
+      "file": "research28/SPEC28.md",
+      "committed_in_research_repo": true
+    }
+  ]
+}

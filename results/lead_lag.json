@@ -1,0 +1,303 @@
+{
+  "what": "Lead-lag: when the leader of a pair moves 3 SD relative to the follower over 15 s, buy or sell the follower at market 1 s later, $10,000 a trade; exit at a target, a stop, 120 s or 15:55. Values are $ per trade (event)",
+  "etf_twins_and_share_classes": {
+    "sealed_window": [
+      "20210104",
+      "20261110"
+    ],
+    "events": 970518,
+    "H1_follows_before_costs": {
+      "usd_per_trade": 0.978,
+      "ci95": [
+        0.954,
+        1.006
+      ],
+      "p_one_sided": 0.0,
+      "verdict": "confirmed"
+    },
+    "H2_forecast_top_minus_all": {
+      "top_usd_per_trade": 5.611,
+      "difference": 4.633,
+      "ci95": [
+        4.269,
+        5.006
+      ],
+      "p_one_sided": 0.0,
+      "top_share": 0.0217,
+      "verdict": "confirmed"
+    },
+    "after_costs": {
+      "all": -3.999,
+      "top": -16.679
+    },
+    "cost_breakdown": {
+      "follow_before_costs": 0.978,
+      "spread_and_fees": -4.878,
+      "size_beyond_displayed_depth": -0.099,
+      "after_costs_L3D1": -3.999,
+      "after_costs_if_entered_0s_late": -3.639,
+      "after_costs_if_entered_5s_late": -4.201
+    },
+    "by_year": {
+      "2021": {
+        "before": 0.627,
+        "after": -2.919
+      },
+      "2022": {
+        "before": 1.129,
+        "after": -4.981
+      },
+      "2023": {
+        "before": 0.886,
+        "after": -3.176
+      },
+      "2024": {
+        "before": 0.964,
+        "after": -4.048
+      },
+      "2025": {
+        "before": 1.044,
+        "after": -4.192
+      },
+      "2026": {
+        "before": 1.242,
+        "after": -4.631
+      }
+    },
+    "forecast_deciles": [
+      {
+        "decile": 1,
+        "forecast_bp": -0.178,
+        "before": 0.107,
+        "after": -2.727
+      },
+      {
+        "decile": 2,
+        "forecast_bp": 0.221,
+        "before": 0.309,
+        "after": -2.883
+      },
+      {
+        "decile": 3,
+        "forecast_bp": 0.443,
+        "before": 0.449,
+        "after": -3.046
+      },
+      {
+        "decile": 4,
+        "forecast_bp": 0.623,
+        "before": 0.566,
+        "after": -3.123
+      },
+      {
+        "decile": 5,
+        "forecast_bp": 0.783,
+        "before": 0.714,
+        "after": -3.129
+      },
+      {
+        "decile": 6,
+        "forecast_bp": 0.928,
+        "before": 0.795,
+        "after": -3.17
+      },
+      {
+        "decile": 7,
+        "forecast_bp": 1.064,
+        "before": 0.984,
+        "after": -3.272
+      },
+      {
+        "decile": 8,
+        "forecast_bp": 1.204,
+        "before": 1.199,
+        "after": -3.666
+      },
+      {
+        "decile": 9,
+        "forecast_bp": 1.414,
+        "before": 1.627,
+        "after": -5.198
+      },
+      {
+        "decile": 10,
+        "forecast_bp": 2.178,
+        "before": 3.032,
+        "after": -9.779
+      }
+    ]
+  },
+  "large_caps_and_sector_etfs": {
+    "pairs": "sector SPDR -> large cap (40), SPY -> large cap (40), SPY -> sector SPDR (9)",
+    "sealed_window": [
+      "20210104",
+      "20261116"
+    ],
+    "events": 4415520,
+    "H1_follows_before_costs": {
+      "usd_per_trade": 0.378,
+      "ci95": [
+        0.356,
+        0.402
+      ],
+      "p_one_sided": 0.0,
+      "verdict": "confirmed"
+    },
+    "H2_forecast_top_minus_all": {
+      "top_usd_per_trade": 1.38,
+      "difference": 1.002,
+      "ci95": [
+        0.867,
+        1.156
+      ],
+      "p_one_sided": 0.0,
+      "top_share": 0.1266,
+      "verdict": "confirmed"
+    },
+    "after_costs": {
+      "all": -4.688,
+      "top": -7.904
+    },
+    "cost_breakdown": {
+      "follow_before_costs": 0.378,
+      "spread_and_fees": -4.999,
+      "size_beyond_displayed_depth": -0.066,
+      "after_costs_L3D1": -4.688,
+      "after_costs_if_entered_0s_late": -4.525,
+      "after_costs_if_entered_5s_late": -4.733
+    },
+    "limit_entry_J15": {
+      "what": "join the best bid/ask with a limit order, wait up to 15 s",
+      "before": -0.7,
+      "after": -0.876,
+      "fill_rate": 0.413
+    },
+    "by_year": {
+      "2021": {
+        "before": 0.535,
+        "after": -4.76
+      },
+      "2022": {
+        "before": 0.604,
+        "after": -4.69
+      },
+      "2023": {
+        "before": 0.549,
+        "after": -4.307
+      },
+      "2024": {
+        "before": 0.153,
+        "after": -4.408
+      },
+      "2025": {
+        "before": 0.236,
+        "after": -5.16
+      },
+      "2026": {
+        "before": 0.188,
+        "after": -4.814
+      }
+    },
+    "forecast_deciles": [
+      {
+        "decile": 1,
+        "forecast_bp": -0.424,
+        "realised_bp_clipped": -0.192,
+        "before": -0.199,
+        "after": -4.044,
+        "spread_bp": 2.87
+      },
+      {
+        "decile": 2,
+        "forecast_bp": -0.117,
+        "realised_bp_clipped": -0.016,
+        "before": -0.021,
+        "after": -3.851,
+        "spread_bp": 2.94
+      },
+      {
+        "decile": 3,
+        "forecast_bp": 0.061,
+        "realised_bp_clipped": 0.086,
+        "before": 0.071,
+        "after": -3.938,
+        "spread_bp": 3.01
+      },
+      {
+        "decile": 4,
+        "forecast_bp": 0.211,
+        "realised_bp_clipped": 0.171,
+        "before": 0.163,
+        "after": -3.99,
+        "spread_bp": 3.05
+      },
+      {
+        "decile": 5,
+        "forecast_bp": 0.351,
+        "realised_bp_clipped": 0.255,
+        "before": 0.25,
+        "after": -4.049,
+        "spread_bp": 3.08
+      },
+      {
+        "decile": 6,
+        "forecast_bp": 0.492,
+        "realised_bp_clipped": 0.314,
+        "before": 0.333,
+        "after": -4.152,
+        "spread_bp": 3.13
+      },
+      {
+        "decile": 7,
+        "forecast_bp": 0.644,
+        "realised_bp_clipped": 0.383,
+        "before": 0.411,
+        "after": -4.329,
+        "spread_bp": 3.21
+      },
+      {
+        "decile": 8,
+        "forecast_bp": 0.828,
+        "realised_bp_clipped": 0.526,
+        "before": 0.528,
+        "after": -4.664,
+        "spread_bp": 3.4
+      },
+      {
+        "decile": 9,
+        "forecast_bp": 1.093,
+        "realised_bp_clipped": 0.639,
+        "before": 0.7,
+        "after": -5.416,
+        "spread_bp": 3.84
+      },
+      {
+        "decile": 10,
+        "forecast_bp": 1.868,
+        "realised_bp_clipped": 1.076,
+        "before": 1.542,
+        "after": -8.445,
+        "spread_bp": 5.81
+      }
+    ],
+    "direction_check_leader_and_follower_swapped": {
+      "before": 0.1,
+      "after": -0.961
+    }
+  },
+  "sources": [
+    {
+      "file": "research30g/results/sealed30g_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "research31/results/sealed31_summary.json",
+      "committed_in_research_repo": true
+    },
+    {
+      "file": "synthesis/presentation_data/study30g_daily.csv",
+      "committed_in_research_repo": false
+    }
+  ],
+  "daily_file_note": "lead_lag_etf_twins_daily.csv comes from synthesis/presentation_data/study30g_daily.csv (sealed rows only); its totals equal sealed30g_summary.json: events, mean before and after costs"
+}
