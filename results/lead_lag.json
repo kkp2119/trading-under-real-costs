@@ -288,16 +288,16 @@
   "sources": [
     {
       "file": "research30g/results/sealed30g_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "c66a8bd"
     },
     {
       "file": "research31/results/sealed31_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "0c8ca4e"
     },
     {
       "file": "synthesis/presentation_data/study30g_daily.csv",
-      "committed_in_research_repo": false
+      "research_repo_commit": "c9a53fd"
     }
   ],
-  "daily_file_note": "lead_lag_etf_twins_daily.csv comes from synthesis/presentation_data/study30g_daily.csv (sealed rows only); its totals equal sealed30g_summary.json: events, mean before and after costs"
+  "daily_file_note": "lead_lag_etf_twins_daily.csv is the sealed rows of synthesis/presentation_data/study30g_daily.csv (research repository commit c9a53fd); its totals equal sealed30g_summary.json: events, mean before and after costs"
 }

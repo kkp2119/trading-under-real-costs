@@ -1,74 +1,121 @@
 {
   "what": "Patient Trader: fill a 1,000-share order within 5 minutes; wait 1 cent inside the spread, buy the rest at market when the spread narrows to 1-2 cents, finish at market at 5 minutes. Compared with buying at market at once",
-  "unit": "cents a share, E* minus market order (negative = cheaper)",
-  "sealed_original_stocks": {
+  "unit": "cents a share, Patient Trader (E*) minus market order (negative = cheaper)",
+  "basis": "free of the quote-size unit error (from 2025-11-03 displayed sizes in the bars are 100x too big): the original stocks and the first new set use their data before the change; the third and fourth sets read corrected sizes (divided by 100 from 2025-11-03) throughout, so their whole sealed periods are used",
+  "headline_original_stocks": {
     "window": [
       "20210104",
-      "20261023"
+      "20251031"
     ],
-    "orders": 286700,
+    "orders": 237900,
+    "days": 1214,
     "fill_rules": "original (L0D0)",
-    "pre_registered": {
-      "mean": -1.498,
-      "ci95": [
-        -1.673,
-        -1.328
-      ],
-      "verdict": "confirmed"
-    },
-    "before_the_3_Nov_2025_unit_change": {
-      "mean": -1.299,
-      "ci95": [
-        -1.463,
-        -1.145
-      ],
-      "orders": 237900,
-      "note": "post hoc split, no verdict changed; from 3 Nov 2025 displayed quote sizes in the data are 100x too big"
-    }
+    "mean": -1.299,
+    "ci95": [
+      -1.463,
+      -1.145
+    ],
+    "note": "post hoc split of the sealed test at 2025-11-03; no verdict changed"
   },
-  "never_used_stocks_strictest_fills_L3D1": {
-    "120_stocks_2021_2026": {
-      "mean": -1.252,
-      "upper_97_5": -1.14,
-      "verdict": "confirmed"
+  "replications_strictest_fills_L3D1": {
+    "first_new_set": {
+      "stocks": "80 never-used stocks (20 a year)",
+      "window": [
+        "2021",
+        "2024"
+      ],
+      "orders": 381440,
+      "mean": -1.193,
+      "note": "years 2021-2024 (the split was made by year); no CI for this split"
     },
-    "third_set": {
+    "third_new_set": {
+      "window": [
+        "20210104",
+        "20261110"
+      ],
+      "orders": 579220,
       "mean": -1.63,
       "ci95": [
         -1.837,
         -1.435
       ],
-      "verdict": "confirmed"
+      "verdict": "confirmed",
+      "before_2025_11_03_for_reference": {
+        "orders": 481440,
+        "mean": -1.373,
+        "ci95": [
+          -1.546,
+          -1.211
+        ]
+      }
     },
-    "fourth_set": {
+    "fourth_new_set": {
+      "window": [
+        "20210104",
+        "20261110"
+      ],
+      "orders": 558560,
       "mean": -1.29,
       "ci95": [
         -1.414,
         -1.172
       ],
-      "note": "reported alongside that study's forecast test, not its verdict"
+      "note": "reported alongside that study's forecast test, not its verdict",
+      "before_2025_11_03_for_reference": {
+        "orders": 463820,
+        "mean": -1.206,
+        "ci95": [
+          -1.335,
+          -1.081
+        ]
+      }
+    }
+  },
+  "whole_sealed_period_footnote": {
+    "original_stocks_pre_registered": {
+      "window": [
+        "20210104",
+        "20261023"
+      ],
+      "orders": 286700,
+      "mean": -1.498,
+      "ci95": [
+        -1.673,
+        -1.328
+      ],
+      "verdict": "confirmed",
+      "bp_of_notional": 2.751,
+      "saved_usd": 4296146,
+      "notional_usd": 15615883100,
+      "average_price_usd": 54.47
+    },
+    "first_new_set_pre_registered": {
+      "orders": 556900,
+      "mean": -1.252,
+      "upper_97_5": -1.14,
+      "verdict": "confirmed"
     }
   },
   "sources": [
     {
       "file": "research15/results15/test15/test15_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "448c695"
     },
     {
       "file": "research17/results/test17_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "5343041"
     },
     {
       "file": "research22/results/test22_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "d000e97"
     },
     {
       "file": "research23/results/test23_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "4987339"
     },
     {
       "file": "synthesis/size_unit_audit/split_summary.json",
-      "committed_in_research_repo": false
+      "research_repo_commit": "c9a53fd"
     }
   ]
 }

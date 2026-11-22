@@ -15,7 +15,7 @@ Can a simple algorithm make money on US stocks once you count the real bid–ask
 
 1. **Rules first.** Settings, costs and the pass/fail test were committed to git before any result. For the four results below, tuning used 2015–2020 only. The sealed 2021–2026 data were opened once, after a code freeze, and never re-run.
 2. **Realistic fills.** I replayed 1-second TAQ quotes and trades. Limit orders wait behind the displayed queue. Market orders pay the spread and $0.003 a share. The strictest rule also charges 1¢ for every share beyond the displayed size.
-3. **Pre-set statistics.** Each verdict is a one-sided bootstrap test written down in advance. The bootstrap resamples days, or pair-days for lead-lag. → [METHOD.md](METHOD.md)
+3. **Pre-set statistics.** Each verdict is a one-sided bootstrap test written down in advance. The bootstrap resamples days, or pair-days for lead-lag. → [METHOD.md](METHOD.md) · lead-lag pre-registration: [PREREG.md](PREREG.md)
 
 ## Four results
 
@@ -87,15 +87,17 @@ Two separate sealed tests confirmed the effect before costs:
 - When the spread narrows to 1–2¢, buy the rest at market.
 - At 5 minutes, buy whatever is left at market.
 
-**Result.** The rule cost **1.30¢ a share less than a market order** (95% CI 1.14 to 1.46). This is the sealed test, 237,900 orders, 2021 to October 2025.
-- Over the whole sealed period, the pre-registered test gave 1.50¢ [1.33, 1.67]. That period runs to October 2026 and includes the days after a data-unit change in November 2025 (see Limits).
-- The saving reappeared on three sets of never-used stocks, under the strictest fill rules: 1.25, 1.63 and 1.29¢ a share.
+**Result.** The rule cost **1.30¢ a share less than a market order** (95% CI 1.14 to 1.46). This is the sealed test, 237,900 orders, January 2021 to October 2025.[^units]
+- The saving reappeared on three sets of never-used stocks, under the strictest fill rules: **1.19, 1.63 and 1.29¢ a share**.[^sets]
 - **It is a cost saving, not a profit.** It pays only on trades you have to make anyway.
+
+[^units]: Every Patient Trader number here avoids a data error: from 3 Nov 2025 the displayed quote sizes are 100× too big (see Limits). The pre-registered test over the whole sealed period, to October 2026, gave 1.50¢ [1.33, 1.67]. That is 2.75 bp of the $15.6 billion traded.
+[^sets]: **The first set** (80 stocks, 381,440 orders) uses 2021–2024 only, the years before the change. Its pre-registered result over the whole sealed period was 1.25¢. **The third and fourth sets** (579,220 and 558,560 orders, 2021 to November 2026) read quote sizes corrected from that date, so their whole periods are used.
 
 ## Limits
 
 - **Simulated fills.** Fills are simulated on 1-second bars. Our own market impact is not modelled, and 1-second reaction is slow next to high-frequency traders.
-- **Data error.** From 3 Nov 2025, the displayed quote sizes in the data are 100× too big. I found this after the fact and re-ran no sealed test. I quote the Patient Trader's result from before that date.
+- **Data error.** From 3 Nov 2025, the displayed quote sizes in the data are 100× too big. I found this after the fact and re-ran no sealed test. The Patient Trader numbers avoid the affected data (notes under result 4). The later lead-lag studies read corrected sizes.
 - **Confirmations are before costs.** The lead-lag and arbitrage confirmations are before costs. No strategy was confirmed to make money after costs.
 - **Multiple testing.** Verdicts are corrected only within each study. The 911-trial count is published so that readers can judge the multiple testing across the whole project.
 
@@ -109,6 +111,7 @@ Two separate sealed tests confirmed the effect before costs:
 ```
 README.md      this page
 METHOD.md      pre-registration flow, data splits, fill and cost models, how trials are counted
+PREREG.md      the two lead-lag tests: hypotheses, gates, dates, tags and plan hashes
 LEDGER.md      all 911 trials, one row per study
 results/       aggregated numbers behind the four results (JSON, CSV of daily totals)
 figures/       the five figures above and make_figures.py, which draws them from results/ only

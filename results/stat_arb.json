@@ -54,15 +54,15 @@
   "sources": [
     {
       "file": "research20/results/test20_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "834a1fd"
     },
     {
       "file": "research20/results/test20_daily.csv",
-      "committed_in_research_repo": true
+      "research_repo_commit": "834a1fd"
     },
     {
       "file": "research21/results/test21_summary.json",
-      "committed_in_research_repo": true
+      "research_repo_commit": "5c86ca7"
     }
   ]
 }
