@@ -299,5 +299,5 @@
       "research_repo_commit": "c9a53fd"
     }
   ],
-  "daily_file_note": "lead_lag_etf_twins_daily.csv is the sealed rows of synthesis/presentation_data/study30g_daily.csv (research repository commit c9a53fd); its totals equal sealed30g_summary.json: events, mean before and after costs"
+  "daily_file_note": "lead_lag_etf_twins_daily.csv is the sealed rows of synthesis/presentation_data/study30g_daily.csv (research repository commit c9a53fd); its totals equal sealed30g_summary.json: events, mean before and after costs. It has 1,470 rows, one for each sealed trading day with data: the window 2021-01-04 to 2026-11-10 holds 1,471 trading days, and 2026-02-24 has no quote table in TAQ, so no bars and no row. Every row has events"
 }

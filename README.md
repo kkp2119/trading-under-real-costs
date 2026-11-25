@@ -1,4 +1,4 @@
-# Trading Under Real Costs
+# Intraday Trading Under Real Costs
 
 **Pre-registered tests of simple trading algorithms on second-by-second US stock data, with real spreads, fees and queues**
 Kyle Park · Columbia University, *Algorithmic Trading with Market Simulator* course project · Fall 2026
@@ -111,6 +111,9 @@ All tuning data start on 2 January 2015. Every sealed period starts on 4 January
 
 **Why the end dates differ.** Each sealed period ends on the last day of data its study had, and the sealed tests ran between 30 October and 21 November 2026. Two Patient Trader numbers stop earlier on purpose: they leave out the data from 3 November 2025, where the quote sizes are wrong (see Limits).
 
+- **The first new stock set uses 2021–2024 only.** That study read the quote sizes uncorrected and saved its results by calendar year, so 2025, with ten months before the error and two after it, cannot be split.
+- **The third and fourth new stock sets use their whole sealed periods.** Their plans, fixed before the sealed runs, made the loader divide the quote sizes by 100 from 3 November 2025, so their data after that date are read correctly.
+- **One trading day has no data.** TAQ has no quote table for 24 February 2026, so no bars exist for that day: a sealed period that ends on 2026-11-10 holds 1,471 trading days, and 1,470 of them have data. The ETF-twin lead-lag test traded on all 1,470.
 - The new stock sets were tuned on the original stocks and sealed-tested on stocks never used before.
 - Under result 1, the first-in-line row is a 2019–2020 check.
 - Under result 2, the other pair types were sealed-tested from 2021-01-04 to 2026-11-10.
