@@ -13,9 +13,9 @@ Can a simple algorithm make money on US stocks once you count the real bid–ask
 
 ## Method in three lines
 
-1. **Rules first.** Settings, costs and the pass/fail test were committed to git before any result. For the four results below, tuning used 2015–2020 only. The sealed 2021–2026 data were opened once, after a code freeze, and never re-run.
+1. **Rules first.** Settings, costs and the pass/fail test were committed to git before any result. For the four results below, tuning used 2015–2020 only. The sealed 2021–2026 data were opened once, after a code freeze, and never re-run. Exact dates: [Data periods](#data-periods).
 2. **Realistic fills.** I replayed 1-second TAQ quotes and trades. Limit orders wait behind the displayed queue. Market orders pay the spread and $0.003 a share. The strictest rule also charges 1¢ for every share beyond the displayed size.
-3. **Pre-set statistics.** Each verdict is a one-sided bootstrap test written down in advance. The bootstrap resamples days, or pair-days for lead-lag. → [METHOD.md](METHOD.md) · lead-lag pre-registration: [PREREG.md](PREREG.md)
+3. **Pre-set statistics.** Each verdict is a one-sided bootstrap test written down in advance. The bootstrap resamples days, or pair-days for lead-lag. → [METHOD.md](METHOD.md) · lead-lag pre-registration: [PREREG.md](PREREG.md) (summary at the top; the original plans are in Korean)
 
 ## Four results
 
@@ -87,12 +87,33 @@ Two separate sealed tests confirmed the effect before costs:
 - When the spread narrows to 1–2¢, buy the rest at market.
 - At 5 minutes, buy whatever is left at market.
 
-**Result.** The rule cost **1.30¢ a share less than a market order** (95% CI 1.14 to 1.46). This is the sealed test, 237,900 orders, January 2021 to October 2025.[^units]
+**Result.** The rule cost **1.30¢ a share less than a market order** (95% CI 1.14 to 1.46). This is the sealed test from 4 January 2021 to 31 October 2025: 237,900 orders. The test itself ran to 23 October 2026, and its last year is left out because of a data error.[^units]
 - The saving reappeared on three sets of never-used stocks, under the strictest fill rules: **1.19, 1.63 and 1.29¢ a share**.[^sets]
 - **It is a cost saving, not a profit.** It pays only on trades you have to make anyway.
 
-[^units]: Every Patient Trader number here avoids a data error: from 3 Nov 2025 the displayed quote sizes are 100× too big (see Limits). The pre-registered test over the whole sealed period, to October 2026, gave 1.50¢ [1.33, 1.67]. That is 2.75 bp of the $15.6 billion traded.
-[^sets]: **The first set** (80 stocks, 381,440 orders) uses 2021–2024 only, the years before the change. Its pre-registered result over the whole sealed period was 1.25¢. **The third and fourth sets** (579,220 and 558,560 orders, 2021 to November 2026) read quote sizes corrected from that date, so their whole periods are used.
+[^units]: Every Patient Trader number here avoids a data error: from 3 Nov 2025 the displayed quote sizes are 100× too big (see Limits). The pre-registered test over the whole sealed period, 4 January 2021 to 23 October 2026, gave 1.50¢ [1.33, 1.67]. That is 2.75 bp of the $15.6 billion traded.
+[^sets]: **The first set** (80 stocks, 381,440 orders) uses 2021–2024 only. Its results were split by calendar year, and these are the full years before the change. Its pre-registered result over the whole sealed period, to 3 November 2026, was 1.25¢. **The third and fourth sets** (579,220 and 558,560 orders, 4 January 2021 to 10 November 2026) read quote sizes corrected from that date, so their whole periods are used.
+
+## Data periods
+
+All tuning data start on 2 January 2015. Every sealed period starts on 4 January 2021, the first trading day of that year.
+
+| Result | Exploration (tuning) | Validation | Sealed test, opened once | Last day tested | The number above uses |
+|---|---|---|---|---|---|
+| 1. Market making | 2015–2020 | — | never opened | 2020-12-31 | all of 2015–2020 |
+| 2. Share-class arbitrage | 2015–2020 | — | 2021-01-04 to 2026-11-09 | 2026-11-09 | the whole sealed period |
+| 3. Lead-lag, ETF twins and share classes | 2015–2018 | 2019–2020 | 2021-01-04 to 2026-11-10 | 2026-11-10 | the whole sealed period |
+| 3. Lead-lag, large caps after their sector ETF or SPY | 2015–2018 | 2019–2020 | 2021-01-04 to 2026-11-16 | 2026-11-16 | the whole sealed period |
+| 4. Patient Trader | 2015–2020 | — | 2021-01-04 to 2026-10-23 | 2026-10-23 | **2021-01-04 to 2025-10-31** (1.30¢) |
+| 4. Patient Trader, first new stock set | 2015–2020 | — | 2021-01-04 to 2026-11-03 | 2026-11-03 | **2021–2024** (1.19¢) |
+| 4. Patient Trader, third new stock set | 2015–2020 | — | 2021-01-04 to 2026-11-10 | 2026-11-10 | the whole sealed period (1.63¢) |
+| 4. Patient Trader, fourth new stock set | 2015–2018 | 2019–2020 | 2021-01-04 to 2026-11-10 | 2026-11-10 | the whole sealed period (1.29¢) |
+
+**Why the end dates differ.** Each sealed period ends on the last day of data its study had, and the sealed tests ran between 30 October and 21 November 2026. Two Patient Trader numbers stop earlier on purpose: they leave out the data from 3 November 2025, where the quote sizes are wrong (see Limits).
+
+- The new stock sets were tuned on the original stocks and sealed-tested on stocks never used before.
+- Under result 1, the first-in-line row is a 2019–2020 check.
+- Under result 2, the other pair types were sealed-tested from 2021-01-04 to 2026-11-10.
 
 ## Limits
 
@@ -111,11 +132,49 @@ Two separate sealed tests confirmed the effect before costs:
 ```
 README.md      this page
 METHOD.md      pre-registration flow, data splits, fill and cost models, how trials are counted
-PREREG.md      the two lead-lag tests: hypotheses, gates, dates, tags and plan hashes
+PREREG.md      the two lead-lag tests: hypotheses, gates, dates, tags and plan hashes (summary at the top)
 LEDGER.md      all 911 trials, one row per study
 results/       aggregated numbers behind the four results (JSON, CSV of daily totals)
 figures/       the five figures above and make_figures.py, which draws them from results/ only
 code/          engines only: fill simulators, cost accounting, lead-lag events, bootstrap and verdict code, tests
+requirements.txt   package versions for the steps under "How to run"
 ```
+
+## How to run
+
+The steps below need no market data. The tests build synthetic markets in code, and the figures use the aggregated files in `results/`.
+
+**1. Requirements.** Python 3.13 and the packages pinned in [requirements.txt](requirements.txt): numpy 2.3.5, pandas 2.2.3, scipy 1.18.1, statsmodels 0.14.5, numba 0.68.1, matplotlib 3.10.7 and pytest 8.4.2. Checked on 2026-11-25 in a fresh virtual environment (Python 3.13.3, macOS on Apple silicon).
+
+**2. Install.** Clone this repository, then run these commands in its folder:
+
+```bash
+python3.13 -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+**3. Run the tests.**
+
+```bash
+(cd code/market_maker && python -m pytest -p no:cacheprovider -q tests)
+(cd code/execution && python test_engine17.py)
+```
+
+- The first command takes about 6 minutes and ends with `76 passed, 14 skipped`. The skipped tests write scratch files, so they need `R12_TEST_DIR` set to an empty folder outside the repository.
+- The second command takes about 1 second and ends with `40/40 passed`. It writes `code/execution/results/engine17_tests.json`, which git ignores.
+
+**4. Redraw the figures.**
+
+```bash
+python figures/make_figures.py
+```
+
+This reads `results/` only and overwrites the five PNG files in `figures/`. It prints one `drew <name>` line per figure. In the check, the redrawn images matched the committed ones pixel for pixel. Git still lists them as modified, because the file bytes differ.
+
+**5. What cannot be re-run.** The studies themselves need WRDS TAQ quotes and trades and CRSP data. These are licensed and not included, so the results cannot be reproduced from this repository alone.
+
+- `code/market_maker` and `code/execution` expect one `.npz` file per stock and day under `$DATA_DIR`. Each file holds 21 int32 columns of 23,400 one-second bars (09:30–16:00), with prices in 1/10,000 dollar and sizes in shares. The columns are listed in `code/market_maker/bars1s/bars.py`.
+- `code/lead_lag` reads the same bar files for the leader and the follower. It also imports modules of the private research repository, so it is here for reading only.
 
 Data: WRDS TAQ (1-second quotes and trades) and CRSP. Licensed data are **not included**. Nor are quotes, trades or per-order records. Code: MIT license. Records: the pre-registration documents (Korean) up to the Market Maker rebuild are in this repository's history (commit `b36bf19`). Every study has spec, freeze and test-run tags in the private research repository.

@@ -90,6 +90,10 @@
       "average_price_usd": 54.47
     },
     "first_new_set_pre_registered": {
+      "window": [
+        "20210104",
+        "20261103"
+      ],
       "orders": 556900,
       "mean": -1.252,
       "upper_97_5": -1.14,
@@ -104,6 +108,10 @@
     {
       "file": "research17/results/test17_summary.json",
       "research_repo_commit": "5343041"
+    },
+    {
+      "file": "research17/calendar17.csv",
+      "research_repo_commit": "733b5c1"
     },
     {
       "file": "research22/results/test22_summary.json",

@@ -1,5 +1,25 @@
 # Pre-registration: the two lead-lag tests
 
+## Summary
+
+This page records the rules and predictions that were fixed before the results were seen, for the two lead-lag tests.
+
+- **Flow.** Plan committed and tagged → exploration → validation, run once → code freeze → sealed test, run once. Test 1's exploration came before its plan, in two closed studies that the plan declares as already seen.
+- **Hypotheses.** H1: before costs, the mean value of a trade is above 0. H2: before costs, the forecast's top trades are worth more than the average trade. H3 (test 2 only): a cost-gated rule is profitable after costs.
+- **Verdict rule.** A pair-day cluster bootstrap with 10,000 resamples, one-sided at α 0.05.
+- **Gates.** Test 2's exploration needed a 95% CI lower bound above 0. Each validation needed an H1 estimate above 0. Otherwise the study stopped and its sealed data stayed unopened.
+
+| $ per $10,000 trade [95% CI] | Test 1: ETF twins and share classes (study 30G) | Test 2: large caps after their sector ETF or SPY (study 31) |
+|---|---|---|
+| Periods | Exploration 2015–2018 · validation 2019–2020 · sealed 2021-01-04 to 2026-11-10 | Exploration 2015–2018 · validation 2019–2020 · sealed 2021-01-04 to 2026-11-16 |
+| Run once on | Validation and sealed test: 2026-11-18 | Exploration 2026-11-18 · validation 2026-11-19 · sealed test 2026-11-21 |
+| H1, sealed | **Confirmed**: +0.978 [+0.954, +1.006] | **Confirmed**: +0.378 [+0.356, +0.402] |
+| H2, sealed | **Confirmed**: +4.633 [+4.269, +5.006] | **Confirmed**: +1.002 [+0.867, +1.156] |
+| H3 | Not in this plan | **Not judged**: exploration produced no candidate |
+| Same trades after costs | −3.999 | −4.688 |
+
+Summary added on 2026-11-25. The record below is unchanged. The original plans (SPEC30G.md, SPEC31.md and their prediction files) are in Korean, in the private research repository; their sha256 are in the tables below.
+
 Both tests ask one question first: **after a leader moves, does the follower follow, on data never seen, before costs?** Neither test claims a profit.
 
 For each test, the plan was committed and tagged before its data were read. The code was frozen before the sealed data were opened. The sealed run happened once, and the runner refuses a second run. Tags and hashes refer to the private research repository, where the records are in Korean.

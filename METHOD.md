@@ -27,6 +27,8 @@ If a study failed on build or validation data, its sealed data were never opened
 | Lead-lag, large caps and sector ETFs | 2015–2018 | 2019–2020 | 2021-01-04 to 2026-11-16 |
 | Patient Trader | 2015–2020 | — | 2021-01-04 to 2026-10-23 |
 
+Each sealed period ends on the last day of data its study had, so the end dates differ. The README's [Data periods](README.md#data-periods) table adds the replication sets and the shorter windows behind two Patient Trader numbers.
+
 ## 3. Fill simulator
 
 **Market orders** take the opposite best quote at the decision bar, plus the delay: 1 second in the base case, and 0 and 5 seconds in checks.
